@@ -1,0 +1,31 @@
+/*------------------------------------*\
+    #CAROUSEL
+\*------------------------------------*/
+
+.c-carousel__caption {
+	@include media-breakpoint-up(md) {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+.slick-list {
+	padding: $spacing-unit 0 !important;
+}
+
+.c-carousel--default {
+	margin: 0 -10px;
+}
+
+.c-carousel__item {
+    position: relative;
+    padding: 0 halve($spacing-unit);
+
+    & img {
+        width: auto !important;
+    }
+}
+
+/* Pagination */

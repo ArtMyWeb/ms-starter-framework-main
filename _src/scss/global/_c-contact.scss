@@ -1,0 +1,42 @@
+/*------------------------------------*\
+    #CONTACT
+\*------------------------------------*/
+
+.c-sidebar__form,
+.c-contact__form {    
+    & label,
+    & .wpforms-field-label,
+    & .wpforms-field-container .wpforms-field-sublabel {
+        font-family: $font-family-primary;
+        text-transform: uppercase;
+        font-weight: font-weight('medium') !important;
+        margin-bottom: halve($spacing-unit);
+        color: color('white');
+        font-size: rem(16px);
+
+        @include media-breakpoint-up(md) {
+            font-size: rem(18px);
+        }
+    }
+
+    & input:not([type='submit']),
+    & textarea,
+    & select {
+        color: color('white');
+        background-color: transparent;
+        padding: halve($spacing-unit);
+        border-color: rgba(color('white'), .3);
+    }
+
+    & textarea {
+        height: 120px !important;
+    }
+}
+
+
+.c-contact__map {
+    & .c-embed {
+        margin: 0;
+    }
+}
+

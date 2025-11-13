@@ -1,0 +1,151 @@
+/*------------------------------------*\
+    #SIDEBAR
+\*------------------------------------*/
+
+.c-sidebar {
+	padding-bottom: $spacing-unit;
+}
+
+.c-sidebar__form {
+	padding: $spacing-unit;
+	box-shadow: 0 5px 5px rgba(color('black'), 0.2);
+
+	@include media-breakpoint-up(sm) {
+		padding: double($spacing-unit);
+	}
+
+	& label {
+        color: color('white');
+    }
+}
+
+
+.c-sidebar__nav {
+	margin: $spacing-unit 0;
+	background-color: color('white');
+
+	@include media-breakpoint-up(sm) {
+		margin: double($spacing-unit) 0;
+	}
+}
+
+.c-sidebar__list {
+
+	& > li {
+		position: relative;
+		margin-bottom: halve($spacing-unit);
+
+		&.menu-item-has-children {
+
+			> a::after {
+				content: '▼';
+				color: color('accent-1');
+				margin-left: auto;
+				position: absolute;
+				top: 15px;
+    			right: 20px;
+    			font-size: rem(14px);
+			}
+		}
+
+
+		>  a {
+			display: block;
+			text-decoration: none;
+			border-bottom: 0;
+			background-color: color('accent-1');
+			padding: halve($spacing-unit) $spacing-unit;
+			text-transform: uppercase;
+			color: color('white');
+			font-family: $font-family-primary;
+			font-weight: font-weight('semibold');
+			font-size: rem(20px);
+
+			@include link-states() {
+				background-color: color('accent-2');
+			}
+		}
+	}
+
+	& .sub-menu {
+		display: none;
+		padding: $spacing-unit 0;
+		list-style: none;
+
+		& > li >  a { 
+			display: block;
+			text-decoration: none;
+			color: color('accent-1');
+			font-family: $font-family-primary;
+			font-weight: font-weight('semibold');
+
+			@include link-states() {
+				color: color('accent-2');
+			}
+		}
+	}
+
+	& li.current_page_item > a {
+		background-color: color('accent-2');
+		color: color('white');
+	}
+
+	& li.current-menu-ancestor .sub-menu, 
+	& li.current-menu-parent .sub-menu {
+    	display: block;
+	}
+
+}
+
+.c-sidebar__reviews {
+	margin: double($spacing-unit) 0;
+	background-color: color('white');
+
+	& .c-carousel__item {
+		padding: 0;
+	}
+}	
+
+.c-sidebar__reviews-img {
+	max-width: 80px;
+	margin: $spacing-unit auto;
+}
+
+	.c-sidebar__reviews-author {
+		font-family: $font-family-primary;
+		font-style: normal;
+		text-transform: uppercase;
+		color: color('accent-3');
+		font-size: rem(20px);
+		margin-top: $spacing-unit;
+		display: block;
+		font-weight: font-weight('medium');
+	}
+
+.c-sidebar__cta-content {
+	background-color: color('accent-1');
+	position: relative;
+	z-index: 10;
+	padding: $spacing-unit;
+	box-shadow: 0 5px 5px rgba(color('black'), 0.2);
+
+	@include media-breakpoint-up(sm) {
+        padding: double($spacing-unit);
+    }
+}
+
+.c-sidebar__cases {
+	margin: $spacing-unit 0;
+
+	@include media-breakpoint-up(sm) {
+		margin: double($spacing-unit) 0;
+	}
+}
+
+.c-sidebar__cases-block {
+	background-color: color('accent-1');
+	padding: double($spacing-unit);
+    box-shadow: 0 5px 5px rgba(color('black'), 0.2);
+}
+
+

@@ -1,0 +1,54 @@
+/*------------------------------------*\
+    #INFO
+\*------------------------------------*/
+
+.c-info__block {
+    position: relative;
+}
+
+.c-info__link {
+    display: block;
+}
+
+.c-info__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: halve($spacing-unit) $spacing-unit;
+    background-color: color('accent-3');
+    color: color('white');
+    font-size: rem(24px);
+
+    @include media-breakpoint-up(sm) {
+        padding: $spacing-unit double($spacing-unit);
+    }
+}
+
+.c-info__mark {
+    max-width: 20%;
+    position: absolute;
+    top: 40px;
+    left: 70px;
+    z-index: 10;
+
+    @include media-breakpoint-up(md) {
+        top: -40px;
+        left: -70px;
+    }
+}
+
+.c-info-cta {
+    border: 5px solid color('accent-2');
+    margin: $spacing-unit 0;
+    padding: $spacing-unit;
+
+    @include media-breakpoint-up(md) {
+        padding: double($spacing-unit);
+    }
+}
+
+.c-info-secondary__img {
+    padding: $spacing-unit;
+}
+

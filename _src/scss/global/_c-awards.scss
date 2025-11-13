@@ -1,0 +1,28 @@
+/*------------------------------------*\
+    #AWARDS
+\*------------------------------------*/
+
+.c-awards {
+
+    & .slick-prev:before, 
+    & .slick-next:before {
+        color: color('accent-1');
+    }
+
+    & .slick-track {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+}
+
+.c-awards__img {
+    text-align: center;
+    padding: halve($spacing-unit);
+
+    & img {
+        width: 150px;
+        object-fit: cover;
+        display: inline-block;
+    }
+}

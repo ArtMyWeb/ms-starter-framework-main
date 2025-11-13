@@ -1,0 +1,154 @@
+/*------------------------------------*\
+    #VARIABLES
+\*------------------------------------*/
+
+/// Generic spacing unit
+$spacing-unit:      20px;
+
+/// Typography
+$font-family-primary: 'IBM Plex Sans', sans-serif;
+$font-family-secondary: 'EB Garamond', serif;
+$font-family-tertiary: 'IBM Plex Sans Condensed', sans-serif;
+
+/// Global font size
+$base-font-size:    18px;
+
+/// Calculated line height
+$base-line-height:   1.5;
+
+///
+/// Global sass map for the color scheme palette.
+/// Add custom color in the color scheme palette separated by a comma.
+///
+$colors: (
+	'black':          #000,
+	'white':          #fff,
+	'accent-1':   		#333,
+	'accent-2':       #cacaca,
+	'accent-3':   		#ee3000,
+);
+
+///
+/// Global sass map for the buttons color palette.
+/// Add custom color in the buttons color palette separated by a comma.
+///
+$buttons: (
+	'primary':    		map-get($colors, accent-3),
+	'secondary':  		map-get($colors, accent-1),
+	'tertiary':   		map-get($colors, accent-2),
+	'light':      		map-get($colors, accent-1),
+	'dark':       		map-get($colors, accent-2)
+);
+
+///
+/// Global sass map for the text transform property.
+///
+$text-transforms: (
+	'lowercase':     lowercase,
+	'uppercase':     uppercase,
+	'capitalize':    capitalize,
+	'normal':        none
+);
+
+///
+/// Global sass map for the font style property.
+///
+$font-styles: (
+	'normal':     normal,
+	'italic':     italic
+);
+
+
+///
+/// Global sass map for the font weight property.
+///
+$font-weights: (
+	'light':      300,
+	'regular':    400,
+	'medium':     500,
+	'semibold':   600,
+	'bold':  			700,
+	'bolder':  		900
+);
+
+///
+/// Global sass map for the float property.
+///
+$floats: (
+	'right':     right,
+	'left':      left,
+	'none':      none
+);
+
+///
+/// Global sass map for the paddings property.
+///
+$spacings: (
+	'xl':     90px,
+	'lg':     60px,
+	'md':     40px,
+	'sm':     20px,
+	'xs':     10px
+);
+
+///
+/// Global sass map for the text align property.
+///
+$text-aligns: (
+	'right':     right,
+	'left':      left,
+	'center':    center,
+	'justify':   justify
+);
+
+///
+/// Z-index Map for @function z();
+///
+$z-index: (
+	'element-name':   100
+);
+
+///
+/// Global sass map for margin/padding property;
+///
+$resets: (
+	'all',
+	'top',
+	'right',
+	'bottom',
+	'left'
+);
+
+// Grid breakpoints
+//
+// Define the minimum and maximum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+  'xxs':     	 0,
+  'xs':      780px,
+  'sm':      1024px,
+  'md':     1224px,
+  'lg':     1400px,
+  'xl':     1600px
+) !default;
+
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+  sm: 1024px,
+  md: 1224px,
+  lg: 1350px,
+  xl: 1600px
+) !default;
+
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns:               12 !default;
+$grid-gutter-width:          30px !default; // 30px

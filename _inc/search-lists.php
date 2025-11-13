@@ -1,0 +1,1 @@
+<?php echo do_shortcode('[wp_sitemap_page only="page"]'); ?>

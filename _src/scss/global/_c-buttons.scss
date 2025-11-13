@@ -1,0 +1,91 @@
+/*------------------------------------*\
+    #BUTTONS
+\*------------------------------------*/
+
+.c-btn {
+	font-family: $font-family-primary;
+	background-color: button('primary');
+	color: color('white');
+	border: 0;
+	border-radius: 0;
+	display: inline-block;
+	text-decoration: none;
+	line-height: inherit;
+	padding: halve($spacing-unit) $spacing-unit;
+	font-size: rem(16px);
+	margin: halve($spacing-unit) 0;
+	transition: all 0.5s ease-in-out;
+	position: relative;
+	font-weight: font-weight('semibold');
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	text-align: center;
+
+	@include media-breakpoint-up(md) {
+		font-size: rem(18px);
+		padding: halve($spacing-unit) double($spacing-unit);
+	}
+
+	@include link-states() {
+		color: color('white');
+		text-decoration: none;
+	}
+}
+
+/**
+* Generate button color classes for each color in $buttons
+*/
+@each $button, $value in $buttons {
+	.c-btn--#{$button} {
+		background-color: $value;
+
+		@include link-states() {
+			background-color: darken($value, 10%);
+		}
+
+	}
+}
+
+/**
+* Generate button arrow class for blog pages
+*/
+.c-btn--arrow {
+	font-family: $font-family-primary;
+	text-transform: uppercase;
+	color: color('accent-3');
+	font-weight: font-weight('bold');
+	transition: all 0.5s ease-in-out;
+
+	&::after {
+		content: ' »';
+	}
+
+	@include link-states() {
+		color: color('accent-2');
+	}
+}
+
+/**
+* Generate button block class
+*/
+.c-btn--block {
+	@include btn-block();
+}
+
+.c-btn--text {
+	font-family: $font-family-primary;
+	text-transform: uppercase;
+	color: color('accent-3');
+	text-decoration: none;
+	display: inline-block;
+	font-weight: font-weight('semibold');
+	letter-spacing: 2px;
+	transition: all 0.5s ease-in-out;
+	white-space: nowrap;
+
+	@include link-states() {
+		color: color('accent-2');
+	}
+}
+
+

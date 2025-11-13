@@ -1,0 +1,26 @@
+/*------------------------------------*\
+    #CONTENT
+\*------------------------------------*/
+
+.o-content {
+	padding-bottom: $spacing-unit;
+
+	& > [class*='u-block-padding--'] {
+		padding: 0 !important;
+	}
+
+	@include media-breakpoint-up(md) {
+		padding-right: double($spacing-unit);
+	}
+}
+
+.o-container--wide {
+	max-width: 100%;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.o-content--hidden {
+	overflow: hidden;
+}
+

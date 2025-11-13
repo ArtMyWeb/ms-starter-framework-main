@@ -1,0 +1,12 @@
+/*------------------------------------*\
+	#WIDGETS
+\*------------------------------------*/
+
+.c-widgets {
+	padding: 0;
+    border-bottom: 0;
+
+	ul {
+		@include list-unstyled;
+	}
+}

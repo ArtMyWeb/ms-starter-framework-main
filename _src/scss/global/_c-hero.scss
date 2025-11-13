@@ -1,0 +1,86 @@
+/*------------------------------------*\
+	#HERO
+\*------------------------------------*/
+
+.c-hero {
+	position: relative;
+    padding: double($spacing-unit) 0;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(color('black'), .5);
+    }
+
+    @include media-breakpoint-up(md) {
+        padding: $spacing-unit * 3 0;
+    }
+
+}
+
+.home .c-hero__title {
+    font-size: rem(42px);
+
+    @include media-breakpoint-up(xs) {
+        font-size: rem(52px);
+    }
+
+    @include media-breakpoint-up(md) {
+        font-size: rem(76px);
+    }
+
+    & span {
+        color: color('accent-3');
+    }
+}
+
+.c-hero__subtitle {
+    text-wrap: balance;
+    text-transform: uppercase;
+    font-weight: font-weight('semibold');
+    letter-spacing: 2px;
+
+    @include media-breakpoint-up(md) {
+        font-size: rem(22px);
+    }
+
+    @include media-breakpoint-up(lg) {
+        font-size: rem(30px);
+    }
+}
+
+.c-hero--default {
+    position: relative;
+    padding: triple($spacing-unit) 0;
+
+    @include media-breakpoint-up(md) {
+        padding: $spacing-unit * 6 0;
+    }
+}
+
+.c-hero-subpage {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(color('black'), .5);
+    }
+}
+
+.c-hero-subpage__rating {
+    padding-left: $spacing-unit;
+}
+
+
+
+
+

@@ -1,0 +1,21 @@
+/*------------------------------------*\
+    #PAGE
+\*------------------------------------*/
+
+/**
+ * Body
+*/
+
+body {
+	background-color: color('white');
+	color: color('black');
+	font-family: $font-family-secondary;
+	font-weight: font-weight('regular');
+	line-height: $base-line-height;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	@include media-breakpoint-up(sm) {
+		font-size: $base-font-size;
+	}
+}
