@@ -72,19 +72,21 @@
 			path.js + "/doubletaptogo.js",
 			path.js + "/scripts.js",
 		])
-			.pipe(concat("scripts.js"))
-			.pipe(browserSync.reload({ stream: true }))
 			.pipe(plumber())
+			.pipe(concat("scripts.js"))
 			.pipe(dest(path.dist_js));
 	}
 
 	// Scripts Concat and Minify Tasks
-	function scripts() {
-		return src(path.dist_js + "/scripts.js")
+	function scripts(done) {
+		src(path.dist_js + "/scripts.js")
 			.pipe(concat("scripts.min.js"))
 			.pipe(uglify())
 			.pipe(dest(path.dist_js))
-			.pipe(notify("Js Done."));
+			.on('end', () => {
+				console.log("✓ JavaScript minified successfully");
+				done();
+			});
 	}
 
 	// Image Tasks
