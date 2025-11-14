@@ -1,63 +1,5 @@
 @import "../css/variables.css";
-/**
- * CONTENTS
- *
- * SETTINGS
- * Variables.............Globally-variables
- *
- * TOOLS
- * Functions.............Useful mixins.
- * Mixins................Useful mixins.
- *
- * GENERIC
- * Normalize.............Reset browser styles.
- * Border Box............Elements inner padding.
- *
- * BASE
- * Page..................Page default styles.
- * Type..................Typography default styles.
- * Forms.................Forms default styles.
- *
- * OBJECTS
- * Grid................Grid system.
- * Content...............Inner content.
- *
- * COMPONENTS
- * Buttons...............Button elements.
- * Navigation............Main navigation.
- * Offcanvas.............Offcanvas navigation.
- * Header................Main page header.
- * Hero..................Main page hero.
- * Sidebar...............Main page sidebar.
- * Logo..................Main page logo.
- * Backgrounds...........Section's background.
- * Lead..................Lead elements.
- * Block.................Flexbox elements.
- * List..................List elements.
- * Pager.................Pager navigation.
- * Pagination............Pagination navigation.
- * Embed.................Responsive video.
- * Breadcrumb............Breadcrumbs navigation.
- * Tables................Tabular data.
- * Pre...................Preformatted text.
- * Carousel..............Carousel.
- * Carousel..............Slick Carousel.
- * Widget................Wp widgets.
- * Tabs..................Tabs.
- * Accordion.............Accordion.
- * Social................Social Icons.
- * Footer................Main page footer.
- * Animate...............Main page animation.
- * Lazyload..............Main page lazyload animation.
- * Procedure List........Main page Procedure List.
- *
- * UTILITIES
- * Images................Border, Rounded, Circle, Shadow
- * Block.................Center, Background, Floats, Clearfix
- * Text..................Colors, Transforms, Align, Weight
- * Visibility............xs, sm, md, lg, xl screen sizes
- * Reset.................Reset styles properties
-**/
+@import "../_dist/css/variables.css";
 header{
   height: var(--header-height);
   transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
@@ -314,7 +256,7 @@ header button .sr-only {
   height: unset;
   margin: unset;
   padding-right: 1rem;
-  font-family: Inter, system-ui, sans-serif;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
   font-weight: 700;
   line-height: 2;
@@ -449,7 +391,9 @@ header button .sr-only {
   --tw-contain-style:  ;
 }
 
-/*! tailwindcss v3.4.18 | MIT License | https://tailwindcss.com*/
+/*
+! tailwindcss v3.4.18 | MIT License | https://tailwindcss.com
+*/
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -487,7 +431,7 @@ html,
   -moz-tab-size: 4; /* 3 */
   -o-tab-size: 4;
      tab-size: 4; /* 3 */
-  font-family: Inter, system-ui, sans-serif; /* 4 */
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
   font-feature-settings: normal; /* 5 */
   font-variation-settings: normal; /* 6 */
   -webkit-tap-highlight-color: transparent; /* 7 */
@@ -900,7 +844,7 @@ video {
   .content ol li{
   position: relative;
   padding-left: 0.8em;
-  font-family: Inter, system-ui, sans-serif;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 18px;
   line-height: 1.5;
 }
@@ -924,12 +868,6 @@ video {
   font-weight: 400;
   text-decoration-line: underline;
 }
-.content a:hover,
-  p a:hover,
-  a.wp-block-button__link:hover{
-  --tw-text-opacity: 1;
-  color: rgb(255 161 34 / var(--tw-text-opacity, 1));
-}
 .content strong,
   .content b{
   font-weight: 500;
@@ -945,10 +883,8 @@ video {
   .content h5,
   .content h6{
   margin-bottom: 1rem;
-  font-family: utopia-std, serif;
+  font-family: Archivo, sans-serif;
   text-transform: capitalize;
-  --tw-text-opacity: 1;
-  color: rgb(7 37 67 / var(--tw-text-opacity, 1));
 }
 .content h2{
   font-size: 2.125rem;
@@ -990,11 +926,9 @@ video {
   }
 }
 .content p{
-  font-family: Inter, system-ui, sans-serif;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 18px;
   line-height: 1.5;
-  --tw-text-opacity: 1;
-  color: rgb(59 59 59 / var(--tw-text-opacity, 1));
 }
 .content img {
     width: auto;
@@ -1007,15 +941,9 @@ video {
 }
 /* Container */
 .container{
+  margin-left: auto;
+  margin-right: auto;
   max-width: 108rem;
-}
-@media not all and (min-width: 1440px){
-  .container{
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-.container{
   padding-bottom: var(--container-bottom-padding);
   padding-left: var(--container-left-padding);
   padding-right: var(--container-right-padding);
@@ -1076,9 +1004,12 @@ button{
 }
 .button{
   overflow: hidden;
-  font-size: 1rem;
+  text-align: center;
+  font-family: Archivo, sans-serif;
+  font-size: 20px;
   font-weight: 700;
   text-transform: uppercase;
+  line-height: 1.5;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
@@ -1089,11 +1020,21 @@ button{
     justify-content: center;
     align-items: center;
     gap: 10px;
-    background-color: #FFA122;
+    background: linear-gradient(180deg, #16898A 0%, #0C2A2D 100%);
     color: #FFFFFF;
+    font-feature-settings: "liga" off, "clig" off;
 }
 .button:hover {
-    background-color: #E69010;
+    background: linear-gradient(180deg, #1a9a9b 0%, #0d2f32 100%);
+  }
+.hero-overlay {
+    background: rgba(17, 17, 16, 0.73);
+    mix-blend-mode: multiply;
+  }
+.person-content-overlay {
+    background: linear-gradient(180deg, rgba(17, 17, 16, 0) 0%, rgba(17, 17, 16, 0.78) 52.63%, #101010 100%);
+    background-blend-mode: multiply;
+    z-index: 3;
   }
 .sr-only{
   position: absolute;
@@ -1105,6 +1046,9 @@ button{
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
+}
+.pointer-events-none{
+  pointer-events: none;
 }
 .visible{
   visibility: visible;
@@ -1124,11 +1068,17 @@ button{
 .-inset-2{
   inset: -0.5rem;
 }
+.inset-0{
+  inset: 0px;
+}
 .bottom-0{
   bottom: 0px;
 }
 .left-0{
   left: 0px;
+}
+.left-1\/2{
+  left: 50%;
 }
 .top-0{
   top: 0px;
@@ -1139,6 +1089,9 @@ button{
 .top-\[var\(--header-height\)\]{
   top: var(--header-height);
 }
+.z-10{
+  z-index: 10;
+}
 .z-30{
   z-index: 30;
 }
@@ -1148,11 +1101,30 @@ button{
 .z-\[1100\]{
   z-index: 1100;
 }
+.mx-auto{
+  margin-left: auto;
+  margin-right: auto;
+}
 .-mt-0\.5{
   margin-top: -0.125rem;
 }
+.-mt-\[120px\]{
+  margin-top: -120px;
+}
+.mb-11{
+  margin-bottom: 2.75rem;
+}
 .mb-2{
   margin-bottom: 0.5rem;
+}
+.mb-4{
+  margin-bottom: 1rem;
+}
+.mb-5{
+  margin-bottom: 1.25rem;
+}
+.mb-6{
+  margin-bottom: 1.5rem;
 }
 .block{
   display: block;
@@ -1169,6 +1141,9 @@ button{
 .inline-flex{
   display: inline-flex;
 }
+.grid{
+  display: grid;
+}
 .hidden{
   display: none;
 }
@@ -1184,6 +1159,24 @@ button{
 .h-6{
   height: 1.5rem;
 }
+.h-\[10px\]{
+  height: 10px;
+}
+.h-\[6px\]{
+  height: 6px;
+}
+.h-full{
+  height: 100%;
+}
+.max-h-\[300px\]{
+  max-height: 300px;
+}
+.max-h-\[750px\]{
+  max-height: 750px;
+}
+.min-h-screen{
+  min-height: 100vh;
+}
 .w-7{
   width: 1.75rem;
 }
@@ -1193,8 +1186,30 @@ button{
 .w-full{
   width: 100%;
 }
+.max-w-\[440px\]{
+  max-width: 440px;
+}
+.max-w-\[500px\]{
+  max-width: 500px;
+}
+.max-w-\[770px\]{
+  max-width: 770px;
+}
+.flex-1{
+  flex: 1 1 0%;
+}
 .flex-shrink-0{
   flex-shrink: 0;
+}
+.shrink-0{
+  flex-shrink: 0;
+}
+.grow-0{
+  flex-grow: 0;
+}
+.-translate-x-1\/2{
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .transform{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1205,6 +1220,12 @@ button{
 .resize{
   resize: both;
 }
+.grid-cols-1{
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.flex-col{
+  flex-direction: column;
+}
 .items-center{
   align-items: center;
 }
@@ -1213,6 +1234,18 @@ button{
 }
 .justify-between{
   justify-content: space-between;
+}
+.gap-10{
+  gap: 2.5rem;
+}
+.gap-4{
+  gap: 1rem;
+}
+.gap-5{
+  gap: 1.25rem;
+}
+.gap-\[100px\]{
+  gap: 100px;
 }
 .rounded-full{
   border-radius: 9999px;
@@ -1232,23 +1265,81 @@ button{
 .bg-current{
   background-color: currentColor;
 }
-.bg-red-500{
+.bg-dark{
   --tw-bg-opacity: 1;
-  background-color: rgb(239 68 68 / var(--tw-bg-opacity, 1));
+  background-color: rgb(17 17 16 / var(--tw-bg-opacity, 1));
+}
+.bg-light-dark{
+  --tw-bg-opacity: 1;
+  background-color: rgb(42 42 43 / var(--tw-bg-opacity, 1));
+}
+.bg-gradient-gold{
+  background-image: linear-gradient(90deg, #FAF1A7 0%, #9F692E 100%);
+}
+.bg-clip-text{
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+.object-contain{
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.object-cover{
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.p-10{
+  padding: 2.5rem;
+}
+.p-5{
+  padding: 1.25rem;
 }
 .px-side-offset{
   padding-left: var(--side-offset);
   padding-right: var(--side-offset);
 }
+.py-0{
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
 .py-1{
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
 }
+.py-20{
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.py-4{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.pb-0{
+  padding-bottom: 0px;
+}
 .pt-3\.5{
   padding-top: 0.875rem;
 }
+.pt-\[400px\]{
+  padding-top: 400px;
+}
+.text-center{
+  text-align: center;
+}
+.font-archivo{
+  font-family: Archivo, sans-serif;
+}
 .font-sans{
-  font-family: Inter, system-ui, sans-serif;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.text-\[0\.9rem\]{
+  font-size: 0.9rem;
+}
+.text-\[1\.25rem\]{
+  font-size: 1.25rem;
+}
+.text-\[120px\]{
+  font-size: 120px;
 }
 .text-\[19px\]{
   font-size: 19px;
@@ -1265,21 +1356,58 @@ button{
 .font-black{
   font-weight: 900;
 }
+.font-extrabold{
+  font-weight: 800;
+}
+.font-semibold{
+  font-weight: 600;
+}
 .uppercase{
   text-transform: uppercase;
 }
 .lowercase{
   text-transform: lowercase;
 }
+.leading-\[109px\]{
+  line-height: 109px;
+}
 .leading-\[3\]{
   line-height: 3;
+}
+.leading-relaxed{
+  line-height: 1.625;
+}
+.leading-tight{
+  line-height: 1.25;
 }
 .tracking-\[0\.3em\]{
   letter-spacing: 0.3em;
 }
+.text-cta{
+  --tw-text-opacity: 1;
+  color: rgb(22 137 138 / var(--tw-text-opacity, 1));
+}
+.text-light-gold{
+  --tw-text-opacity: 1;
+  color: rgb(250 241 167 / var(--tw-text-opacity, 1));
+}
+.text-transparent{
+  color: transparent;
+}
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+.opacity-70{
+  opacity: 0.7;
+}
+.opacity-90{
+  opacity: 0.9;
+}
+.shadow-\[0_4px_4px_0_rgba\(0\2c 0\2c 0\2c 0\.25\)\]{
+  --tw-shadow: 0 4px 4px 0 rgba(0,0,0,0.25);
+  --tw-shadow-colored: 0 4px 4px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 .blur{
   --tw-blur: blur(8px);
@@ -1302,7 +1430,6 @@ button{
   transition-duration: 600ms;
 }
 /* Custom styles here */
-/* Active fonts - using Typekit only */
 *{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -1347,74 +1474,70 @@ small sup{
 
 h1,
 .h1 {
-  /* 40px */
-  font-size: 2.5rem;
-  font-family: "utopia-std", serif;
-  font-weight: 400;
+  /* 38px */
+  font-family: Archivo, sans-serif;
+  font-size: 2.375rem;
+  font-weight: 600;
   font-style: normal;
-  color: #072543;
-  /* 56px */
+  /* 48px */
 }
 
 @media (min-width: 641px){
   h1,
 .h1{
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 }
 
 h1,
 .h1 {
-  /* 72px */
-  font-family: utopia-std, serif;
+  /* 54px */
   line-height: 1.1;
 }
 
 @media (min-width: 1025px){
   h1,
 .h1{
-    font-size: 4.5rem;
+    font-size: 3.374rem;
   }
 }
 
 h2,
 .h2 {
-  /* 36px */
-  font-size: 2.25rem;
-  /* 44px */
+  /* 38px */
+  font-family: Archivo, sans-serif;
+  font-size: 2.375rem;
+  font-weight: 600;
+  font-style: normal;
+  /* 48px */
 }
 
 @media (min-width: 641px){
   h2,
 .h2{
-    font-size: 2.75rem;
+    font-size: 3rem;
   }
 }
 
 h2,
 .h2 {
-  /* 59px */
-  font-family: utopia-std, serif;
+  /* 54px */
   line-height: 1.1;
 }
 
 @media (min-width: 1025px){
   h2,
 .h2{
-    font-size: 3.6875rem;
+    font-size: 3.374rem;
   }
-}
-
-h2,
-.h2 {
-  color: #072543;
 }
 
 h3,
 .h3 {
-  /* 32px */
+  /* 24px */
+  font-family: Archivo, sans-serif;
   font-size: 2rem;
-  /* 36px */
+  /* 28px */
 }
 
 @media (min-width: 641px){
@@ -1426,26 +1549,21 @@ h3,
 
 h3,
 .h3 {
-  /* 45px */
-  font-family: utopia-std, serif;
+  /* 28px */
   line-height: 1.1;
 }
 
 @media (min-width: 1025px){
   h3,
 .h3{
-    font-size: 2.8125rem;
+    color: rem;
   }
-}
-
-h3,
-.h3 {
-  color: #072543;
 }
 
 h4,
 .h4 {
   /* 22px */
+  font-family: Archivo, sans-serif;
   font-size: 1.375rem;
   /* 28px */
 }
@@ -1459,29 +1577,23 @@ h4,
 
 h4,
 .h4 {
-  /* 36px */
-  font-family: utopia-std, serif;
+  /* 24px */
   line-height: 1.3;
 }
 
 @media (min-width: 1025px){
   h4,
 .h4{
-    font-size: 2.25rem;
+    font-size: 1.5rem;
   }
-}
-
-h4,
-.h4 {
-  color: #072543;
 }
 
 h5,
 .h5 {
   /* 21px */
+  font-family: Archivo, sans-serif;
   font-size: 1.3125rem;
   /* 26px */
-  font-family: Inter, system-ui, sans-serif;
   font-weight: 400;
   line-height: 1.5;
 }
@@ -1501,10 +1613,43 @@ h5,
 h6,
 .h6 {
   /* 16px */
-  font-family: utopia-std, serif;
+  font-family: Archivo, sans-serif;
   font-size: 1rem;
   line-height: 1.5;
   color: #072543;
+}
+
+.vertical-border {
+  position: relative;
+  padding-left: 2rem;
+}
+.vertical-border::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 10px;
+  background: linear-gradient(180deg, #FAF1A7 0%, #9F692E 101.96%);
+}
+
+.horizonal-border {
+  position: relative;
+  padding-left: 2rem;
+}
+.horizonal-border::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 10px;
+  background: linear-gradient(180deg, #FAF1A7 0%, #9F692E 101.96%);
+}
+
+.subtitle{
+  font-size: 1.7rem;
+  line-height: 130%;
 }
 
 .large-text {
@@ -1521,7 +1666,6 @@ h6,
 
 .large-text {
   /* 42px */
-  font-family: utopia-std, serif;
   letter-spacing: 0.0476em;
 }
 
@@ -1546,7 +1690,6 @@ h6,
 
 .display-text {
   /* 120px */
-  font-family: utopia-std, serif;
   text-transform: uppercase;
   letter-spacing: -1px;
 }
@@ -1571,7 +1714,7 @@ h6,
 
 p{
   margin-bottom: var(--paragraph-bottom-margin);
-  font-family: Inter, system-ui, sans-serif;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 400;
 }
 
@@ -1669,10 +1812,6 @@ strong{
     --tw-translate-x: 100%;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
-  .max-md\:bg-blue{
-    --tw-bg-opacity: 1;
-    background-color: rgb(7 37 67 / var(--tw-bg-opacity, 1));
-  }
   .group.active .max-md\:group-\[\.active\]\:translate-x-0{
     --tw-translate-x: 0px;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1685,14 +1824,6 @@ strong{
   }
   .max-sm\:h-full{
     height: 100%;
-  }
-  .max-sm\:bg-blue{
-    --tw-bg-opacity: 1;
-    background-color: rgb(7 37 67 / var(--tw-bg-opacity, 1));
-  }
-  .max-sm\:bg-dark-blue{
-    --tw-bg-opacity: 1;
-    background-color: rgb(0 59 94 / var(--tw-bg-opacity, 1));
   }
   .max-sm\:py-3{
     padding-top: 0.75rem;
@@ -1745,6 +1876,9 @@ strong{
   .md\:hidden{
     display: none;
   }
+  .md\:grid-cols-2{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .md\:justify-end{
     justify-content: flex-end;
   }
@@ -1760,6 +1894,12 @@ strong{
 @media (min-width: 1025px){
   .lg\:h-24{
     height: 6rem;
+  }
+  .lg\:grid-cols-4{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .lg\:grid-cols-\[623px_1fr\]{
+    grid-template-columns: 623px 1fr;
   }
   .lg\:gap-7{
     gap: 1.75rem;

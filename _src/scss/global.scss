@@ -1,80 +1,17 @@
-// Import Tailwind CSS
-@use "tailwind";
-
-/**
- * CONTENTS
- *
- * SETTINGS
- * Variables.............Globally-variables
- *
- * TOOLS
- * Functions.............Useful mixins.
- * Mixins................Useful mixins.
- *
- * GENERIC
- * Normalize.............Reset browser styles.
- * Border Box............Elements inner padding.
- *
- * BASE
- * Page..................Page default styles.
- * Type..................Typography default styles.
- * Forms.................Forms default styles.
- *
- * OBJECTS
- * Grid................Grid system.
- * Content...............Inner content.
- *
- * COMPONENTS
- * Buttons...............Button elements.
- * Navigation............Main navigation.
- * Offcanvas.............Offcanvas navigation.
- * Header................Main page header.
- * Hero..................Main page hero.
- * Sidebar...............Main page sidebar.
- * Logo..................Main page logo.
- * Backgrounds...........Section's background.
- * Lead..................Lead elements.
- * Block.................Flexbox elements.
- * List..................List elements.
- * Pager.................Pager navigation.
- * Pagination............Pagination navigation.
- * Embed.................Responsive video.
- * Breadcrumb............Breadcrumbs navigation.
- * Tables................Tabular data.
- * Pre...................Preformatted text.
- * Carousel..............Carousel.
- * Carousel..............Slick Carousel.
- * Widget................Wp widgets.
- * Tabs..................Tabs.
- * Accordion.............Accordion.
- * Social................Social Icons.
- * Footer................Main page footer.
- * Animate...............Main page animation.
- * Lazyload..............Main page lazyload animation.
- * Procedure List........Main page Procedure List.
- *
- * UTILITIES
- * Images................Border, Rounded, Circle, Shadow
- * Block.................Center, Background, Floats, Clearfix
- * Text..................Colors, Transforms, Align, Weight
- * Visibility............xs, sm, md, lg, xl screen sizes
- * Reset.................Reset styles properties
-**/
-
-
-
 //Components
 @forward "global/header";
 @forward "global/footer";
 @forward "global/_home-sidebar";
+
+// Import Tailwind CSS
+@use "tailwind";
+@import "../_dist/css/variables.css";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* Custom styles here */
-
-/* Active fonts - using Typekit only */
 
 * {
     @apply antialiased;
@@ -105,74 +42,105 @@ small sup {
 
 h1,
 .h1 {
-    /* 40px */
-    @apply text-[2.5rem];
-    font-family: "utopia-std", serif;
-    font-weight: 400;
+    /* 38px */
+    @apply text-[2.375rem] font-archivo;
+    font-weight: 600;
     font-style: normal;
-    color: #072543;
 
-    /* 56px */
-    @apply sm:text-[3.5rem];
+    /* 48px */
+    @apply sm:text-[3rem];
 
-    /* 72px */
-    @apply leading-[1.1] lg:text-[4.5rem] font-typekit;
+    /* 54px */
+    @apply leading-[1.1] lg:text-[3.374rem];
 }
 
 h2,
 .h2 {
-    /* 36px */
-    @apply text-[2.25rem];
+    /* 38px */
+    @apply text-[2.375rem] font-archivo;
+    font-weight: 600;
+    font-style: normal;
 
-    /* 44px */
-    @apply sm:text-[2.75rem];
+    /* 48px */
+    @apply sm:text-[3rem];
 
-    /* 59px */
-    @apply leading-[1.1] lg:text-[3.6875rem] font-typekit;
-    color: #072543;
+    /* 54px */
+    @apply leading-[1.1] lg:text-[3.374rem];
 }
 
 h3,
 .h3 {
-    /* 32px */
-    @apply text-[2rem];
+    /* 24px */
+    @apply text-[2rem] font-archivo;
 
-    /* 36px */
+    /* 28px */
     @apply sm:text-[2.25rem];
 
-    /* 45px */
-    @apply leading-[1.1] lg:text-[2.8125rem] font-typekit;
-    color: #072543;
+    /* 28px */
+    @apply leading-[1.1] lg:text-[rem];
 }
 
 h4,
 .h4 {
     /* 22px */
-    @apply text-[1.375rem];
+    @apply text-[1.375rem] font-archivo;
 
     /* 28px */
     @apply sm:text-[1.75rem];
 
-    /* 36px */
-    @apply leading-[1.3] lg:text-[2.25rem] font-typekit;
-    color: #072543;
+    /* 24px */
+    @apply leading-[1.3] lg:text-[1.5rem];
 }
 
 h5,
 .h5 {
     /* 21px */
-    @apply text-[1.3125rem];
+    @apply text-[1.3125rem] font-archivo;
 
     /* 26px */
-    @apply font-normal leading-normal md:text-[1.625rem] font-sans;
+    @apply font-normal leading-normal md:text-[1.625rem];
     color: #072543;
 }
 
 h6,
 .h6 {
     /* 16px */
-    @apply leading-[1.5] text-[1rem] font-typekit;
+    @apply leading-[1.5] text-[1rem] font-archivo;
     color: #072543;
+}
+
+.vertical-border {
+    position: relative;
+    padding-left: 2rem;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 10px;
+        background: linear-gradient(180deg, #FAF1A7 0%, #9F692E 101.96%);
+    }
+}
+
+.horizonal-border {
+    position: relative;
+    padding-left: 2rem;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 10px;
+        background: linear-gradient(180deg, #FAF1A7 0%, #9F692E 101.96%);
+    }
+}
+
+.subtitle {
+    @apply text-[1.7rem]/[130%];
 }
 
 .large-text {
@@ -183,7 +151,7 @@ h6,
     @apply sm:text-[1.625rem];
 
     /* 42px */
-    @apply md:text-[2.625rem] tracking-[0.0476em] font-typekit;
+    @apply md:text-[2.625rem] tracking-[0.0476em];
 }
 
 .display-text {
@@ -194,7 +162,7 @@ h6,
     @apply md:text-[4.5rem];
 
     /* 120px */
-    @apply lg:text-[6.5rem] font-typekit sm:leading-[0.9] uppercase -tracking-[1px];
+    @apply lg:text-[6.5rem] sm:leading-[0.9] uppercase -tracking-[1px];
 
     @apply 4xl:text-[7.5rem];
 }
@@ -252,9 +220,7 @@ strong {
     a.wp-block-button__link {
         @apply font-normal underline text-[18px];
 
-        &:hover {
-            @apply text-gold;
-        }
+
     }
 
     .content strong,
@@ -274,7 +240,7 @@ strong {
         h4,
         h5,
         h6 {
-            @apply text-blue capitalize mb-4 font-utopia;
+            @apply capitalize mb-4 font-archivo;
         }
 
         h2 {
@@ -290,7 +256,7 @@ strong {
         }
 
         p {
-            @apply font-sans leading-[1.5] text-text-color text-[18px];
+            @apply font-sans leading-[1.5] text-[18px];
         }
 
         img {
@@ -317,7 +283,7 @@ strong {
 
     /* Container */
     .container {
-        @apply max-w-[108rem] max-3xl:mx-auto;
+        @apply max-w-[108rem] mx-auto;
         @apply pb-[var(--container-bottom-padding)] pl-[var(--container-left-padding)] pr-[var(--container-right-padding)] pt-[var(--container-top-padding)];
         @apply sm:pb-[var(--container-sm-bottom-padding)] sm:pl-[var(--container-sm-left-padding)] sm:pr-[var(--container-sm-right-padding)] sm:pt-[var(--container-sm-top-padding)];
         @apply lg:pb-[var(--container-lg-bottom-padding)] lg:pl-[var(--container-lg-left-padding)] lg:pr-[var(--container-lg-right-padding)] lg:pt-[var(--container-lg-top-padding)];
@@ -354,17 +320,18 @@ strong {
     }
 
     .button {
-        @apply overflow-hidden text-white uppercase font-bold transition-colors duration-200 text-[1rem];
+        @apply overflow-hidden text-white text-center uppercase font-archivo font-bold transition-colors duration-200 text-[20px] leading-normal;
         display: inline-flex;
         padding: 20px 40px;
         justify-content: center;
         align-items: center;
         gap: 10px;
-        background-color: #FFA122;
+        background: linear-gradient(180deg, #16898A 0%, #0C2A2D 100%);
         color: #FFFFFF;
+        font-feature-settings: 'liga' off, 'clig' off;
 
         &:hover {
-            background-color: #E69010;
+            background: linear-gradient(180deg, #1a9a9b 0%, #0d2f32 100%);
         }
     }
 
@@ -375,4 +342,16 @@ strong {
             background: unset;
         }
     }
+
+    .hero-overlay {
+        background: rgba(17, 17, 16, 0.73);
+        mix-blend-mode: multiply;
+    }
+
+    .person-content-overlay {
+        background: linear-gradient(180deg, rgba(17, 17, 16, 0) 0%, rgba(17, 17, 16, 0.78) 52.63%, #101010 100%);
+        background-blend-mode: multiply;
+        z-index: 3;
+    }
+
 }

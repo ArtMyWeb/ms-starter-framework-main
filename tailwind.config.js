@@ -66,16 +66,23 @@ module.exports = {
           800: '#1e40af',
           900: '#1e3a8a',
         },
-        'gold': '#FFA122',
-        'blue': '#072543',
-        'dark-blue': '#003B5E',
-        'text-color': '#3B3B3B',
+
+        // New color palette
+        'dark': '#111110',
+        'light-dark': '#2A2A2B',
+        'brown': '#4C361F',
+        'light-gold': '#FAF1A7',
+        'light-brown': '#9F692E',
+        'cta': '#16898A',
+        'cta-alt': '#0C2A2D',
+        'charcoal-grey': '#3B3B3B',
+      },
+      backgroundImage: {
+        'gradient-gold': 'linear-gradient(90deg, #FAF1A7 0%, #9F692E 100%)',
       },
       fontFamily: {
-        // Додайте свої шрифти тут
-        'sans': ['Inter', 'system-ui', 'sans-serif'],
-        'typekit': ['utopia-std', 'serif'],
-        'utopia': ['utopia-std', 'serif'],
+        'archivo': ['Archivo', 'sans-serif'],
+        'pontano': ['Pontano Sans', 'sans-serif'],
       },
       spacing: {
         // Додайте свої розміри тут
@@ -83,6 +90,7 @@ module.exports = {
         '84': '21rem',
         '96': '24rem',
       }
+
     },
   },
   plugins: [

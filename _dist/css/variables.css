@@ -30,4 +30,15 @@
     --blue: #072543;
     --dark-blue: #003B5E;
     --light-blue: #E8F4FF;
+
+    /* New Color Palette */
+    --dark: #111110;
+    --light-dark: #2A2A2B;
+    --brown: #4C361F;
+    --light-gold: #FAF1A7;
+    --light-brown: #9F692E;
+    --cta: #16898A;
+    --cta-alt: #0C2A2D;
+    --charcoal-grey: #3B3B3B;
+    --gradient-gold: linear-gradient(90deg, #FAF1A7 0%, #9F692E 100%);
 }

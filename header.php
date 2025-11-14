@@ -13,13 +13,11 @@
 		<meta property="og:image:alt" content="<?php echo get_bloginfo( 'name' ) . ' - '. get_bloginfo( 'description' ); ?>" />
 
 		<!--
-			// Enqueue Typekit fonts in functions.php file using wp_enqueue_script();
-			// Enqueue Google fonts in functions.php file using wp_enqueue_style();
+			// Google fonts (Archivo & Pontano Sans) are loaded below
 		-->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=IBM+Plex+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-
+		<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Pontano+Sans:wght@300..700&display=swap" rel="stylesheet">
 
 		<link rel="apple-touch-icon" sizes="57x57" href="<?php echo esc_url( get_template_directory_uri() ); ?>/_dist/img/apple-icon-57x57.png">
 		<link rel="apple-touch-icon" sizes="60x60" href="<?php echo esc_url( get_template_directory_uri() ); ?>/_dist/img/apple-icon-60x60.png">
@@ -53,13 +51,13 @@
    <!-- BEGIN of header -->
     <header id="header"
         class="group/header fixed z-[1100]  w-full transform-gpu group-[.modal-open]/body:-translate-y-[--modal-wrapper-mobile-nav-modal-scroll-position] group-[.modal-open]/body:duration-0 [&.scroll-down]:-translate-y-[100%] [&.scroll-up]:translate-y-0 sm:[&.scroll-up]:-translate-y-[calc(100%-(100%-5rem))]">
-        <div class="header-inner relative z-30 transform-gpu sm:group-[.scroll-up]/header:translate-y-[calc(5rem/2)] bg-red-500">
+        <div class="header-inner relative z-30 transform-gpu sm:group-[.scroll-up]/header:translate-y-[calc(5rem/2)] bg-dark py-4">
             <div class="container relative py-1 sm:py-2.5 max-sm:bg-orange">
                                 <div class="w-full">
                     <div class="flex items-center justify-between mb-2 max-lg:gap-3">
-                                                    <a href="https://alopezlawfidev.wpenginepowered.com" class="logo flex-shrink-0 max-md:hidden">
+                                                    <a href="https://alopezlawfidev.wpenginepowered.com" class="logo max-w-[440px] flex-shrink-0 max-md:hidden">
                                 <div class="">
-                                    <img width="274" height="81" src="https://alopezlawfidev.wpenginepowered.com/wp-content/uploads/2025/10/logo-h-white-1.svg" class="w-auto h-16 lg:h-24" alt="" decoding="async" />                                </div>
+                                    <img width="274" height="81" src="wp-content/uploads/2025/11/big-header_logo.svg" class="w-auto object-contain h-16 lg:h-24" alt="" decoding="async" />                                </div>
                             </a>
                                                 <div class="max-md:w-full">
                             <div class="flex sm:items-center md:gap-2.5 lg:gap-7 max-md:w-full justify-center sm:justify-between md:justify-end">
@@ -68,7 +66,7 @@
                                         <p class="font-sans uppercase text-[1rem] lg:text-[16px] leading-[3] font-black tracking-[0.3em]">
                                             24/7 Live Call Answering</p>
                                     </div>
-                                                                            <div class="text-white sm:text-orange">
+                                                                            <div class="text-cta">
                                             <a class="text-[2.25rem] sm:text-[1.625rem] lg:text-[2.875rem] "
                                                 href="tel:9542375101">
                                                 (954)-237-5101                                            </a>
@@ -80,7 +78,7 @@
                                     class=" group/deskop-menu w-full max-md:group-[.active]:translate-x-0 max-md:absolute max-md:h-full max-md:right-0 max-md:top-0 max-md:pointer-events-auto max-md:translate-x-full transition-transform duration-[600ms] max-sm:bg-blue">
                                     <div class="max-sm:h-full">
                                         <div class="menu-header-menu-container">
-                                            <div class="menu-menu-1-container"><ul id="primary-menu" class="menu"><li id="menu-item-244" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-244"><a href="https://alopezlawfidev.wpenginepowered.com/" aria-current="page">Home</a></li>
+                                            <div class="menu-menu-1-container"><ul id="primary-menu" class="menu"><li id="menu-item-244" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-244"><a class="object-contain" href="https://alopezlawfidev.wpenginepowered.com/" aria-current="page">Home</a></li>
 <li id="menu-item-263" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-263"><a href="https://alopezlawfidev.wpenginepowered.com/why-hire-us/">Why Hire Us</a></li>
 <li id="menu-item-262" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-262"><a href="https://alopezlawfidev.wpenginepowered.com/practice-areas/">Practice Areas</a></li>
 <li id="menu-item-261" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-261"><a href="https://alopezlawfidev.wpenginepowered.com/blog/">Blog</a></li>
