@@ -53,6 +53,7 @@
                     },
                 },
             });
+            console.log(swiper);
         }
     }
 })();

@@ -1,5 +1,5 @@
 @import "../css/variables.css";
-@import "../_dist/css/variables.css";
+@import "../../_dist/css/variables.css";
 header{
   height: var(--header-height);
   transition: background-color 0.3s ease, backdrop-filter 0.3s ease;

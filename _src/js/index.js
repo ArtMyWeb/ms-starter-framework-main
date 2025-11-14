@@ -1,5 +1,6 @@
 // Import Swiper and modules
 import Swiper from 'swiper';
+
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
 // Import Swiper styles

@@ -60,16 +60,34 @@
 			});
 	}
 
-	// Scripts Tasks (now handled by webpack)
-	function js(done) {
-		console.log("JavaScript bundling is now handled by Webpack");
-		done();
+	// Scripts Tasks
+	function js() {
+		return src([
+			path.js + "/slick.carousel.js",
+			path.js + "/jquery.matchHeight.js",
+			path.js + "/jquery-scrolltofixed.js",
+			path.js + "/blazy.js",
+			path.js + "/accordion.js",
+			path.js + "/tabs.js",
+			path.js + "/doubletaptogo.js",
+			path.js + "/swiper-init.js",
+			path.js + "/scripts.js",
+		])
+			.pipe(plumber())
+			.pipe(concat("scripts.js"))
+			.pipe(dest(path.dist_js));
 	}
 
-	// Scripts Concat and Minify Tasks (now handled by webpack)
+	// Scripts Concat and Minify Tasks
 	function scripts(done) {
-		console.log("JavaScript minification is now handled by Webpack");
-		done();
+		src(path.dist_js + "/scripts.js")
+			.pipe(concat("scripts.min.js"))
+			.pipe(uglify())
+			.pipe(dest(path.dist_js))
+			.on('end', () => {
+				console.log("✓ JavaScript minified successfully");
+				done();
+			});
 	}
 
 	// Image Tasks
@@ -94,14 +112,13 @@
 	function watchFiles() {
 		console.log("Watching for file changes...");
 		watch(
-			[path.scss + "/**/*.scss", path.php],
-			series(scss, styles)
+			[path.scss + "/**/*.scss", path.js + "/**/*.js", path.php],
+			series(scss, styles, js, scripts)
 		);
 
 		watch(path.img + "/*", images);
 
 		console.log("Watch mode active. Press Ctrl+C to stop.");
-		console.log("Note: JavaScript is handled by Webpack. Run 'npm run webpack:watch' separately.");
 	}
 
 	exports.scss = scss;
