@@ -1,5 +1,5 @@
 // Import Tailwind CSS
-@import "tailwind.scss";
+@use "tailwind";
 
 /**
  * CONTENTS
@@ -63,75 +63,316 @@
 
 
 
-//Settings
-@import 'global/s-variables';
-
-
-//Tools
-@import 'global/t-functions';
-@import 'global/t-mixins';
-
-//Generic
-@import 'global/g-normalize';
-@import 'global/g-border-box';
-
-//Base
-@import 'global/b-page';
-@import 'global/b-type';
-@import 'global/b-forms';
-
-
-//Objects
-@import 'global/o-grid';
-@import 'global/o-content';
-
-
 //Components
-@import 'global/c-buttons';
-@import 'global/c-nav';
-@import 'global/c-offcanvas';
-@import 'global/c-header';
-@import 'global/c-hero';
-@import 'global/c-sidebar';
-@import 'global/c-logo';
-@import 'global/c-background';
-@import 'global/c-lead';
-@import 'global/c-block';
-@import 'global/c-list';
-@import 'global/c-pager';
-@import 'global/c-pagination';
-@import 'global/c-embed';
-@import 'global/c-breadcrumb';
-@import 'global/c-tables';
-@import 'global/c-pre';
-@import 'global/c-carousel';
-@import 'global/c-slick-carousel';
-@import 'global/c-widget';
-@import 'global/c-tabs';
-@import 'global/c-accordion';
-@import 'global/c-social';
-@import 'global/c-footer';
-@import 'global/c-animate';
-@import 'global/c-blazy';
-@import 'global/c-cases';
-@import 'global/c-icons';
-@import 'global/c-social';
-@import 'global/c-services';
-@import 'global/c-reviews';
-@import 'global/c-contact';
-@import 'global/c-cta';
-@import 'global/c-info';
-@import 'global/c-blog';
-@import 'global/c-awards';
-@import 'global/c-forms';
-@import 'global/c-video';
-@import 'global/c-map';
-@import 'global/c-team';
+@forward "global/header";
+@forward "global/footer";
+@forward "global/_home-sidebar";
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-//Utilities
-@import 'global/u-img';
-@import 'global/u-block';
-@import 'global/u-text';
-@import 'global/u-visibility';
-@import 'global/u-reset';
+/* Custom styles here */
+
+/* Active fonts - using Typekit only */
+
+* {
+    @apply antialiased;
+}
+
+*:last-child {
+    @apply mb-0;
+}
+
+html {
+    @apply text-[100%] lg:text-[0.8333vw] 3xl:text-[16px];
+}
+
+body {
+    @apply text-[1.25rem]/[1.25] font-normal;
+    font-family: "source-sans-pro", sans-serif !important;
+    color: #3B3B3B;
+}
+
+small,
+sup {
+    @apply text-[60%];
+}
+
+small sup {
+    @apply font-medium;
+}
+
+h1,
+.h1 {
+    /* 40px */
+    @apply text-[2.5rem];
+    font-family: "utopia-std", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #072543;
+
+    /* 56px */
+    @apply sm:text-[3.5rem];
+
+    /* 72px */
+    @apply leading-[1.1] lg:text-[4.5rem] font-typekit;
+}
+
+h2,
+.h2 {
+    /* 36px */
+    @apply text-[2.25rem];
+
+    /* 44px */
+    @apply sm:text-[2.75rem];
+
+    /* 59px */
+    @apply leading-[1.1] lg:text-[3.6875rem] font-typekit;
+    color: #072543;
+}
+
+h3,
+.h3 {
+    /* 32px */
+    @apply text-[2rem];
+
+    /* 36px */
+    @apply sm:text-[2.25rem];
+
+    /* 45px */
+    @apply leading-[1.1] lg:text-[2.8125rem] font-typekit;
+    color: #072543;
+}
+
+h4,
+.h4 {
+    /* 22px */
+    @apply text-[1.375rem];
+
+    /* 28px */
+    @apply sm:text-[1.75rem];
+
+    /* 36px */
+    @apply leading-[1.3] lg:text-[2.25rem] font-typekit;
+    color: #072543;
+}
+
+h5,
+.h5 {
+    /* 21px */
+    @apply text-[1.3125rem];
+
+    /* 26px */
+    @apply font-normal leading-normal md:text-[1.625rem] font-sans;
+    color: #072543;
+}
+
+h6,
+.h6 {
+    /* 16px */
+    @apply leading-[1.5] text-[1rem] font-typekit;
+    color: #072543;
+}
+
+.large-text {
+    /* 22px */
+    @apply text-[1.375rem];
+
+    /* 26px */
+    @apply sm:text-[1.625rem];
+
+    /* 42px */
+    @apply md:text-[2.625rem] tracking-[0.0476em] font-typekit;
+}
+
+.display-text {
+    /* 55px */
+    @apply text-[3.4375rem] leading-[1.01];
+
+    /* 80px */
+    @apply md:text-[4.5rem];
+
+    /* 120px */
+    @apply lg:text-[6.5rem] font-typekit sm:leading-[0.9] uppercase -tracking-[1px];
+
+    @apply 4xl:text-[7.5rem];
+}
+
+p {
+    @apply mb-[var(--paragraph-bottom-margin)] font-sans font-normal;
+}
+
+a {
+    @apply cursor-pointer;
+}
+
+a:not(.button),
+.link,
+.link * {
+    @apply transition duration-[600ms];
+}
+
+.link {
+    @apply cursor-pointer;
+}
+
+strong {
+    @apply font-medium;
+}
+
+@layer components {
+
+    /* Editor */
+    .content ol,
+    .content ul {
+        @apply mb-[var(--paragraph-bottom-margin)] pl-[30px];
+    }
+
+    .content ol {
+        @apply list-decimal pl-[0.5em] pt-[0.6em];
+    }
+
+    .content ul {
+        @apply list-none pl-[0.5em] pt-[0.6em];
+    }
+
+    .content ul li,
+    .content ol li {
+        @apply relative pl-[0.8em] font-sans leading-[1.5] text-[18px];
+    }
+
+    .content ul li::before {
+        @apply absolute left-0 size-1.5 -translate-y-1/2 rounded-full bg-current content-[''];
+        top: calc(0.4em * 2);
+    }
+
+    .content a,
+    p a,
+    a.wp-block-button__link {
+        @apply font-normal underline text-[18px];
+
+        &:hover {
+            @apply text-gold;
+        }
+    }
+
+    .content strong,
+    .content b {
+        @apply font-medium;
+    }
+
+    .content sup {
+        @apply top-[-1em] text-[40%];
+    }
+
+    .content {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            @apply text-blue capitalize mb-4 font-utopia;
+        }
+
+        h2 {
+            @apply text-[2.125rem] sm:text-[2.75rem] lg:text-[2.625rem];
+        }
+
+        h3 {
+            @apply text-[1.75rem] sm:text-[2.25rem] lg:text-[2.425rem];
+        }
+
+        h4 {
+            @apply text-[1.5rem] sm:text-[2rem] lg:text-[3.1rem];
+        }
+
+        p {
+            @apply font-sans leading-[1.5] text-text-color text-[18px];
+        }
+
+        img {
+            width: auto;
+            height: auto;
+        }
+    }
+
+    .content-column {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: white;
+        }
+    }
+
+    .content iframe {
+        @apply w-full h-auto aspect-video;
+    }
+
+    /* Container */
+    .container {
+        @apply max-w-[108rem] max-3xl:mx-auto;
+        @apply pb-[var(--container-bottom-padding)] pl-[var(--container-left-padding)] pr-[var(--container-right-padding)] pt-[var(--container-top-padding)];
+        @apply sm:pb-[var(--container-sm-bottom-padding)] sm:pl-[var(--container-sm-left-padding)] sm:pr-[var(--container-sm-right-padding)] sm:pt-[var(--container-sm-top-padding)];
+        @apply lg:pb-[var(--container-lg-bottom-padding)] lg:pl-[var(--container-lg-left-padding)] lg:pr-[var(--container-lg-right-padding)] lg:pt-[var(--container-lg-top-padding)];
+    }
+
+    .container.collapse-right {
+        @apply pr-0 3xl:pr-[var(--container-right-padding)];
+    }
+
+    .container.collapse-left {
+        @apply pl-0 3xl:pl-[var(--container-left-padding)];
+    }
+
+    .container.collapse-both {
+        @apply px-0 3xl:pl-[var(--container-left-padding)] 3xl:pr-[var(--container-right-padding)];
+    }
+
+    /* Image Zoom */
+    .image-zoom {
+        @apply scale-[var(--image-zoom)];
+    }
+
+    .swiper-button-disabled {
+        @apply opacity-50;
+    }
+
+    img {
+        @apply w-full h-full object-cover;
+    }
+
+    /* Buttons */
+    button {
+        @apply cursor-pointer;
+    }
+
+    .button {
+        @apply overflow-hidden text-white uppercase font-bold transition-colors duration-200 text-[1rem];
+        display: inline-flex;
+        padding: 20px 40px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        background-color: #FFA122;
+        color: #FFFFFF;
+
+        &:hover {
+            background-color: #E69010;
+        }
+    }
+
+    .gradient-blue {
+        background: linear-gradient(90deg, rgba(0, 47, 82, 1) 40%, rgba(255, 255, 255, 0) 100%);
+
+        @media (max-width: 1024px) {
+            background: unset;
+        }
+    }
+}

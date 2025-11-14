@@ -1,5 +1,5 @@
 <?php get_header(); ?>
 
-<?php get_template_part('_inc/content', 'home'); ?>
+<p>Front Page</p>
 
 <?php get_footer(); ?>

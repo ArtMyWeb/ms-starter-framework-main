@@ -1503,7 +1503,7 @@
 
                 <div class="o-col--md-10 o-col--offset-md-1 o-col--lg-8 o-col--offset-lg-2 u-text--center text-[19px]">
 
-                    <h4 class="text-[39px]">No content blocks</h4>
+                    <h4 class="text-[34px]">No content blocks</h4>
 
                     <?php
                         if( is_user_logged_in()) : ?>
@@ -1527,5 +1527,5 @@
         </div>
 
     </div>
-
+<p>rwt</p>
 <?php endif; ?>

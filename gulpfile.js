@@ -39,7 +39,7 @@
 		console.log("Starting SCSS compilation...");
 		src([
 			path.scss + "/global.scss",
-			path.scss + "/editor.scss"
+
 		])
 			.pipe(sass().on("error", sass.logError))
 			.pipe(postcss())
