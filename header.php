@@ -37,6 +37,9 @@
 		<meta name="msapplication-TileImage" content="<?php echo esc_url( get_template_directory_uri() ); ?>/_dist/img/ms-icon-144x144.png">
 		<meta name="theme-color" content="#ffffff">
 
+		<!-- Swiper CSS CDN -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 		<?php wp_head(); ?>
 
 		<!--[if lt IE 9]>

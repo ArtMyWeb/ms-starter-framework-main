@@ -10,20 +10,16 @@
     }
 
     function initSwiper() {
-        const swiperElement = document.querySelector('.swiper');
+        const swiperElement = document.querySelector('.why-hire-swiper');
         console.log(swiperElement);
         if (swiperElement && typeof Swiper !== 'undefined') {
-            const swiper = new Swiper('.swiper', {
+            const swiper = new Swiper('.why-hire-swiper', {
                 // Optional parameters
                 loop: true,
                 spaceBetween: 30,
                 slidesPerView: 1,
 
-                // Navigation arrows
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
+
 
                 // Pagination
                 pagination: {
@@ -31,11 +27,7 @@
                     clickable: true,
                 },
 
-                // Autoplay
-                autoplay: {
-                    delay: 5000,
-                    disableOnInteraction: false,
-                },
+
 
                 // Responsive breakpoints
                 breakpoints: {
@@ -44,11 +36,11 @@
                         spaceBetween: 20,
                     },
                     768: {
-                        slidesPerView: 2,
+                        slidesPerView: 1,
                         spaceBetween: 30,
                     },
                     1024: {
-                        slidesPerView: 3,
+                        slidesPerView: 1,
                         spaceBetween: 40,
                     },
                 },

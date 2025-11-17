@@ -76,10 +76,14 @@ module.exports = {
         'cta': '#16898A',
         'cta-alt': '#0C2A2D',
         'charcoal-grey': '#3B3B3B',
+        'gradient-gold': 'linear-gradient(90deg, #FAF1A7 0%, #9F692E 100%)',
+        'rotate-gold': 'linear-gradient(180deg, #FAF1A7 0%, #9F692E 100%)',
       },
       backgroundImage: {
         'gradient-gold': 'linear-gradient(90deg, #FAF1A7 0%, #9F692E 100%)',
+        'rotate-gold': 'linear-gradient(180deg, #FAF1A7 0%, #9F692E 100%)',
       },
+
       fontFamily: {
         'archivo': ['Archivo', 'sans-serif'],
         'pontano': ['Pontano Sans', 'sans-serif'],
