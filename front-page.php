@@ -161,10 +161,10 @@
             <?php
             for ($i = 0; $i < 3; $i++) {
             ?>
-            <article class="blog-item group  max-h-[500px] relative h-full  ">
-                <div class="relative">
-                <div class="blog-img h-full    ">
-                    <img class="w-full h-full object-cover " src="/wp-content/uploads/2025/11/Bg.png" alt="">
+            <article class="blog-item group    h-full  overflow-hidden ">
+                <div class="relative ">
+                <div class="blog-img h-full max-h-[500px]">
+                    <img class="w-full h-auto object-cover " src="/wp-content/uploads/2025/11/Bg.png" alt="">
                 </div>
                 <div class="blog-content flex flex-col  text-white z-10  vertical-border bg-light-dark/90 p-5 !absolute bottom-0 left-0 w-full">
                     <h3 class="text-[1.375rem]/[1.2] font-archivo font-semibold pb-2">Family Law</h3>

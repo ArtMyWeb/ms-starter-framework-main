@@ -1192,6 +1192,18 @@ button{
 .hidden{
   display: none;
 }
+.aspect-\[16\/9\]{
+  aspect-ratio: 16/9;
+}
+.aspect-\[9\/16\]{
+  aspect-ratio: 9/16;
+}
+.aspect-\[4\/3\]{
+  aspect-ratio: 4/3;
+}
+.aspect-\[3\/4\]{
+  aspect-ratio: 3/4;
+}
 .h-1{
   height: 0.25rem;
 }
@@ -1215,6 +1227,9 @@ button{
 }
 .h-full{
   height: 100%;
+}
+.h-auto{
+  height: auto;
 }
 .max-h-\[300px\]{
   max-height: 300px;
