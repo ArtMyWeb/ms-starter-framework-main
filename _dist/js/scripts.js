@@ -4215,39 +4215,26 @@
     }
 });
 
-/*
-    accordion
-*/
-(function($){
+document.addEventListener('DOMContentLoaded', function () {
+	const accordion = document.querySelector('.accordion');
 
-	//$('.c-accordion__content.active').show();
+	if (accordion) {
+		const accordionItems = accordion.querySelectorAll('.accordion-item');
+		accordionItems.forEach(item => {
+			item.addEventListener('click', () => {
+				const isActive = item.classList.contains('active-accordion');
 
-	$(".c-accordion__panel").click(function(){
+				// Close all items first
+				accordionItems.forEach(i => i.classList.remove('active-accordion'));
 
-		$(this).each( function() {
-
-			//Add/Remove active class from accordion on click
-			if ( $(this).children('.c-accordion__title').hasClass('active') ) {
-				 $(this).children('.c-accordion__title').removeClass('active');
-			} else {
-				$(this).children('.c-accordion__title.active').removeClass('active');
-				$(this).children('.c-accordion__title').addClass('active');
-			}
-
-			//Hide other accordions on click
-			$(this).siblings().children('.c-accordion__title').removeClass('active');
-			$(this).siblings().children('.c-accordion__content').removeClass('active');
-
-			//Show accordion on click
-			$(this).children('.c-accordion__content').slideToggle();
-
-			//Hide other accordions on click
-			$(this).siblings().children('.c-accordion__content').slideUp();
-
+				// If the clicked item wasn't active, open it
+				if (!isActive) {
+					item.classList.add('active-accordion');
+				}
+			});
 		});
-	});
-
-})( jQuery, this); //-- end jQuery/AUI
+	}
+});
 
 /*
 	tabs

@@ -265,6 +265,134 @@
         </div>
     </div>
 </section>
+<section class="meet-your-attorneys bg-[#0D0D0D]">
+    <div class=" container-sm ">
+        <h2 class="text-center text-white mb-[54px]">Meet Your <span class="text-light-gold">Attorneys</span></h2>
+
+        <div class="attorneys-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-20">
+            <?php
+            for ($i = 0; $i < 2; $i++) {
+            ?>
+            <article class="attorneys-item overflow-hidden flex     flex-col justify-end aspect-[25/34] !pl-0  vertical-border bg-[url(/wp-content/uploads/2025/11/Frame-1171276039.svg)] bg-no-repeat  bg-[#2A2A2B]  ">
+                <div class="overlay-block absolute z-[5] inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.21)_50%,rgba(0,0,0,0.82)_100%)] ">
+                </div>
+                <div class="image-overlay-block     relative z-[4] max-h-[520px]">
+                    <img class="object-contain h-auto w-full" src="wp-content/uploads/2025/11/headshot-1.png" alt="">
+                </div>
+                
+                <div class="content-block flex flex-col gap-2 justify-center items-center absolute z-10 w-full  bottom-10 max-w-[320px] mx-auto left-1/2 -translate-x-1/2">
+                    <h3 class="text-[#F1BE48]">Leif A. Becker, Esq.</h3>
+                    <div class="position text-white flex gap-2">
+                        <span >Attorney</span>
+                        <span class="left-divider">Founder</span>
+                    </div>
+                </div>
+               
+            </article>
+            <?php
+            }
+            ?>
+        </div>
+    </div>
+</section>
+<section class="cta-section relative text-white">
+    <div class="image-overlay absolute inset-0 -z-1  bg-[url(/wp-content/uploads/2025/11/Rectangle-459.png)] bg-cover">
+        <div class="bg-overlay opacity-0 absolute inset-0 z-10 bg-dark/70"></div>
+    </div>
+    <div class="container-sm relative z-10">
+        <div class="content-cta">
+            <div class="flex  flex-col items-center gap-8 text-center">
+                <img src="wp-content/uploads/2025/11/dove-logo-symbol-2.svg" alt="">
+                <span class="!text-[1.7rem]/[1.2] font-archivo ">Schedule a Free Consultation |  Call 24/7  <a class="!text-[1.7rem]/[1.2] font-archivo  !no-underline" href="tel:0000000000">(603) 802-8100</a> </span>
+                <h2  class="flex items-center flex-col text-[72px]/[1] font-bold uppercase"> <span class="">Strength and Strategy </span><span class="text-transparent bg-clip-text bg-gradient-gold">for Every Battle.</span></h2>
+                 <p>From administrative hearings to district and superior courts of NH and Maine, NH Supreme Court, 1st Circuit for the District of New Hampshire and the 1st Circuit Court of Appeals we have practiced at all levels from child custody cases to homicide to precedential NH Supreme Court case law. </p>
+            <a href="#" class="button">schedule a consultation</a>
+            </div>
+           
+        </div>
+    </div> 
+    <div class="three-lines flex flex-col justify-center gap-5 relative z-10">
+                <div class="line bg-gradient-gold h-[10px] w-full"></div>
+                <div class="line bg-gradient-gold h-[10px] w-full"></div>
+                <div class="line bg-gradient-gold h-[10px] w-full"></div>
+            </div>
+</section>
+<section class="accordion-section bg-[url(/wp-content/uploads/2025/11/Frame-1171276023.png)] bg-no-repeat bg-cover">
+    <div class="container">
+        <h2 class="text-center text-[30px]/[1.2] text-white capitalize mb-[60px]">frequently Asked Questions</h2>
+        <div class="accordion">
+            <?php
+            for ($i = 0; $i < 2; $i++) {
+            ?>
+            <div class="accordion-item vertical-border p-6  mb-6 bg-light-dark">
+                <div class="accordion-header">
+                    <p class="!text-[1.25rem]/[1.2] text-light-gold">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur?</p>
+                </div>
+                <div class="accordion-content-container">
+                    <div class="accordion-content  text-white ">
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi pretium tellus duis convallis tempus leo eu aenean sed diam urna tempor pulvinar vivamus fringilla lacus nec metus bibendum egestas iaculis massa nisl malesuada lacinia integer nunc posuere ut hendrerit semper vel class aptent taciti sociosqu ad litora torquent per conubia nostra inceptos himenaeos orci varius natoque penatibus et magnis dis parturient montes nascetur ridiculus mus donec rhoncus eros lobortis nulla molestie mattis scelerisque maximus eget fermentum odio phasellus non purus est efficitur laoreet mauris pharetra vestibulum fusce dictum risus.</p>
+                    </div>
+                </div>
+            </div>
+            <?php
+            }
+            ?>
+        </div>
+    </div>
+</section>
+<section class="two-col-section" >
+    <div class="container">
+   
+        <h4 class="subtitle text-center mb-5">KW / Overline / Sub Heading</h4>
+        <h2 class="mb-10 text-center" > SEO <span class="text-light-brown  ">Content Section</span></h2>
+        <div class="grid-block grid grid-cols-1 lg:grid-cols-2 gap-[60px]">
+            <div class="grid-item">
+                <h3>Curabitur Accumsan Sem Vel</h3>
+                <p>Donec ut nulla non sapien tristique pretium. Nam ut sollicitudin lorem. Suspendisse eget libero sit amet orci iaculis tincidunt. Sed dignissim lacinia mauris, et condimentum ante bibendum a. Sed a dapibus est. Mauris a rutrum orci. Sed ut iaculis nulla. Nullam vel imperdiet leo. Quisque consequat augue ut congue suscipit. Mauris lobortis urna ut volutpat tincidunt.
+        Fusce quis turpis tellus. Integer fringilla ipsum nec nulla tincidunt, at malesuada purus rhoncus. Nunc vulputate, augue non tincidunt gravida, ante tortor fermentum enim, eget volutpat justo mi at elit. In a erat ut lorem imperdiet bibendum. Sed consequat enim ac diam accumsan, vel laoreet metus cursus. Cras a neque libero. Aenean non nibh bibendum, dictum risus in, convallis magna.</p>
+            </div>
+            <div class="grid-item">
+            <h3>Curabitur Accumsan Sem Vel</h3>
+            <p>Donec ut nulla non sapien tristique pretium. Nam ut sollicitudin lorem. Suspendisse eget libero sit amet orci iaculis tincidunt. Sed dignissim lacinia mauris, et condimentum ante bibendum a. Sed a dapibus est. Mauris a rutrum orci. Sed ut iaculis nulla. Nullam vel imperdiet leo. Quisque consequat augue ut congue suscipit. Mauris lobortis urna ut volutpat tincidunt.
+        Fusce quis turpis tellus. Integer fringilla ipsum nec nulla tincidunt, at malesuada purus rhoncus. Nunc vulputate, augue non tincidunt gravida, ante tortor fermentum enim, eget volutpat justo mi at elit. In a erat ut lorem imperdiet bibendum. Sed consequat enim ac diam accumsan, vel laoreet metus cursus. Cras a neque libero. Aenean non nibh bibendum, dictum risus in, convallis magna.</p>
+            </div>
+        </div>
+</section>
+<section class="blog-section">
+    <div class="container">
+<div class="blog-grid grid grid-cols-1 col-3 md:grid-cols-2 lg:grid-cols-3 gap-10" >
+ <?php  for ($i = 0; $i < 3; $i++) {
+            ?>
+                        <article class="blog-item group    h-full  overflow-hidden ">
+                <div class="relative " >
+                <div class="blog-img h-full max-h-[500px]" >
+                    <img class="w-full h-auto object-cover " src="/wp-content/uploads/2025/11/Bg.png" alt="">
+                </div>
+                <div class="blog-content flex flex-col  text-white z-10  vertical-border bg-light-dark/90 p-5 !absolute bottom-0 left-0 w-full" >
+                    <h3 class="text-[1.375rem]/[1.2] font-archivo font-semibold pb-2">Family Law</h3>
+                    <div class="blog-excerpt" >
+                        <div class=" " >
+                            <div class="" >
+                                <p>Lorem ipsum dolor sit amet consecur adipiscing elit quisque faucibus exLorem ipsum dolor sit amet consecur adipiscing elit quisque fa</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="text-light-gold text-[1rem]/[1.2] font-archivo font-medium underline underline-offset-5 ">Read More</a>
+                </div>
+                </div>
+            </article>
+            <?php } ?>
+                    </div>
+
+    </div>
+</section>
+
+<?php get_footer(); ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 <?php get_footer(); ?>
