@@ -1489,6 +1489,11 @@
 
             </div>
 
+        <?php elseif( get_row_layout() == 'why_hire' ): ?>
+
+            <!-- Why Hire Section -->
+            <?php get_template_part('_inc/flex/home-why-hire'); ?>
+
             <?php endif;
 
         endwhile;
