@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<?php if ( function_exists('have_rows') && have_rows('home') ) { include get_template_directory() . '/_inc/content-home-flexible.php'; } ?>
+
 <section class="padding-admin relative min-h-screen">
     <div class="absolute inset-0">
         <img src="wp-content/uploads/2025/11/hero-logo-scaled.jpg" alt="" class="w-full h-full object-cover">
@@ -452,13 +454,5 @@
 
     </div>
 </section>
-
-<?php get_footer(); ?>
-</div>
-</div>
-</div>
-</div>
-</section>
-
 
 <?php get_footer(); ?>
