@@ -60,7 +60,7 @@
                     <div class="flex items-center justify-between mb-2 max-lg:gap-3">
                                                     <a href="https://alopezlawfidev.wpenginepowered.com" class="logo max-w-[440px] flex-shrink-0 max-md:hidden">
                                 <div class="">
-                                    <img width="274" height="81" src="wp-content/uploads/2025/11/big-header_logo.svg" class="w-auto object-contain h-16 lg:h-24" alt="" decoding="async" />                                </div>
+                                    <img width="274" height="81" src="/wp-content/uploads/2025/11/big-header_logo.svg" class="w-auto object-contain h-16 lg:h-24" alt="" decoding="async" />                                </div>
                             </a>
                                                 <div class="max-md:w-full">
                             <div class="flex sm:items-center md:gap-2.5 lg:gap-7 max-md:w-full justify-center sm:justify-between md:justify-end">
@@ -125,7 +125,7 @@
 
 		
 
-		<main id="content" class="o-main">
+		<main id="content " class="o-main padding-admin">
 
 			<?php 
 
