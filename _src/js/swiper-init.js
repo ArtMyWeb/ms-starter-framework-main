@@ -11,7 +11,16 @@
 
     function initSwiper() {
         const swiperElement = document.querySelector('.why-hire-swiper');
-        console.log(swiperElement);
+        const sidebarSwiperElement = document.querySelector('.sidebar-reviews-swiper');
+        if (sidebarSwiperElement && typeof Swiper !== 'undefined') {
+            const swiper = new Swiper('.sidebar-reviews-swiper', {
+                loop: true,
+                spaceBetween: 20,
+                slidesPerView: 1,
+            });
+            console.log('Sidebar swiper initialized:', swiper);
+        }
+
         if (swiperElement && typeof Swiper !== 'undefined') {
             const swiper = new Swiper('.why-hire-swiper', {
                 // Optional parameters
@@ -48,4 +57,5 @@
             console.log(swiper);
         }
     }
+
 })();
