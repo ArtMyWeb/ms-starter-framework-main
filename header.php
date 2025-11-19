@@ -13,13 +13,11 @@
 		<meta property="og:image:alt" content="<?php echo get_bloginfo( 'name' ) . ' - '. get_bloginfo( 'description' ); ?>" />
 
 		<!--
-			// Enqueue Typekit fonts in functions.php file using wp_enqueue_script();
-			// Enqueue Google fonts in functions.php file using wp_enqueue_style();
+			// Google fonts (Archivo & Pontano Sans) are loaded below
 		-->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=IBM+Plex+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-
+		<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Pontano+Sans:wght@300..700&display=swap" rel="stylesheet">
 
 		<link rel="apple-touch-icon" sizes="57x57" href="<?php echo esc_url( get_template_directory_uri() ); ?>/_dist/img/apple-icon-57x57.png">
 		<link rel="apple-touch-icon" sizes="60x60" href="<?php echo esc_url( get_template_directory_uri() ); ?>/_dist/img/apple-icon-60x60.png">
@@ -39,6 +37,9 @@
 		<meta name="msapplication-TileImage" content="<?php echo esc_url( get_template_directory_uri() ); ?>/_dist/img/ms-icon-144x144.png">
 		<meta name="theme-color" content="#ffffff">
 
+		<!-- Swiper CSS CDN -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 		<?php wp_head(); ?>
 
 		<!--[if lt IE 9]>
@@ -49,187 +50,86 @@
 	</head>
 
 	<body <?php body_class(); ?>>
-
-	<a id="skip-content" href="#content" class="u-visibility--sr-only">Skip to main content</a>
-
-		<header class="c-header u-block--sticky u-block--fixed-top">
-
-			<?php 
-
-		    $header_info_phone_mobile = get_field('header_phones', 'options');
-
-		    if ( $header_info_phone_mobile ): 
-
-		        $header_mobile_phone = $header_info_phone_mobile[0]['header_phone'];
-		        $header_mobile_text = $header_info_phone_mobile[0]['header_text'];
-
-		    ?>
-
-				<a class="c-header__phone-mobile u-text--white u-text--bold u-text--uppercase" href="tel:<?php echo preg_replace('~[^\d]+~', '', $header_mobile_phone); ?>">
-					<i class="fa-solid fa-phone u-text--accent-3" aria-hidden="true"></i>  <?php echo $header_mobile_text; ?> <?php echo $header_mobile_phone; ?>
-				</a>
-
-			<?php endif; ?>
-
-			<div class="c-header__inner u-block-padding--sm">
-
-				<div class="o-container">
-
-					<div class="c-block--flex c-block--flex-between c-block--flex-v-center">
-
-						<?php
-
-							$header_logo = get_field('header_logo', 'options');
-
-							if ( $header_logo ): ?>
-
-							<a class="c-logo" href="<?php echo esc_url( home_url() ); ?>">
-								<img class="u-reset--margin" 
-									 src="<?php echo $header_logo['url']; ?>" alt="<?php echo esc_url( bloginfo('name') ); ?>"  width="<?php echo $header_logo['width']; ?>" height="<?php echo $header_logo['height']; ?>">
-							</a>
-
-						<?php endif; ?>
-
-						<div class="c-header__cta u-visibility-hidden-xs--down">
-
-							<?php 
-
-						    $header_info_phone = get_field('header_phones', 'options');
-
-						    if ( $header_info_phone ): 
-
-						        $header_phone = $header_info_phone[0]['header_phone'];
-						        $header_text = $header_info_phone[0]['header_text'];
-
-						    ?>
-
-								<a class="c-header__phone" href="tel:<?php echo preg_replace('~[^\d]+~', '', $header_phone); ?>">
-									<i class="fa-solid fa-phone u-text--accent-3" aria-hidden="true"></i> <?php echo $header_text; ?> <?php echo $header_phone; ?>
-								</a>
-
-							<?php endif; ?>
-
-							<?php 
-
-							$header_link = get_field('header_link', 'options');
-
-							if ( $header_link ): 
-
-                                $link_target = $header_link['target'] ? $header_link['target'] : '_self';
-                            ?>
-
-                                <a class="c-btn c-btn--primary" target="<?php echo  $link_target; ?>" href="<?php echo $header_link['url']; ?>">
-                                    <?php echo $header_link['title']; ?>
-                                </a>
-
-                            <?php endif; ?>
-
-						</div>
-
-						<button class="c-nav__icon c-nav__open js-toggle" aria-label="Open Menu">
-							<i class="fas fa-bars c-nav__icon--open" aria-hidden="true"></i>
-						</button>
-
-					</div>
-
-				</div>
-
-			</div>
-
-			<nav class="c-nav">
-
-				<div class="o-container u-reset--padding">
-					
-					<button class="c-nav__icon c-nav__icon--padding js-toggle" aria-label="Close Menu">
-						<i class="fas fa-times c-nav__icon--close" aria-hidden="true"></i>
-					</button>
-
-					<?php
-
-						$header_logo = get_field('header_logo', 'options');
-
-						if ( $header_logo ): ?>
-
-						<a class="c-logo__nav u-visibility-hidden-sm--up" href="<?php echo esc_url( home_url() ); ?>">
-							<img class="u-reset--margin" 
-								 src="<?php echo $header_logo['url']; ?>" alt="<?php echo esc_url( bloginfo('name') ); ?>"  width="<?php echo $header_logo['width']; ?>" height="<?php echo $header_logo['height']; ?>">
-						</a>
-
-					<?php endif; ?>
-
-					 <?php
-
-						$headerConfig = array(
-							'theme_location'  => 'main_nav',
-							'menu'            => 'main_nav',
-							'container'       => '',
-							'container_class' => '',
-							'container_id'    => '',
-							'menu_class'      => 'c-nav__list',
-							'menu_id'         => '',
-							'echo'            => true,
-							'fallback_cb'     => 'wp_page_menu',
-							'before'          => '',
-							'after'           => '',
-							'link_before'     => '',
-							'link_after'      => '',
-							'items_wrap'      => '<ul role="menu" id="%1$s" class="%2$s">%3$s</ul>',
-							'depth'           => 0,
-							'walker'          => new wp_bootstrap_navwalker()
-							);
-
-						wp_nav_menu( $headerConfig );
-
-					?>
-
-					<div class="u-text--center u-visibility-hidden-sm--up u-block-padding--lg">
-
-						<?php if ( get_field('header_phones', 'options') ): ?>
-
-							<ul class="c-list--unstyled u-reset--margin">
-
-								<?php while( has_sub_field('header_phones', 'options') ): 
-
-									$header_nav_phone = get_sub_field('header_phone');
-									$header_nav_text = get_sub_field('header_text');
-
-								?>
-
-									<li>
-
-										<?php
-
-										if ( $header_nav_phone ): ?>
-
-											<a class="u-text--block u-text--white u-reset--link u-reset-font--tertiary u-text--uppercase u-text--medium" href="tel:<?php echo preg_replace('~[^\d]+~', '', $header_nav_phone); ?>">
-												<span class="u-text--block u-text--uppercase u-reset-font--tertiary u-text--accent-2"><?php echo $header_nav_text; ?></span>
-												<?php echo $header_nav_phone; ?>
-
-											</a>
-
-										<?php endif; ?>
-
-									</li>
-
-								<?php endwhile; ?>
-
-							</ul>
-
-						<?php endif; ?>
-
-						<?php get_template_part('_inc/content', 'social'); ?>
-
-					</div>
-				
-				</div>
-
-			</nav>
-
-			<div class="c-nav__mask js-toggle"></div>
-
-		</header><!-- /.header -->
-
-		<main id="content" class="o-main">
+<?php
+$header_logo = get_field('header_logo', 'option');
+?>
+   <!-- BEGIN of header -->
+    <header id="header"
+        class="group/header fixed z-[1100]  w-full transform-gpu group-[.modal-open]/body:-translate-y-[--modal-wrapper-mobile-nav-modal-scroll-position] group-[.modal-open]/body:duration-0 [&.scroll-down]:-translate-y-[100%] [&.scroll-up]:translate-y-0 sm:[&.scroll-up]:-translate-y-[calc(100%-(100%-5rem))]">
+        <div class="header-inner relative z-30 transform-gpu sm:group-[.scroll-up]/header:translate-y-[calc(5rem/2)] bg-dark py-4">
+            <div class="container relative py-1 sm:py-2.5 max-sm:bg-orange">
+                                <div class="w-full">
+                    <div class="flex items-center justify-between mb-2 max-lg:gap-3">
+                                                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo max-w-[440px] flex-shrink-0 max-md:hidden">
+                                <div class="">
+                                
+                                <img width="274" height="81" src="<?php echo esc_url($header_logo['url']); ?>" class="w-auto object-contain h-16 lg:h-24" alt="<?php echo esc_attr($header_logo['alt']); ?>" decoding="async" />              
+                                                  </div>
+                            </a>
+                                                <div class="max-md:w-full">
+                            <div class="flex sm:items-center md:gap-2.5 lg:gap-7 max-md:w-full justify-center sm:justify-between md:justify-end">
+                                                                    <div
+                                        class="max-sm:py-3 max-sm:pl-5 max-sm:pr-2 flex sm:items-center max-sm:bg-dark-blue text-white max-sm:hidden">
+                                        <p class="font-sans uppercase text-[1rem] lg:text-[16px] leading-[3] font-black tracking-[0.3em]">
+                                            24/7 Live Call Answering</p>
+                                    </div>
+                                                                            <div class="text-cta">
+                                            <a class="text-[2.25rem] sm:text-[1.625rem] lg:text-[2.875rem] "
+                                                href="tel:9542375101">
+                                                (954)-237-5101                                            </a>
+                                        </div>
+                                                                                                </div>
+                            <!-- .container -->
+                            <div class="drilldown-menu-box group max-md:absolute left-0 top-[var(--header-height)] z-50 w-full max-md:pointer-events-none max-md:h-[calc(100dvh-var(--wp-admin--admin-bar--height,0px)-var(--header-height))] transition-transform duration-[600ms] border-t border-white/20 md:mt-1.5 pt-3.5">
+                                <div id="mobile-menu"
+                                    class=" group/deskop-menu w-full max-md:group-[.active]:translate-x-0 max-md:absolute max-md:h-full max-md:right-0 max-md:top-0 max-md:pointer-events-auto max-md:translate-x-full transition-transform duration-[600ms] max-sm:bg-blue">
+                                    <div class="max-sm:h-full">
+                                        <div class="menu-header-menu-container">
+                                            <div class="menu-menu-1-container"><ul id="primary-menu" class="menu"><li id="menu-item-244" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-244"><a class="object-contain" href="https://alopezlawfidev.wpenginepowered.com/" aria-current="page">Home</a></li>
+<li id="menu-item-263" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-263"><a href="https://alopezlawfidev.wpenginepowered.com/why-hire-us/">Why Hire Us</a></li>
+<li id="menu-item-262" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-262"><a href="https://alopezlawfidev.wpenginepowered.com/practice-areas/">Practice Areas</a></li>
+<li id="menu-item-261" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-261"><a href="https://alopezlawfidev.wpenginepowered.com/blog/">Blog</a></li>
+<li id="menu-item-260" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-260"><a href="https://alopezlawfidev.wpenginepowered.com/contact/">Contact</a></li>
+<li id="menu-item-259" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-259"><a href="https://alopezlawfidev.wpenginepowered.com/pay-online/">Pay online</a></li>
+<li id="menu-item-258" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-258"><a href="https://alopezlawfidev.wpenginepowered.com/se-habla-espanol/">SE HABLA ESPAÑOl</a></li>
+</ul></div>                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile menu button -->
+            <div class="flex justify-between px-side-offset md:hidden py-1 md:py-3.5 max-md:bg-blue">
+                                    <a href="https://alopezlawfidev.wpenginepowered.com" class="logo flex-shrink-0 md:hidden">
+                        <div class="">
+                            <img width="274" height="81" src="https://alopezlawfidev.wpenginepowered.com/wp-content/uploads/2025/10/logo-h-white-1.svg" class="w-auto h-12 sm:h-20" alt="" decoding="async" />                        </div>
+                    </a>
+                                <button type="button"
+                    class="group/nav-button relative inline-flex items-center justify-center rounded-md z-50 md:hidden"
+                    aria-controls="mobile-menu" aria-expanded="false">
+                    <span class="absolute -inset-2"></span>
+                    <span class="sr-only text-white">Menu</span>
+                    <span
+                        class="relative block w-7 h-6 sm:w-12 sm:h-7 [&>span]:transition-all [&>span]:duration-300 text-white group-hover/nav-button:text-white">
+                        <span
+                            class="absolute rounded-full top-0 block bg-current h-1 w-full group-[.active]/nav-button:rotate-45 group-[.active]/nav-button:mt-3"></span>
+                        <span
+                            class="absolute rounded-full top-1/2 block bg-current h-1 w-full -mt-0.5 group-[.active]/nav-button:opacity-0"></span>
+                        <span
+                            class="absolute rounded-full bottom-0 block bg-current h-1 w-full group-[.active]/nav-button:-rotate-45 group-[.active]/nav-button:mb-2 sm:group-[.active]/nav-button:mb-3"></span>
+                    </span>
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+		
+
+		<main id="content " class="o-main padding-admin">
 
 			<?php 
 

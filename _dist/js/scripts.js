@@ -4215,64 +4215,52 @@
     }
 });
 
-/*
-    accordion
-*/
-(function($){
+document.addEventListener('DOMContentLoaded', function () {
+	const accordion = document.querySelector('.accordion');
 
-	//$('.c-accordion__content.active').show();
+	if (accordion) {
+		const accordionItems = accordion.querySelectorAll('.accordion-item');
+		accordionItems.forEach(item => {
+			item.addEventListener('click', () => {
+				const isActive = item.classList.contains('active-accordion');
 
-	$(".c-accordion__panel").click(function(){
+				// Close all items first
+				accordionItems.forEach(i => i.classList.remove('active-accordion'));
 
-		$(this).each( function() {
-
-			//Add/Remove active class from accordion on click
-			if ( $(this).children('.c-accordion__title').hasClass('active') ) {
-				 $(this).children('.c-accordion__title').removeClass('active');
-			} else {
-				$(this).children('.c-accordion__title.active').removeClass('active');
-				$(this).children('.c-accordion__title').addClass('active');
-			}
-
-			//Hide other accordions on click
-			$(this).siblings().children('.c-accordion__title').removeClass('active');
-			$(this).siblings().children('.c-accordion__content').removeClass('active');
-
-			//Show accordion on click
-			$(this).children('.c-accordion__content').slideToggle();
-
-			//Hide other accordions on click
-			$(this).siblings().children('.c-accordion__content').slideUp();
-
+				// If the clicked item wasn't active, open it
+				if (!isActive) {
+					item.classList.add('active-accordion');
+				}
+			});
 		});
-	});
-
-})( jQuery, this); //-- end jQuery/AUI
+	}
+});
 
 /*
-    tabs
+	tabs
 */
-(function($){
+(function ($) {
 
 	$('.c-tabs').each(function () {
 
-		$('.active').each( function(){
-		    $($(this).attr('data-id')).show();
+		$('.active').each(function () {
+			$($(this).attr('data-id')).show();
 		});
 
-		$('.c-tab__link').click(function(){ //When any link is clicked
-		    var current_tab = $(this).closest('.c-tab__nav').find('.active');
-		    $($(current_tab).attr('data-id')).hide();
-		    current_tab.removeClass('active');
-		    $(this).addClass('active'); //Set clicked link class to active
-		    $($(this).attr('data-id')).fadeIn();
-		    return false;
+		$('.c-tab__link').click(function () { //When any link is clicked
+			var current_tab = $(this).closest('.c-tab__nav').find('.active');
+			$($(current_tab).attr('data-id')).hide();
+			current_tab.removeClass('active');
+			$(this).addClass('active'); //Set clicked link class to active
+			$($(this).attr('data-id')).fadeIn();
+			return false;
 		});
 
 	});
 
 
-})( jQuery, this); //-- end jQuery/AUI
+})(jQuery, this); //-- end jQuery/AUI
+
 
 /*
     doubleTap
@@ -4305,6 +4293,58 @@
         return this;
     };
 })(jQuery, window, document);
+// Initialize Swiper (Note: Swiper bundle must be loaded via CDN in header.php)
+(function () {
+    'use strict';
+
+    // Wait for DOM to be ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initSwiper);
+    } else {
+        initSwiper();
+    }
+
+    function initSwiper() {
+        const swiperElement = document.querySelector('.why-hire-swiper');
+        console.log(swiperElement);
+        if (swiperElement && typeof Swiper !== 'undefined') {
+            const swiper = new Swiper('.why-hire-swiper', {
+                // Optional parameters
+                loop: true,
+                spaceBetween: 30,
+                slidesPerView: 1,
+
+
+
+                // Pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+
+
+
+                // Responsive breakpoints
+                breakpoints: {
+                    640: {
+                        slidesPerView: 1,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 1,
+                        spaceBetween: 30,
+                    },
+                    1024: {
+                        slidesPerView: 1,
+                        spaceBetween: 40,
+                    },
+                },
+            });
+            console.log(swiper);
+        }
+    }
+})();
+
 /*
 	mainScripts
 */

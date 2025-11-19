@@ -1,5 +1,5 @@
 <?php get_header(); ?>
 
-<?php get_template_part('_inc/content', 'home'); ?>
+<?php if ( function_exists('have_rows') && have_rows('home') ) { include get_template_directory() . '/_inc/content-home-flexible.php'; } ?>
 
 <?php get_footer(); ?>

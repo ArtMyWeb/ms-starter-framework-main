@@ -1,0 +1,44 @@
+:root {
+    /* Container Padding */
+
+    --container-top-padding: 40px;
+    --container-bottom-padding: 40px;
+    --container-left-padding: 20px;
+    --container-right-padding: 20px;
+
+    --container-sm-top-padding: 60px;
+    --container-sm-bottom-padding: 60px;
+    --container-sm-left-padding: 24px;
+    --container-sm-right-padding: 24px;
+
+    --container-lg-top-padding: 5rem;
+    --container-lg-bottom-padding: 5rem;
+    --container-lg-left-padding: 6.25rem;
+    --container-lg-right-padding: 6.25rem;
+
+    /* Content Spacing */
+    --paragraph-bottom-margin: 1rem;
+
+    /* Header */
+    --header-height: 120px;
+
+    /* Image Effects */
+    --image-zoom: 1;
+
+    /* Colors */
+    --gold: #FFA122;
+    --blue: #072543;
+    --dark-blue: #003B5E;
+    --light-blue: #E8F4FF;
+
+    /* New Color Palette */
+    --dark: #111110;
+    --light-dark: #2A2A2B;
+    --brown: #4C361F;
+    --light-gold: #FAF1A7;
+    --light-brown: #9F692E;
+    --cta: #16898A;
+    --cta-alt: #0C2A2D;
+    --charcoal-grey: #3B3B3B;
+    --gradient-gold: linear-gradient(90deg, #FAF1A7 0%, #9F692E 100%);
+}
