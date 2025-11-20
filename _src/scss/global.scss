@@ -26,7 +26,7 @@ html {
 }
 
 body {
-    @apply text-[1.25rem]/[1.25] font-normal;
+    @apply text-[1.125rem]/[1.5] font-normal;
     font-family: "source-sans-pro", sans-serif !important;
     color: #3B3B3B;
 }
@@ -251,7 +251,7 @@ strong {
         h4,
         h5,
         h6 {
-            @apply capitalize mb-4 font-archivo;
+            @apply capitalize mb-3 font-archivo font-bold mt-9;
         }
 
         h2 {
@@ -259,11 +259,12 @@ strong {
         }
 
         h3 {
-            @apply text-[1.75rem] sm:text-[2.25rem] lg:text-[2.425rem];
+            @apply text-[1.75rem] sm:text-[2.25rem] lg:text-[1.75rem];
+
         }
 
         h4 {
-            @apply text-[1.5rem] sm:text-[2rem] lg:text-[3.1rem];
+            @apply text-[1.5rem] sm:text-[2rem] lg:text-[1.5rem];
         }
 
         p {
@@ -359,11 +360,34 @@ strong {
         align-items: center;
         gap: 10px;
         background: linear-gradient(180deg, #16898A 0%, #0C2A2D 100%);
-        color: #FFFFFF;
+        color: #FFFFFF !important;
         font-feature-settings: 'liga' off, 'clig' off;
 
         &:hover {
             background: linear-gradient(180deg, #1a9a9b 0%, #0d2f32 100%);
+        }
+
+
+    }
+
+    .sidebar .wpforms-submit-container button.wpforms-submit {
+        @apply overflow-hidden text-white text-center uppercase font-archivo !font-bold transition-colors duration-200 text-[16px] leading-normal;
+        display: inline-flex;
+        padding: 20px 40px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        background: linear-gradient(180deg, #16898A 0%, #0C2A2D 100%);
+        color: #FFFFFF !important;
+        font-feature-settings: 'liga' off, 'clig' off;
+        font-weight: 700;
+
+        transition: filter 0.2s ease;
+
+        &:hover {
+            filter: brightness(1.2);
+            background: linear-gradient(180deg, #16898A 0%, #0C2A2D 100%);
+
         }
     }
 
@@ -463,5 +487,40 @@ strong {
         }
     }
 
+    .form-shortcode {
+        .wp-contact-form {
+            @apply grid gap-4;
 
+            label {
+                color: #fff !important;
+            }
+
+            input,
+            textarea {
+                background-color: transparent !important;
+                border: none !important;
+                border-bottom: 1px solid #FAF1A7 !important;
+                outline: none !important;
+                transition: border-color 0.3s ease !important;
+                color: #fff !important;
+                resize: vertical;
+
+
+
+                &:focus {
+                    border: 1px solid #FFD700 !important;
+                    box-shadow: none !important;
+                }
+            }
+        }
+
+    }
+
+    .item-area {
+        @apply bg-[#F5F5F5] text-dark px-4 py-5 w-full flex items-center justify-between text-[16px] leading-[150%] tracking-[2.4px] uppercase font-bold font-archivo !duration-0;
+
+        &:hover {
+            @apply bg-gradient-to-b from-[#16898A] to-[#0C2A2D] text-white;
+        }
+    }
 }
