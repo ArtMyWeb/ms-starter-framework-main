@@ -1345,15 +1345,6 @@ button{
 .mt-8{
   margin-top: 2rem;
 }
-.mb-\[9\]{
-  margin-bottom: 9;
-}
-.mb-\[36px\]{
-  margin-bottom: 36px;
-}
-.mt-2{
-  margin-top: 0.5rem;
-}
 .block{
   display: block;
 }
@@ -1396,6 +1387,9 @@ button{
 .h-\[10px\]{
   height: 10px;
 }
+.h-\[2px\]{
+  height: 2px;
+}
 .h-\[66px\]{
   height: 66px;
 }
@@ -1407,9 +1401,6 @@ button{
 }
 .h-full{
   height: 100%;
-}
-.h-\[2px\]{
-  height: 2px;
 }
 .max-h-\[230px\]{
   max-height: 230px;
@@ -1438,6 +1429,9 @@ button{
 .min-h-screen{
   min-height: 100vh;
 }
+.\!w-full{
+  width: 100% !important;
+}
 .w-32{
   width: 8rem;
 }
@@ -1459,14 +1453,11 @@ button{
 .w-full{
   width: 100%;
 }
-.w-\[250px\]{
-  width: 250px;
-}
-.\!w-full{
-  width: 100% !important;
-}
 .max-w-\[320px\]{
   max-width: 320px;
+}
+.max-w-\[345px\]{
+  max-width: 345px;
 }
 .max-w-\[390px\]{
   max-width: 390px;
@@ -1488,15 +1479,6 @@ button{
 }
 .max-w-\[770px\]{
   max-width: 770px;
-}
-.max-w-full{
-  max-width: 100%;
-}
-.max-w-\[700px\]{
-  max-width: 700px;
-}
-.max-w-\[345px\]{
-  max-width: 345px;
 }
 .flex-1{
   flex: 1 1 0%;
@@ -1583,9 +1565,6 @@ button{
 .gap-\[60px\]{
   gap: 60px;
 }
-.gap-6{
-  gap: 1.5rem;
-}
 .self-end{
   align-self: flex-end;
 }
@@ -1621,6 +1600,10 @@ button{
 .bg-\[\#F5F5F5\]{
   --tw-bg-opacity: 1;
   background-color: rgb(245 245 245 / var(--tw-bg-opacity, 1));
+}
+.bg-\[\#FAFAFA\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 250 250 / var(--tw-bg-opacity, 1));
 }
 .bg-black{
   --tw-bg-opacity: 1;
@@ -1674,35 +1657,16 @@ button{
 .bg-gradient-gold{
   background-image: linear-gradient(90deg, #FAF1A7 0%, #9F692E 100%);
 }
-.bg-rotate-gold{
-  background-image: linear-gradient(180deg, #FAF1A7 0%, #9F692E 100%);
-}
-.bg-gradient-to-r{
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
-}
 .bg-gradient-to-b{
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
-.from-yellow-400{
-  --tw-gradient-from: #facc15 var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(250 204 21 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-.from-gradient-gold{
-  --tw-gradient-from: linear-gradient(90deg, #FAF1A7 0%, #9F692E 100%) var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+.bg-rotate-gold{
+  background-image: linear-gradient(180deg, #FAF1A7 0%, #9F692E 100%);
 }
 .from-light-gold{
   --tw-gradient-from: #FAF1A7 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(250 241 167 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-.to-amber-800{
-  --tw-gradient-to: #92400e var(--tw-gradient-to-position);
-}
-.to-light-gold{
-  --tw-gradient-to: #FAF1A7 var(--tw-gradient-to-position);
 }
 .to-light-brown{
   --tw-gradient-to: #9F692E var(--tw-gradient-to-position);
@@ -1728,14 +1692,14 @@ button{
 .p-10{
   padding: 2.5rem;
 }
+.p-4{
+  padding: 1rem;
+}
 .p-5{
   padding: 1.25rem;
 }
 .p-6{
   padding: 1.5rem;
-}
-.p-0{
-  padding: 0px;
 }
 .px-8{
   padding-left: 2rem;
@@ -1847,6 +1811,12 @@ button{
 .text-\[13px\]{
   font-size: 13px;
 }
+.text-\[16px\]{
+  font-size: 16px;
+}
+.text-\[18px\]{
+  font-size: 18px;
+}
 .text-\[19px\]{
   font-size: 19px;
 }
@@ -1859,6 +1829,15 @@ button{
 }
 .text-\[2\.25rem\]{
   font-size: 2.25rem;
+}
+.text-\[20px\]{
+  font-size: 20px;
+}
+.text-\[24px\]{
+  font-size: 24px;
+}
+.text-\[27px\]{
+  font-size: 27px;
 }
 .text-\[30px\]{
   font-size: 30px;
@@ -1891,18 +1870,6 @@ button{
 .text-xs{
   font-size: 0.75rem;
   line-height: 1rem;
-}
-.text-\[27px\]{
-  font-size: 27px;
-}
-.text-\[24px\]{
-  font-size: 24px;
-}
-.text-\[18px\]{
-  font-size: 18px;
-}
-.text-\[16px\]{
-  font-size: 16px;
 }
 .font-black{
   font-weight: 900;
@@ -1952,6 +1919,14 @@ button{
 .tracking-\[0\.3em\]{
   letter-spacing: 0.3em;
 }
+.text-\[\#2A2A2B\]{
+  --tw-text-opacity: 1;
+  color: rgb(42 42 43 / var(--tw-text-opacity, 1));
+}
+.text-\[\#909090\]{
+  --tw-text-opacity: 1;
+  color: rgb(144 144 144 / var(--tw-text-opacity, 1));
+}
 .text-\[\#F1BE48\]{
   --tw-text-opacity: 1;
   color: rgb(241 190 72 / var(--tw-text-opacity, 1));
@@ -1986,10 +1961,6 @@ button{
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-.text-\[\#2A2A2B\]{
-  --tw-text-opacity: 1;
-  color: rgb(42 42 43 / var(--tw-text-opacity, 1));
 }
 .underline{
   text-decoration-line: underline;
@@ -2071,8 +2042,8 @@ html{
 }
 
 body{
-  font-size: 1.25rem;
-  line-height: 1.25;
+  font-size: 1.125rem;
+  line-height: 1.5;
   font-weight: 400;
   font-family: "source-sans-pro", sans-serif !important;
   color: #3B3B3B;
