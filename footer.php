@@ -68,9 +68,12 @@
                     </ul>
                 </div>
             </div>
-            <div class="footer-grid-links grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 w-full gap-4 text-white">
+            <div class="footer-grid-links grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 w-full gap-0 text-white">
                 <div>
                     <ul>
+                        <li><a href="#">Key Word / SEO Link / Description</a></li>
+                        <li><a href="#">Key Word / SEO Link / Description</a></li>
+                        <li><a href="#">Key Word / SEO Link / Description</a></li>
                         <li><a href="#">Key Word / SEO Link / Description</a></li>
                         <li><a href="#">Key Word / SEO Link / Description</a></li>
                         <li><a href="#">Key Word / SEO Link / Description</a></li>
@@ -81,6 +84,9 @@
                         <li><a href="#">Key Word / SEO Link / Description</a></li>
                         <li><a href="#">Key Word / SEO Link / Description</a></li>
                         <li><a href="#">Key Word / SEO Link / Description</a></li>
+                        <li><a href="#">Key Word / SEO Link / Description</a></li>
+                        <li><a href="#">Key Word / SEO Link / Description</a></li>
+                        <li><a href="#">Key Word / SEO Link / Description</a></li>
                     </ul>
                 </div>
                 <div>
@@ -88,6 +94,10 @@
                         <li><a href="#">Key Word / SEO Link / Description</a></li>
                         <li><a href="#">Key Word / SEO Link / Description</a></li>
                         <li><a href="#">Key Word / SEO Link / Description</a></li>
+                        <li><a href="#">Key Word / SEO Link / Description</a></li>
+                        <li><a href="#">Key Word / SEO Link / Description</a></li>
+                        <li><a href="#">Key Word / SEO Link / Description</a></li>
+
                     </ul>
                 </div>
 

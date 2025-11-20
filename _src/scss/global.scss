@@ -589,13 +589,31 @@ strong {
 
     .footer-grid-links {
         ul {
-            @apply py-10 px-5;
+            @apply my-10 px-5;
 
             li {
                 @apply mb-2 text-center;
 
                 a {
                     color: #fff;
+                }
+            }
+        }
+    }
+
+    .footer-grid-links {
+        div {
+            place-content: start;
+
+            &:last-child {
+                ul {
+                    @apply border-l-[1px] border-[#FFFFFF];
+                }
+            }
+
+            &:first-child {
+                ul {
+                    @apply border-r-[1px] border-[#FFFFFF];
                 }
             }
         }

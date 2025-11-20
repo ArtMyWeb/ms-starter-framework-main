@@ -1243,8 +1243,8 @@ button{
     text-transform: capitalize;
   }
 .footer-grid-links ul{
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
 }
@@ -1255,6 +1255,19 @@ button{
 .footer-grid-links ul li a {
     color: #fff;
   }
+.footer-grid-links div {
+    place-content: start;
+  }
+.footer-grid-links div:last-child ul{
+  border-left-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
+}
+.footer-grid-links div:first-child ul{
+  border-right-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
+}
 .sr-only{
   position: absolute;
   width: 1px;
@@ -1607,6 +1620,9 @@ button{
 .justify-between{
   justify-content: space-between;
 }
+.gap-0{
+  gap: 0px;
+}
 .gap-1{
   gap: 0.25rem;
 }
@@ -1788,9 +1804,6 @@ button{
 }
 .p-\[20px\]{
   padding: 20px;
-}
-.p-0{
-  padding: 0px;
 }
 .px-5{
   padding-left: 1.25rem;
