@@ -50,7 +50,9 @@
 	</head>
 
 	<body <?php body_class(); ?>>
-
+<?php
+$header_logo = get_field('header_logo', 'option');
+?>
    <!-- BEGIN of header -->
     <header id="header"
         class="group/header fixed z-[1100]  w-full transform-gpu group-[.modal-open]/body:-translate-y-[--modal-wrapper-mobile-nav-modal-scroll-position] group-[.modal-open]/body:duration-0 [&.scroll-down]:-translate-y-[100%] [&.scroll-up]:translate-y-0 sm:[&.scroll-up]:-translate-y-[calc(100%-(100%-5rem))]">
@@ -58,9 +60,11 @@
             <div class="container relative py-1 sm:py-2.5 max-sm:bg-orange">
                                 <div class="w-full">
                     <div class="flex items-center justify-between mb-2 max-lg:gap-3">
-                                                    <a href="https://alopezlawfidev.wpenginepowered.com" class="logo max-w-[440px] flex-shrink-0 max-md:hidden">
+                                                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo max-w-[440px] flex-shrink-0 max-md:hidden">
                                 <div class="">
-                                    <img width="274" height="81" src="/wp-content/uploads/2025/11/big-header_logo.svg" class="w-auto object-contain h-16 lg:h-24" alt="" decoding="async" />                                </div>
+                                
+                                <img width="274" height="81" src="<?php echo esc_url($header_logo['url']); ?>" class="w-auto object-contain h-16 lg:h-24" alt="<?php echo esc_attr($header_logo['alt']); ?>" decoding="async" />              
+                                                  </div>
                             </a>
                                                 <div class="max-md:w-full">
                             <div class="flex sm:items-center md:gap-2.5 lg:gap-7 max-md:w-full justify-center sm:justify-between md:justify-end">
