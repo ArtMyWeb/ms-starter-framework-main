@@ -14,7 +14,7 @@ $btn   = get_sub_field('home_cta_button');
   <div class="container-sm relative z-10">
     <div class="content-cta">
       <div class="flex flex-col items-center gap-8 text-center">
-        <?php if (!empty($logo['url'])): ?><img src="<?php echo esc_url($logo['url']); ?>" alt=""><?php endif; ?>
+        <?php if (!empty($logo['url'])): ?><img style="max-width: 127px;" src="<?php echo esc_url($logo['url']); ?>" alt=""><?php endif; ?>
         <?php if ($phone): ?><span class="!text-[1.7rem]/[1.2] font-archivo">Schedule a Free Consultation | Call 24/7 <a class="!text-[1.7rem]/[1.2] font-archivo !no-underline" href="tel:<?php echo preg_replace('/\D+/', '', $phone); ?>"><?php echo esc_html($phone); ?></a></span><?php endif; ?>
         <h2 class="flex items-center flex-col text-[72px]/[1] font-bold uppercase">
           <?php if ($t1): ?><span><?php echo esc_html($t1); ?></span><?php endif; ?>

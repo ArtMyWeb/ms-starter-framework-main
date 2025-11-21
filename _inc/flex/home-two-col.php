@@ -17,11 +17,11 @@ $r_content  = get_sub_field('home_tc_right_content');
     <div class="grid-block grid grid-cols-1 lg:grid-cols-2 gap-[60px]">
       <div class="grid-item">
         <?php if ($l_title): ?><h3><?php echo esc_html($l_title); ?></h3><?php endif; ?>
-        <?php if ($l_content): echo wp_kses_post($l_content); endif; ?>
+        <?php if ($l_content): echo apply_filters('the_content',$l_content); endif; ?>
       </div>
       <div class="grid-item">
         <?php if ($r_title): ?><h3><?php echo esc_html($r_title); ?></h3><?php endif; ?>
-        <?php if ($r_content): echo wp_kses_post($r_content); endif; ?>
+        <?php if ($r_content): echo apply_filters('the_content',$r_content); endif; ?>
       </div>
     </div>
   </div>

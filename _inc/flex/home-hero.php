@@ -6,7 +6,7 @@ $t2     = get_sub_field('home_hero_title_line2');
 $desc   = get_sub_field('home_hero_description');
 $btn    = get_sub_field('home_hero_button'); // link array
 ?>
-<section class="padding-admin relative min-h-screen">
+<section class="padding-admin relative">
     <div class="absolute inset-0">
         <?php if (!empty($bg['url'])): ?>
             <img src="<?php echo esc_url($bg['url']); ?>" alt="" class="w-full h-full object-cover">
@@ -14,7 +14,7 @@ $btn    = get_sub_field('home_hero_button'); // link array
     </div>
     <div class="hero-overlay absolute inset-0"></div>
     <div class="person-content-overlay absolute pointer-events-none max-h-[300px] h-full w-full bottom-0"></div>
-    <div class="container relative pb-0">
+    <div class="container relative py-0">
         <div class="home-hero hero-block">
             <h1 class="home-hero-title text-white text-center justify-center flex flex-col font-archivo text-[120px] font-extrabold leading-[109px] uppercase">
                 <?php if ($t1): ?><span><?php echo esc_html($t1); ?></span><?php endif; ?>

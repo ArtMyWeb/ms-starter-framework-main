@@ -15,7 +15,7 @@ $t_high = get_sub_field('home_att_title_highlight');
         $role1 = get_sub_field('home_att_item_role1');
         $role2 = get_sub_field('home_att_item_role2');
       ?>
-      <article class="attorneys-item overflow-hidden flex flex-col justify-end aspect-[25/34] !pl-0 vertical-border bg-[#2A2A2B]">
+      <article class="attorneys-item overflow-hidden flex flex-col justify-end aspect-[25/34] bg-[url(/wp-content/uploads/2025/11/Frame-1171276039.svg)] !pl-0 vertical-border bg-[#2A2A2B]">
         <div class="overlay-block absolute z-[5] inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.21)_50%,rgba(0,0,0,0.82)_100%)]"></div>
         <div class="image-overlay-block relative z-[4] max-h-[520px]">
           <?php if (!empty($photo['url'])): ?><img class="object-contain h-auto w-full" src="<?php echo esc_url($photo['url']); ?>" alt=""><?php endif; ?>
