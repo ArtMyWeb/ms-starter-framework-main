@@ -1,4 +1,8 @@
 // Initialize Swiper (Note: Swiper bundle must be loaded via CDN in header.php)
+
+
+console.log('swiper');
+
 (function () {
     'use strict';
 
@@ -17,6 +21,7 @@
                 loop: true,
                 spaceBetween: 20,
                 slidesPerView: 1,
+
             });
             console.log('Sidebar swiper initialized:', swiper);
         }

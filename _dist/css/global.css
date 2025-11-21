@@ -1740,6 +1740,9 @@ button{
 .bg-\[url\(\'\/wp-content\/uploads\/2025\/11\/footer-bg\.png\'\)\]{
   background-image: url('/wp-content/uploads/2025/11/footer-bg.png');
 }
+.bg-\[url\(\)\]{
+  background-image: url();
+}
 .bg-\[url\(\/wp-content\/uploads\/2025\/11\/Frame-1171276023\.png\)\]{
   background-image: url(/wp-content/uploads/2025/11/Frame-1171276023.png);
 }

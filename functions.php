@@ -61,7 +61,7 @@ function theme_styles() {
 function themejs() {
 	wp_enqueue_script( 'font-awesome', 'https://kit.fontawesome.com/43f01e18f7.js', array(), false );
 	wp_enqueue_script( 'lightbox', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js', array('jquery'), '', true );
-	wp_enqueue_script( 'script', get_template_directory_uri() . '/_dist/js/scripts.js', array('jquery'), '', true );
+	wp_enqueue_script( 'script', get_template_directory_uri() . '/_dist/js/scripts.min.js', array(), '', true );
 }
 
 

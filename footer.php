@@ -1,3 +1,5 @@
+
+
 <footer id="site-footer" class="relative overflow-hidden bg-[url('/wp-content/uploads/2025/11/footer-bg.png')] no-repeat bg-cover">
     <!-- START COMPONENT : footer-banner -->
     <div class="footer-banner ">
@@ -108,3 +110,7 @@
         </div>
     </div>
 </footer>
+
+<?php wp_footer(); ?>
+</body>
+</html>

@@ -1,5 +1,9 @@
+console.log('accordion.js loaded');
+
 document.addEventListener('DOMContentLoaded', function () {
 	const accordion = document.querySelector('.accordion');
+	console.log(accordion);
+
 
 	if (accordion) {
 		const accordionItems = accordion.querySelectorAll('.accordion-item');
@@ -13,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				// If the clicked item wasn't active, open it
 				if (!isActive) {
 					item.classList.add('active-accordion');
+
 				}
 			});
 		});
