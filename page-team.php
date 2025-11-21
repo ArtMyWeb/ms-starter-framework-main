@@ -58,8 +58,8 @@ get_header();
                 <?php
                 for ($i = 0; $i < 3; $i++) {
                 ?>
-                    <div class="attorney-item grid grid-cols-[2fr_3fr] gap-5 shadow-[0_0_20px_0_rgba(0,0,0,0.25)]">
-                        <div class="attorney-image  relative  bg-black ">
+                    <div class="attorney-item grid sm:grid-cols-[2fr_3fr] grid-cols-1 gap-5 shadow-[0_0_20px_0_rgba(0,0,0,0.25)]">
+                        <div class="attorney-image  relative  bg-black max-sm:min-h-[250px] h-full">
                             <img class="w-full h-full object-contain absolute inset-0" src="/wp-content/uploads/2025/11/Bg-1.png" alt="Attorney Name">
                         </div>
                         <div class="attorney-info  py-[20px] ">

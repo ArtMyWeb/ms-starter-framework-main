@@ -1,8 +1,6 @@
-console.log('accordion.js loaded');
 
 document.addEventListener('DOMContentLoaded', function () {
 	const accordion = document.querySelector('.accordion');
-	console.log(accordion);
 
 
 	if (accordion) {

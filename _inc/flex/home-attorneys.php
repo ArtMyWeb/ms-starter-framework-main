@@ -2,7 +2,7 @@
 $t_main = get_sub_field('home_att_title_main');
 $t_high = get_sub_field('home_att_title_highlight');
 ?>
-<section class="meet-your-attorneys bg-[#0D0D0D]">
+<section class="meet-your-attorneys  bg-no-repeat bg-cover py-[80px]" style="background-image: url('<?php echo get_template_directory_uri(); ?>/_dist/img/bird-bg.svg');">
   <div class="container-sm">
     <h2 class="text-center text-white mb-[54px]">
       <?php echo esc_html($t_main ?: ''); ?>

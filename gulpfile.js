@@ -72,6 +72,7 @@
 			path.js + "/doubletaptogo.js",
 			path.js + "/swiper-init.js",
 			path.js + "/scripts.js",
+			path.js + "/header.js",
 		])
 			.pipe(plumber())
 			.pipe(concat("scripts.js"))
