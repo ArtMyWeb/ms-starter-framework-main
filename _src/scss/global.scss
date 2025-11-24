@@ -513,10 +513,12 @@ strong {
             }
 
             .wpforms-field {
-                display: flex;
-                flex-direction: column;
-                gap: 0.4rem;
-                margin-bottom: 1rem;
+
+                margin-bottom: 0rem;
+
+                .wpforms-field-label {
+                    margin-bottom: 0px !important;
+                }
             }
         }
 
