@@ -502,25 +502,6 @@
                             "maxlength": ""
                         },
                         {
-                            "key": "field_642de1ad6486e",
-                            "label": "Content",
-                            "name": "block_6_team_content",
-                            "type": "wysiwyg",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "tabs": "all",
-                            "toolbar": "full",
-                            "media_upload": 1,
-                            "delay": 0
-                        },
-                        {
                             "key": "field_664a8c9662148",
                             "label": "Blocks",
                             "name": "block_6_team_blocks",
@@ -560,9 +541,9 @@
                                 },
                                 {
                                     "key": "field_664a8cca6214b",
-                                    "label": "Subtitle",
-                                    "name": "block_6_team_subtitle",
-                                    "type": "text",
+                                    "label": "Description",
+                                    "name": "block_6_team_description",
+                                    "type": "wysiwyg",
                                     "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
@@ -600,6 +581,25 @@
                                     "max_height": "",
                                     "max_size": "",
                                     "mime_types": ""
+                                },
+                                {
+                                    "key": "field_664a8e1e6214c",
+                                    "label": "Phone",
+                                    "name": "block_6_team_phone",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
                                 },
                                 {
                                     "key": "field_664a8e2705d15",

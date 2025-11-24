@@ -1,5 +1,7 @@
 <?php get_header(); ?>
-
+<?php 
+       get_template_part('_inc/page', 'hero'); 
+?>
 <div class="c-content u-block-padding--lg">
 
     <div class="o-container">

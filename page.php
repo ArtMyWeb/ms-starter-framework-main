@@ -1,43 +1,42 @@
-<?php get_header(); ?>
+<?php
 
-<?php get_template_part('_inc/page', 'hero'); ?>
+/**
+ * The main template file
+ *
+ */
 
-<div class="c-content u-block-padding--lg">
+get_header();
+?>
 
-	<div class="o-container">
+<?php if (have_posts()) :
+    while (have_posts()) : the_post(); ?>
 
-	    <div class="o-row">
-
-	        <div class="o-col--xxs-12 o-col--md-8">
-
-	            <div class="o-content">
-	            	
+        <main id="site-content">
+            <?php if (!is_front_page()) {
+               get_template_part('_inc/page', 'hero'); 
+            } ?>
+ 
+            <?php if (!empty(get_the_content())) : ?>
+                <div class="container lg:flex gap-16 lg:pt-24">
+                    <div class="lg:w-2/3  max-lg:mb-10">
             		<?php get_template_part('_inc/content', 'image'); ?>
 
-	            	<?php if ( have_posts() ) : ?>
-
-                        <?php while ( have_posts() ) : the_post(); ?>
-
+                        <div class="content">
                             <?php the_content(); ?>
+                        </div>
+                    </div>
 
-                        <?php endwhile; ?>
-
+                    <?php if (is_active_sidebar('sidebar')) : ?>
+                        <div class="lg:w-1/3">
+                            <aside class="sidebar">
+                                <?php dynamic_sidebar('sidebar'); ?>
+                            </aside>
+                        </div>
                     <?php endif; ?>
-	            	
-	            	<?php get_template_part('_inc/content', 'flexible'); ?>
-	            	
-	            </div>
+                </div>
+            <?php endif; ?>
+        </main>
+    <?php endwhile;
+endif; ?>
 
-	        </div>
-
-	        <?php get_sidebar(); ?>
-
-	    </div>
-
-	</div>
-
-</div>
-
-<?php get_footer(); ?>
-
-
+<?php get_footer();
