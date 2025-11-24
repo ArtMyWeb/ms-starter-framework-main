@@ -7,7 +7,7 @@ $content  = get_sub_field('home_tm_content');
 $btn      = get_sub_field('home_tm_button');
 ?>
 <section class="text-media-section bg-dark">
-  <div class="container">
+  <div class="container pb-0">
     <div class="grid grid-cols-1 lg:grid-cols-[623px_1fr] gap-[100px] text-white flex-1">
       <div class="relative">
         <?php if (!empty($image['url'])): ?>

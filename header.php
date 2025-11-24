@@ -55,7 +55,7 @@ $header_logo = get_field('header_logo', 'option');
 ?>
    <!-- BEGIN of header -->
     <header id="header"
-        class="group/header fixed z-[1100]  w-full transform-gpu group-[.modal-open]/body:-translate-y-[--modal-wrapper-mobile-nav-modal-scroll-position] group-[.modal-open]/body:duration-0 [&.scroll-down]:-translate-y-[100%] [&.scroll-up]:translate-y-0 sm:[&.scroll-up]:-translate-y-[calc(100%-(100%-5rem))]">
+        class="group/header fixed z-[1100]  w-full transform-gpu group-[.modal-open]/body:-translate-y-[--modal-wrapper-mobile-nav-modal-scroll-position] group-[.modal-open]/body:duration-0 [&.scroll-down]:-translate-y-[100%] [&.scroll-up]:translate-y-0 sm:[&.scroll-up]:-translate-y-[calc(100%-(100%-5rem))] bg-dark">
         <div class="header-inner relative z-30 transform-gpu sm:group-[.scroll-up]/header:translate-y-[calc(5rem/2)] bg-dark py-4">
             <div class="container relative py-1 sm:py-2.5 max-sm:bg-orange">
                                 <div class="w-full">
@@ -74,15 +74,15 @@ $header_logo = get_field('header_logo', 'option');
                                             24/7 Live Call Answering</p>
                                     </div>
                                                                             <div class="text-cta">
-                                            <a class="text-[2.25rem] sm:text-[1.625rem] lg:text-[2.875rem] "
+                                            <a class=" text-[1.25rem] lg:text-[2.875rem] "
                                                 href="tel:9542375101">
                                                 (954)-237-5101                                            </a>
                                         </div>
                                                                                                 </div>
                             <!-- .container -->
-                            <div class="drilldown-menu-box group max-md:absolute left-0 top-[var(--header-height)] z-50 w-full max-md:pointer-events-none max-md:h-[calc(100dvh-var(--wp-admin--admin-bar--height,0px)-var(--header-height))] transition-transform duration-[600ms] border-t border-white/20 md:mt-1.5 pt-3.5">
+                            <div class="drilldown-menu-box group max-md:absolute left-0 top-[var(--header-height)] z-50 w-full max-md:pointer-events-none max-md:h-[calc(100dvh-var(--wp-admin--admin-bar--height,0px)-var(--header-height))] transition-transform duration-[600ms]  md:mt-1.5 pt-3.5">
                                 <div id="mobile-menu"
-                                    class=" group/deskop-menu w-full max-md:group-[.active]:translate-x-0 max-md:absolute max-md:h-full max-md:right-0 max-md:top-0 max-md:pointer-events-auto max-md:translate-x-full transition-transform duration-[600ms] max-sm:bg-blue">
+                                    class=" group/deskop-menu w-full max-md:group-[.active]:translate-x-0 max-md:absolute max-md:h-full max-md:right-0 max-md:top-0 max-md:pointer-events-auto max-md:translate-x-full transition-transform duration-[600ms] max-md:bg-dark">
                                     <div class="max-sm:h-full">
                                         <div class="menu-header-menu-container">
                                             <div class="menu-menu-1-container"><ul id="primary-menu" class="menu"><li id="menu-item-244" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-244"><a class="object-contain" href="https://alopezlawfidev.wpenginepowered.com/" aria-current="page">Home</a></li>
@@ -102,10 +102,10 @@ $header_logo = get_field('header_logo', 'option');
             </div>
 
             <!-- Mobile menu button -->
-            <div class="flex justify-between px-side-offset md:hidden py-1 md:py-3.5 max-md:bg-blue">
+            <div class="flex justify-between px-[10px] md:hidden py-1 md:py-3.5 max-md:bg-blue container  ">
                                     <a href="https://alopezlawfidev.wpenginepowered.com" class="logo flex-shrink-0 md:hidden">
                         <div class="">
-                            <img width="274" height="81" src="https://alopezlawfidev.wpenginepowered.com/wp-content/uploads/2025/10/logo-h-white-1.svg" class="w-auto h-12 sm:h-20" alt="" decoding="async" />                        </div>
+                            <img width="274" height="81" src="/wp-content/uploads/2025/11/Layer_1.svg" class="w-auto h-12 sm:h-20" alt="" decoding="async" />                        </div>
                     </a>
                                 <button type="button"
                     class="group/nav-button relative inline-flex items-center justify-center rounded-md z-50 md:hidden"

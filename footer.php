@@ -24,12 +24,12 @@
                 <div class="place-info flex flex-col gap-5">
                     <div class="footer-map md:py-6 md:px-8 max-md:mb-10 [&>iframe]:h-full bg-dark p-[20px] ">
                         <p class="text-white text-[1.5rem] font-archivo">Becker Legal | serving clients in New Hampshire & Maine</p>
-                        <p><iframe loading="lazy" style="border: 0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3309.5961127483615!2d-84.54853862253039!3d33.95151467319519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f51423acf53315%3A0x68ca680dcf4f075b!2sJohnson%20%26%20Alday%2C%20LLC%20-%20Personal%20Injury%20%26%20Workers'%20Compensation!5e0!3m2!1sen!2sus!4v1759717983529!5m2!1sen!2sus" width="100%" height="400" allowfullscreen="allowfullscreen"></iframe></p>
+                        <p><iframe class="w-full" loading="lazy" style="border: 0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3309.5961127483615!2d-84.54853862253039!3d33.95151467319519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f51423acf53315%3A0x68ca680dcf4f075b!2sJohnson%20%26%20Alday%2C%20LLC%20-%20Personal%20Injury%20%26%20Workers'%20Compensation!5e0!3m2!1sen!2sus!4v1759717983529!5m2!1sen!2sus" width="100%" height="400" allowfullscreen="allowfullscreen"></iframe></p>
 
 
 
                     </div>
-                    <div class="contacts grid grid-cols-[3fr_3fr_5fr] gap-1 px-5 py-[30px] bg-dark">
+                    <div class="contacts grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] lg:grid-cols-[3fr_3fr_5fr] gap-1 px-5 py-[30px] bg-dark">
                         <div class="footer-widget-column">
                             <h4>Portsmouth Office</h4>
                             <p>1 New Hampshire Avenue1st FloorPortsmouth NH 03801</p>
@@ -52,8 +52,8 @@
         </div>
     </div><!-- END COMPONENT : footer-banner -->
     <div class="background-footer bg-dark  py-3">
-        <div class="container relative py-3 flex  gap-4">
-            <div class="footer-col max-w-[300px] text-white flex flex-col gap-7">
+        <div class="container relative py-3 flex  gap-4 justify-between max-sm:flex-col max-sm:gap-6">
+            <div class="footer-col lg:max-w-[300px] sm:max-w-[50%] max-w-full text-white flex flex-col gap-7 ">
                 <a href="/" class="logo"> <img src="/wp-content/uploads/2025/11/big-header_logo.svg" alt=""></a>
                 <p>While this website provides general information, it does not constitute legal advice. The best way to get guidance on your specific legal issue is to contact a lawyer. To schedule a meeting with Becker Legal, please call&nbsp;603-259-6726&nbsp;or complete the intake form below. Fields marked with an * are required</p>
                 <div class="social">
@@ -70,7 +70,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="footer-grid-links grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 w-full gap-0 text-white">
+            <div class="footer-grid-links grid lg:grid-cols-3 md:grid-cols-2 grid-cols-2 w-full gap-0 text-white">
                 <div>
                     <ul>
                         <li><a href="#">Key Word / SEO Link / Description</a></li>
@@ -112,5 +112,6 @@
 </footer>
 
 <?php wp_footer(); ?>
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 </body>
 </html>

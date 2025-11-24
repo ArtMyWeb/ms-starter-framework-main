@@ -16,7 +16,7 @@ $btn    = get_sub_field('home_hero_button'); // link array
     <div class="person-content-overlay absolute pointer-events-none max-h-[300px] h-full w-full bottom-0"></div>
     <div class="container relative py-0">
         <div class="home-hero hero-block">
-            <h1 class="home-hero-title text-white text-center justify-center flex flex-col font-archivo text-[120px] font-extrabold leading-[109px] uppercase">
+            <h1 class="home-hero-title text-white text-center justify-center flex flex-col font-archivo  md:text-[80px]/[1.2] lg:text-[120px]/[109px] font-extrabold  uppercase">
                 <?php if ($t1): ?><span><?php echo esc_html($t1); ?></span><?php endif; ?>
                 <?php if ($t2): ?><span class="text-transparent bg-clip-text bg-gradient-gold"><?php echo esc_html($t2); ?></span><?php endif; ?>
             </h1>
@@ -27,7 +27,7 @@ $btn    = get_sub_field('home_hero_button'); // link array
             </div>
             <div class="person-content flex flex-col items-center text-center gap-10 relative pt-[400px] max-w-[770px] z-2 mx-auto p-10 -mt-[120px]">
                 <?php if (!empty($person['url'])): ?>
-                    <img class="person-img max-w-[500px] absolute bottom-0 left-1/2 -translate-x-1/2 object-contain" src="<?php echo esc_url($person['url']); ?>" alt="">
+                    <img class="person-img max-w-[100%] lg:max-w-[500px] absolute bottom-0 left-1/2 -translate-x-1/2 object-contain" src="<?php echo esc_url($person['url']); ?>" alt="">
                 <?php endif; ?>
                 <div class="person-info z-10 relative">
                     <?php if ($desc): ?><p class="text-white"><?php echo esc_html($desc); ?></p><?php endif; ?>

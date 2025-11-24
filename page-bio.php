@@ -3,7 +3,7 @@ get_header();
 
 ?>
 <main>
-    <section class="padding-admin relative global-hero ">
+    <section class=" relative global-hero  lg:pt-20  max-sm:pt-10  ">
         <div class="absolute inset-0">
             <img src="/wp-content/uploads/2025/11/hero-logo-scaled.jpg" alt="" class="w-full h-full object-cover">
         </div>
