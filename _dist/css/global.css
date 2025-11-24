@@ -80,16 +80,16 @@ header .menu-header-menu-container .menu li {
   }
 }
 header .menu-header-menu-container .menu li.hover-active {
-  color: var(--gold);
+  color: var(--light-gold);
 }
 header .menu-header-menu-container .menu .current-menu-item,
 header .menu-header-menu-container .menu .current-menu-parent {
-  color: var(--gold);
+  color: var(--light-gold);
 }
 header .menu-header-menu-container .menu .current-menu-item::before,
 header .menu-header-menu-container .menu .current-menu-parent::before {
   content: "";
-  background: var(--gold);
+  background: var(--light-gold);
   width: 100%;
   height: 3px;
   position: absolute;
@@ -108,7 +108,7 @@ header .menu-header-menu-container .menu .current-menu-parent .sub-menu li::befo
 }
 header .menu-header-menu-container .menu .current-menu-item .sub-menu li a:hover,
 header .menu-header-menu-container .menu .current-menu-parent .sub-menu li a:hover {
-  color: var(--gold);
+  color: var(--light-gold);
 }
 header .menu-header-menu-container .menu .menu-item-has-children {
   position: relative;
@@ -263,6 +263,9 @@ header button .sr-only {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
+header .menu-item:hover a {
+  color: var(--light-gold);
+}
 
 .padding-admin {
   padding-top: calc(var(--header-height, 0px));
@@ -281,6 +284,18 @@ header button .sr-only {
   header .menu-header-menu-container .menu .menu-item-has-children.active .sub-menu li.menu-item-has-children.active .sub-menu {
     display: block;
   }
+}
+
+.footer-col ul li a:hover,
+.footer-grid-links ul li a:hover {
+  color: var(--light-gold);
+}
+
+.social {
+  transition: all 0.3s ease-in-out;
+}
+.social a svg:hover path {
+  fill: var(--light-gold);
 }
 
 *, ::before, ::after{
