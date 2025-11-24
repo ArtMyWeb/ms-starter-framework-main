@@ -461,7 +461,18 @@ strong {
     }
 
     .accordion-item {
-        .accordion-header {}
+        .accordion-header {
+            @apply relative cursor-pointer;
+
+            &::after {
+                content: '';
+                @apply absolute right-0 top-1/2 -translate-y-1/2 w-[22px] h-[22px];
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 22 22' fill='none'%3E%3Cpath d='M9.78625 11.8804H0V9.78625H9.78625V0H11.8804V9.78625H21.6667V11.8804H11.8804V21.6667H9.78625V11.8804Z' fill='%23FAF1A7'/%3E%3C/svg%3E");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
 
         .accordion-content-container {
             display: grid;
@@ -476,6 +487,10 @@ strong {
         }
 
         &.active-accordion {
+            .accordion-header::after {
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='3' viewBox='0 0 19 3' fill='none'%3E%3Cpath d='M0 2.09417V0H18.3333V2.09417H0Z' fill='%23FAF1A7'/%3E%3C/svg%3E");
+            }
+
             .accordion-content-container {
                 grid-template-rows: 1fr;
             }
@@ -513,10 +528,12 @@ strong {
             }
 
             .wpforms-field {
-                display: flex;
-                flex-direction: column;
-                gap: 0.4rem;
-                margin-bottom: 1rem;
+
+                margin-bottom: 0rem;
+
+                .wpforms-field-label {
+                    margin-bottom: 0px !important;
+                }
             }
         }
 

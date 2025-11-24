@@ -80,16 +80,16 @@ header .menu-header-menu-container .menu li {
   }
 }
 header .menu-header-menu-container .menu li.hover-active {
-  color: var(--gold);
+  color: var(--light-gold);
 }
 header .menu-header-menu-container .menu .current-menu-item,
 header .menu-header-menu-container .menu .current-menu-parent {
-  color: var(--gold);
+  color: var(--light-gold);
 }
 header .menu-header-menu-container .menu .current-menu-item::before,
 header .menu-header-menu-container .menu .current-menu-parent::before {
   content: "";
-  background: var(--gold);
+  background: var(--light-gold);
   width: 100%;
   height: 3px;
   position: absolute;
@@ -108,7 +108,7 @@ header .menu-header-menu-container .menu .current-menu-parent .sub-menu li::befo
 }
 header .menu-header-menu-container .menu .current-menu-item .sub-menu li a:hover,
 header .menu-header-menu-container .menu .current-menu-parent .sub-menu li a:hover {
-  color: var(--gold);
+  color: var(--light-gold);
 }
 header .menu-header-menu-container .menu .menu-item-has-children {
   position: relative;
@@ -263,6 +263,9 @@ header button .sr-only {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
+header .menu-item:hover a {
+  color: var(--light-gold);
+}
 
 .padding-admin {
   padding-top: calc(var(--header-height, 0px));
@@ -281,6 +284,18 @@ header button .sr-only {
   header .menu-header-menu-container .menu .menu-item-has-children.active .sub-menu li.menu-item-has-children.active .sub-menu {
     display: block;
   }
+}
+
+.footer-col ul li a:hover,
+.footer-grid-links ul li a:hover {
+  color: var(--light-gold);
+}
+
+.social {
+  transition: all 0.3s ease-in-out;
+}
+.social a svg:hover path {
+  fill: var(--light-gold);
 }
 
 *, ::before, ::after{
@@ -1144,6 +1159,24 @@ button{
     width: 1px;
     background: #fff;
   }
+.accordion-item .accordion-header{
+  position: relative;
+  cursor: pointer;
+}
+.accordion-item .accordion-header::after {
+    content: "";
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    height: 22px;
+    width: 22px;
+    --tw-translate-y: -50%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 22 22' fill='none'%3E%3Cpath d='M9.78625 11.8804H0V9.78625H9.78625V0H11.8804V9.78625H21.6667V11.8804H11.8804V21.6667H9.78625V11.8804Z' fill='%23FAF1A7'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 .accordion-item .accordion-content-container {
     display: grid;
     grid-template-rows: 0fr;
@@ -1153,6 +1186,9 @@ button{
     overflow: hidden;
     padding-top: 0;
     transition: all 0.3s ease;
+  }
+.accordion-item.active-accordion .accordion-header::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='3' viewBox='0 0 19 3' fill='none'%3E%3Cpath d='M0 2.09417V0H18.3333V2.09417H0Z' fill='%23FAF1A7'/%3E%3C/svg%3E");
   }
 .accordion-item.active-accordion .accordion-content-container {
     grid-template-rows: 1fr;
@@ -1183,10 +1219,10 @@ button{
     box-shadow: none !important;
   }
 .form-shortcode .wp-contact-form .wpforms-field {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
+  }
+.form-shortcode .wp-contact-form .wpforms-field .wpforms-field-label {
+    margin-bottom: 0px !important;
   }
 .item-area{
   display: flex;

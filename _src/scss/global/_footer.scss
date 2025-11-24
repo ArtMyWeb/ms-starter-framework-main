@@ -1,0 +1,26 @@
+.footer-col,
+.footer-grid-links {
+    ul {
+        li {
+            a {
+                &:hover {
+                    color: var(--light-gold);
+                }
+            }
+        }
+    }
+}
+
+.social {
+    transition: all 0.3s ease-in-out;
+
+    a {
+        svg {
+            &:hover {
+                path {
+                    fill: var(--light-gold);
+                }
+            }
+        }
+    }
+}
