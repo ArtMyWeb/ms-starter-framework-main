@@ -1,4 +1,13 @@
 
+<?php 
+$footer_logo = get_field('footer_logo', 'option');
+$footer_copyright = get_field('footer_copyright', 'option');
+if ( !$footer_copyright ) {
+    $footer_copyright = get_bloginfo( 'name' );
+}else{
+    $footer_copyright = str_replace( '{year}', date('Y'), $footer_copyright );
+}
+?>
 
 <footer id="site-footer" class="relative overflow-hidden bg-[url('/wp-content/uploads/2025/11/footer-bg.png')] no-repeat bg-cover">
     <!-- START COMPONENT : footer-banner -->
@@ -54,7 +63,7 @@
     <div class="background-footer bg-dark  py-3">
         <div class="container relative py-3 flex  gap-4 justify-between max-sm:flex-col max-sm:gap-6">
             <div class="footer-col lg:max-w-[300px] sm:max-w-[50%] max-w-full text-white flex flex-col gap-7 ">
-                <a href="/" class="logo"> <img src="/wp-content/uploads/2025/11/big-header_logo.svg" alt=""></a>
+                <a href="/" class="logo"> <img src="<?php echo esc_url($footer_logo['url']); ?>" alt="<?php echo esc_attr($footer_logo['alt']); ?>"></a>
                 <p>While this website provides general information, it does not constitute legal advice. The best way to get guidance on your specific legal issue is to contact a lawyer. To schedule a meeting with Becker Legal, please call&nbsp;603-259-6726&nbsp;or complete the intake form below. Fields marked with an * are required</p>
                 <div class="social">
                     <ul class="flex gap-4">
@@ -72,46 +81,38 @@
             </div>
             <div class="footer-grid-links grid lg:grid-cols-3 md:grid-cols-2 grid-cols-2 w-full gap-0 text-white">
                 <div>
-                    <ul>
-                        <li><a href="#">Key Word / SEO Link / Description</a></li>
-                        <li><a href="#">Key Word / SEO Link / Description</a></li>
-                        <li><a href="#">Key Word / SEO Link / Description</a></li>
-                        <li><a href="#">Key Word / SEO Link / Description</a></li>
-                        <li><a href="#">Key Word / SEO Link / Description</a></li>
-                        <li><a href="#">Key Word / SEO Link / Description</a></li>
-                    </ul>
+               <?php 
+               // render widget area 'footer-1'
+               if ( is_active_sidebar( 'sidebar-footer-1' ) ) {
+                   dynamic_sidebar( 'sidebar-footer-1' );
+               }
+               ?>
                 </div>
                 <div>
-                    <ul>
-                        <li><a href="#">Key Word / SEO Link / Description</a></li>
-                        <li><a href="#">Key Word / SEO Link / Description</a></li>
-                        <li><a href="#">Key Word / SEO Link / Description</a></li>
-                        <li><a href="#">Key Word / SEO Link / Description</a></li>
-                        <li><a href="#">Key Word / SEO Link / Description</a></li>
-                        <li><a href="#">Key Word / SEO Link / Description</a></li>
-                    </ul>
+                 <?php 
+               // render widget area 'footer-1'
+               if ( is_active_sidebar( 'sidebar-footer-2' ) ) {
+                   dynamic_sidebar( 'sidebar-footer-2' );
+               }
+               ?>
                 </div>
                 <div>
-                    <ul>
-                        <li><a href="#">Key Word / SEO Link / Description</a></li>
-                        <li><a href="#">Key Word / SEO Link / Description</a></li>
-                        <li><a href="#">Key Word / SEO Link / Description</a></li>
-                        <li><a href="#">Key Word / SEO Link / Description</a></li>
-                        <li><a href="#">Key Word / SEO Link / Description</a></li>
-                        <li><a href="#">Key Word / SEO Link / Description</a></li>
-
-                    </ul>
+                    <?php 
+               // render widget area 'footer-1'
+               if ( is_active_sidebar( 'sidebar-footer-3' ) ) {
+                   dynamic_sidebar( 'sidebar-footer-3' );
+               }
+               ?>
                 </div>
 
             </div>
         </div>
         <div class="container py-0 text-center text-white">
-            <p>© 2025 FIRM NAME All rights reserved | Sitemap Disclaimer | privacy policy | <a href="#">Terms & Conditions</a> </p>
+    <?php echo $footer_copyright ?> 
         </div>
     </div>
 </footer>
-
-<?php wp_footer(); ?>
 <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+<?php wp_footer(); ?>
 </body>
 </html>
