@@ -8,6 +8,7 @@
 
             // Get the current layout name and include the corresponding file
             $layout = get_row_layout();
+            $layout = str_replace('_', '-', $layout);
             $file_path = get_template_directory() . '/_inc/sub-page/' . $layout . '.php';
 
             if ( file_exists( $file_path ) ) {

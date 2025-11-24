@@ -14,6 +14,7 @@ get_header();
         <main id="site-content">
             <?php if (!is_front_page()) {
                get_template_part('_inc/page', 'hero'); 
+               get_template_part( '_inc/content', 'flexible' );
             } ?>
  
             <?php if (!empty(get_the_content())) : ?>
