@@ -18,11 +18,68 @@
             "placement": "top",
             "endpoint": 0
         },
+                {
+            "key": "field_67919ce182aca",
+            "label": "Footer Contact Form Title",
+            "name": "info_footer_contact_form_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "br"
+        },
+        {
+            "key": "field_67919ce182ac9",
+            "label": "Footer Contact Form Subtitle",
+            "name": "info_footer_contact_form_subtitle",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "br"
+        },
         {
             "key": "field_67919ce182acb",
-            "label": "Address",
-            "name": "info_address",
-            "type": "textarea",
+            "label": "Footer Contact Form",
+            "name": "info_footer_contact_form",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "br"
+        },
+        {
+            "key": "field_67a2edf506172",
+            "label": "Map Title",
+            "name": "info_map_title",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -1034,25 +1091,25 @@
             "max_size": "",
             "mime_types": ""
         },
-                {
-                    "key": "field_6760e658b389e",
-                    "label": "Phone",
-                    "name": "header_phone",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
+        {
+            "key": "field_6760e658b389e",
+            "label": "Phone",
+            "name": "header_phone",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
         {
             "key": "field_67df42ba7ee54",
             "label": "Call text",
