@@ -10,7 +10,7 @@ get_header();
                 <!-- Bio content will go here -->
                 <?php
                 $section_title = get_field('team_section_title');
-                $profile_image = get_field('team_profile_image');
+                $profile_image = get_the_post_thumbnail_url( get_the_ID(), 'full' );
                 $name = get_field('team_name');
                 $social_links = get_field('team_social_links');
                 $phone = get_field('team_phone');
@@ -24,7 +24,7 @@ get_header();
                 <div class="about-card grid grid-cols-1 md:grid-cols-2 min-h-[500px]">
                     <div class="bio-img relative  overflow-hidden bg-black">
                         <?php if ($profile_image): ?>
-                            <img src="<?php echo esc_url($profile_image['url']); ?>" alt="<?php echo esc_attr($profile_image['alt'] ?: $name); ?>" class=" w-full h-auto object-contain transition-transform duration-300 hover:scale-105">
+                            <img src="<?php echo esc_url($profile_image); ?>" alt="<?php echo esc_attr($name); ?>" class=" w-full h-auto object-contain transition-transform duration-300 hover:scale-105">
                         <?php else: ?>
                             <img src="/wp-content/uploads/2025/11/R6__4474-scaled-large-2.png" alt="Attorney" class=" w-full h-auto object-contain transition-transform duration-300 hover:scale-105">
                         <?php endif; ?>
