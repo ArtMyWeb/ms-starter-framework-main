@@ -6,12 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
 
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-		<meta property="og:image" content="<?php bloginfo('template_url'); ?>/_dist/img/site-image.png" />
-		<meta property="og:image:type" content="image/jpeg" />
-		<meta property="og:image:width" content="1200" />
-		<meta property="og:image:height" content="630" />
-		<meta property="og:image:alt" content="<?php echo get_bloginfo( 'name' ) . ' - '. get_bloginfo( 'description' ); ?>" />
-
+ 
 		<!--
 			// Google fonts (Archivo & Pontano Sans) are loaded below
 		-->
@@ -19,20 +14,7 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Pontano+Sans:wght@300..700&display=swap" rel="stylesheet">
 
-		<link rel="apple-touch-icon" sizes="57x57" href="<?php echo esc_url( get_template_directory_uri() ); ?>/_dist/img/apple-icon-57x57.png">
-		<link rel="apple-touch-icon" sizes="60x60" href="<?php echo esc_url( get_template_directory_uri() ); ?>/_dist/img/apple-icon-60x60.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="<?php echo esc_url( get_template_directory_uri() ); ?>/_dist/img/apple-icon-72x72.png">
-		<link rel="apple-touch-icon" sizes="76x76" href="<?php echo esc_url( get_template_directory_uri() ); ?>/_dist/img/apple-icon-76x76.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="<?php echo esc_url( get_template_directory_uri() ); ?>/_dist/img/apple-icon-114x114.png">
-		<link rel="apple-touch-icon" sizes="120x120" href="<?php echo esc_url( get_template_directory_uri() ); ?>/_dist/img/apple-icon-120x120.png">
-		<link rel="apple-touch-icon" sizes="144x144" href="<?php echo esc_url( get_template_directory_uri() ); ?>/_dist/img/apple-icon-144x144.png">
-		<link rel="apple-touch-icon" sizes="152x152" href="<?php echo esc_url( get_template_directory_uri() ); ?>/_dist/img/apple-icon-152x152.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="<?php echo esc_url( get_template_directory_uri() ); ?>/_dist/img/apple-icon-180x180.png">
-		<link rel="icon" type="image/png" sizes="192x192"  href="<?php echo esc_url( get_template_directory_uri() ); ?>/_dist/img/android-icon-192x192.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="<?php echo esc_url( get_template_directory_uri() ); ?>/_dist/img/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="96x96" href="<?php echo esc_url( get_template_directory_uri() ); ?>/_dist/img/favicon-96x96.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="<?php echo esc_url( get_template_directory_uri() ); ?>/_dist/img/favicon-16x16.png">
-		<link rel="manifest" href="<?php echo esc_url( get_template_directory_uri() ); ?>/_dist/img/manifest.json">
+ 
 		<meta name="msapplication-TileColor" content="#ffffff">
 		<meta name="msapplication-TileImage" content="<?php echo esc_url( get_template_directory_uri() ); ?>/_dist/img/ms-icon-144x144.png">
 		<meta name="theme-color" content="#ffffff">
@@ -52,6 +34,7 @@
 	<body <?php body_class(); ?>>
 <?php
 $header_logo = get_field('header_logo', 'option');
+$header_phone = get_field('header_phone', 'option');
 ?>
    <!-- BEGIN of header -->
     <header id="header"
@@ -75,8 +58,8 @@ $header_logo = get_field('header_logo', 'option');
                                     </div>
                                                                             <div class="text-cta">
                                             <a class=" text-[1.25rem] lg:text-[2.875rem] "
-                                                href="tel:9542375101">
-                                                (954)-237-5101                                            </a>
+                                                href="tel:<?php echo esc_attr($header_phone); ?>">
+                                                <?php echo esc_html($header_phone); ?>                                            </a>
                                         </div>
                                                                                                 </div>
                             <!-- .container -->
@@ -85,14 +68,14 @@ $header_logo = get_field('header_logo', 'option');
                                     class=" group/deskop-menu w-full max-md:group-[.active]:translate-x-0 max-md:absolute max-md:h-full max-md:right-0 max-md:top-0 max-md:pointer-events-auto max-md:translate-x-full transition-transform duration-[600ms] max-md:bg-dark">
                                     <div class="max-sm:h-full">
                                         <div class="menu-header-menu-container">
-                                            <div class="menu-menu-1-container"><ul id="primary-menu" class="menu"><li id="menu-item-244" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-244"><a class="object-contain" href="https://alopezlawfidev.wpenginepowered.com/" aria-current="page">Home</a></li>
-<li id="menu-item-263" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-263"><a href="https://alopezlawfidev.wpenginepowered.com/why-hire-us/">Why Hire Us</a></li>
-<li id="menu-item-262" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-262"><a href="https://alopezlawfidev.wpenginepowered.com/practice-areas/">Practice Areas</a></li>
-<li id="menu-item-261" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-261"><a href="https://alopezlawfidev.wpenginepowered.com/blog/">Blog</a></li>
-<li id="menu-item-260" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-260"><a href="https://alopezlawfidev.wpenginepowered.com/contact/">Contact</a></li>
-<li id="menu-item-259" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-259"><a href="https://alopezlawfidev.wpenginepowered.com/pay-online/">Pay online</a></li>
-<li id="menu-item-258" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-258"><a href="https://alopezlawfidev.wpenginepowered.com/se-habla-espanol/">SE HABLA ESPAÑOl</a></li>
-</ul></div>                                        </div>
+                                            <?php
+                                            wp_nav_menu(
+                                                array(
+                                                    'theme_location' => 'header-menu',
+                                                    'menu_id' => 'primary-menu',
+                                                )
+                                            ); ?>                                     
+ </div>
                                     </div>
                                 </div>
                             </div>

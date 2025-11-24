@@ -354,7 +354,7 @@
             "key": "field_6851fad958c6d",
             "label": "Copyright",
             "name": "footer_copyright",
-            "type": "textarea",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -1034,25 +1034,6 @@
             "max_size": "",
             "mime_types": ""
         },
-        {
-            "key": "field_6760e641b389d",
-            "label": "Phones",
-            "name": "header_phones",
-            "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "collapsed": "field_6760e658b389e",
-            "min": 0,
-            "max": 0,
-            "layout": "block",
-            "button_label": "Add Phone",
-            "sub_fields": [
                 {
                     "key": "field_6760e658b389e",
                     "label": "Phone",
@@ -1072,51 +1053,11 @@
                     "append": "",
                     "maxlength": ""
                 },
-                {
-                    "key": "field_6760e8c408d07",
-                    "label": "Text",
-                    "name": "header_text",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_6760e8d008d08",
-                    "label": "Icon",
-                    "name": "header_icon",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                }
-            ]
-        },
         {
             "key": "field_67df42ba7ee54",
-            "label": "Platform",
-            "name": "header_platform",
-            "type": "image",
+            "label": "Call text",
+            "name": "header_text",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,

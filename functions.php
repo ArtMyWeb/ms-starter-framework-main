@@ -114,7 +114,7 @@ add_theme_support( 'align-wide' );
 ========================================== */
 
 register_nav_menus( array(
-	'main_nav' => 'Main Navigation',
+    'header-menu' => 'Header Menu',
 	'sidebar_nav' => 'Sidebar Navigation',
 	'footer_nav' => 'Footer Navigation',
 	'resources_nav' => 'Resources Navigation',
@@ -374,4 +374,4 @@ function page_title() {
 		echo get_the_title();
 	}
 }
-
+ 
