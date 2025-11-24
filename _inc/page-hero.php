@@ -1,6 +1,14 @@
 <?php
 $title = get_the_title(  );
- 
+$hero_text = get_field('hero_text');
+ if(!empty($hero_text) ){
+    if(!empty($hero_text['sub_title']) ){
+    $subtitle = '<span class="text-light-gold"> ' . $hero_text['sub_title'] . '</span> ' ;
+    }else{
+        $subtitle = '';
+    }
+    $title = $hero_text['title'] .  $subtitle ;
+ }
 ?>
      <section class=" relative global-hero  lg:pt-20  max-sm:pt-10  ">
         <div class="absolute inset-0">
@@ -15,8 +23,8 @@ $title = get_the_title(  );
                     <div class="vertical-border !mb-[80px] align-middle content-center">
 
                         <h1 class="hero-title text-white text-left font-archivo justify-center    font-semibold  leading-[120%]">
-
-                            Our <span class="text-light-gold"> Team</span>
+ <?php echo $title; ?>
+                          
                         </h1>
                         <div class="google-reviews flex items-center gap-2">
                             <img src="/wp-content/uploads/2025/11/Google_2015_logo.svg-2.svg" alt="Google Reviews" class="w-32">
