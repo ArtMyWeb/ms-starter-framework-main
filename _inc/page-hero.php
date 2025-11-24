@@ -20,7 +20,7 @@
 
             <div class="c-hero--default u-block--accent-1 c-background--relative">
 
-                <div class="o-container">
+                <div class="container">
 
                     <div class="o-row align-items-center-md">
 

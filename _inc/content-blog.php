@@ -9,7 +9,7 @@ if ( $the_query->have_posts() ) : ?>
 
     <div class="c-blog-recent u-block--white u-block-padding--lg c-background--relative">
 
-        <div class="o-container">
+        <div class="container">
 
             <div class="o-row">
 

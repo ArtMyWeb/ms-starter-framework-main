@@ -1,6 +1,6 @@
 <div class="c-contact u-block--accent-1 u-block-padding--lg c-background--relative">
 
-    <div class="o-container">
+    <div class="container">
 
         <div class="o-row">
             

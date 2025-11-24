@@ -2,7 +2,7 @@
 
 <div class="u-block-padding--md">
 
-	<div class="o-container">
+	<div class="container">
 
 		<div class="o-row">
 

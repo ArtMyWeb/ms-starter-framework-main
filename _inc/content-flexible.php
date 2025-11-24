@@ -16,7 +16,7 @@
 
             <div class="c-awards u-block--white u-block-padding--md">
 
-                <div class="o-container">
+                <div class="container">
 
                     <div class="o-row">
 
@@ -95,7 +95,7 @@
 
             <div class="c-content-primary u-block-padding--lg">
 
-                <div class="o-container">
+                <div class="container">
 
                     <div class="o-row">
 
@@ -133,7 +133,7 @@
 
             <div class="c-info u-block-padding--md">
 
-                <div class="o-container">
+                <div class="container">
 
                     <div class="o-row">
 
@@ -184,7 +184,7 @@
 
             <div class="c-cases-block u-block-padding--xl">
 
-                <div class="o-container">
+                <div class="container">
 
                     <div class="o-row">
 
@@ -296,7 +296,7 @@
 
             <div class="c-team u-block-padding--lg">
 
-                 <div class="o-container">
+                 <div class="container">
                     
                     <div class="o-row">
                         
@@ -400,7 +400,7 @@
 
             <div class="c-video u-block-padding--md">
 
-                <div class="o-container">
+                <div class="container">
                     
                     <div class="o-row">
                         
@@ -468,7 +468,7 @@
 
             <div class="c-cta u-block-padding--lg">
 
-                <div class="o-container">
+                <div class="container">
                     
                     <div class="o-row">
                         
@@ -511,7 +511,7 @@
 
             <div class="c-services u-block--white u-block-padding--xl c-background--relative">
 
-                <div class="o-container">
+                <div class="container">
 
                     <div class="o-row">
 
@@ -649,7 +649,7 @@
 
             <div class="c-reviews u-block-padding--lg">
 
-                <div class="o-container">
+                <div class="container">
 
                     <div class="o-row">
 
