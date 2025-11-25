@@ -517,6 +517,28 @@
             "endpoint": 0
         },
         {
+            "key": "field_reviews_source",
+            "label": "Reviews Source",
+            "name": "reviews_source",
+            "type": "button_group",
+            "instructions": "Choose whether to use custom reviews or Trustindex widget",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "custom": "Custom",
+                "trustindex": "Trustindex"
+            },
+            "allow_null": 0,
+            "default_value": "custom",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
             "key": "field_66491ca818ffd",
             "label": "Title",
             "name": "reviews_title",
@@ -536,13 +558,48 @@
             "maxlength": ""
         },
         {
+            "key": "field_reviews_trustindex",
+            "label": "Trustindex Code",
+            "name": "reviews_trustindex",
+            "type": "textarea",
+            "instructions": "Paste your Trustindex widget code here",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_reviews_source",
+                        "operator": "==",
+                        "value": "trustindex"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 6,
+            "new_lines": ""
+        },
+        {
             "key": "field_64543777eeb2c",
             "label": "Reviews",
             "name": "reviews",
             "type": "repeater",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_reviews_source",
+                        "operator": "==",
+                        "value": "custom"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -556,9 +613,9 @@
             "sub_fields": [
                 {
                     "key": "field_66491d0619000",
-                    "label": "Image",
-                    "name": "reviews_image",
-                    "type": "image",
+                    "label": "Rating",
+                    "name": "reviews_rating",
+                    "type": "number",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -567,16 +624,8 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array",
-                    "preview_size": "medium",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": ""
+                    "default_value": 5,
+                    "maxlength": "5"
                 },
                 {
                     "key": "field_64543777eeb2e",
@@ -617,21 +666,6 @@
                     "maxlength": ""
                 }
             ]
-        },
-        {
-            "key": "field_66491cb818ffe",
-            "label": "Link",
-            "name": "reviews_link",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array"
         },
         {
             "key": "field_6454393fd4997",
@@ -1162,10 +1196,10 @@
             "maxlength": ""
         },
         {
-            "key": "field_68e5b7d3a2a05",
-            "label": "Link",
-            "name": "sidebar_practice_areas_link",
-            "type": "link",
+            "key": "field_68e5b7d2ace2c",
+            "label": "Practice Areas",
+            "name": "sidebar_practice_areas",
+            "type": "repeater",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -1174,7 +1208,28 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array"
+            "collapsed": "field_68e5b7e2ace2d",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add Practice Area",
+            "sub_fields": [
+                {
+                    "key": "field_68e5b7e2ace2d",
+                    "label": "Practice Area",
+                    "name": "practice_area",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                }
+            ]
         }
     ],
     "location": [
