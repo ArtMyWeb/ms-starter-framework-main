@@ -7,15 +7,15 @@ $btn    = get_sub_field('home_pb_button');
 <section class="blog-section bg-[url()] bg-no-repeat">
   <div class="container">
     <div class="practice-areas pb-[70px]">
-      <div class="vertical-border flex gap-5 justify-between">
-        <div class="text-side max-w-[50%] flex flex-col gap-5">
+      <div class="vertical-border flex gap-5 justify-between max-sm:flex-col max-sm:gap-3">
+        <div class="text-side lg:max-w-[50%] flex flex-col gap-5">
           <h2>
             <?php if ($t_main): echo esc_html($t_main); endif; ?>
             <?php if ($t_high): ?><span class="text-light-brown"> <?php echo esc_html($t_high); ?></span><?php endif; ?>
           </h2>
           <?php if ($desc): ?><p><?php echo esc_html($desc); ?></p><?php endif; ?>
         </div>
-        <div class="button-side self-end">
+        <div class="button-side self-end max-sm:w-full">
           <?php if (!empty($btn['url'])): ?>
             <a href="<?php echo esc_url($btn['url']); ?>" class="button" target="<?php echo isset($btn['target']) ? esc_attr($btn['target']) : '_self'; ?>"><?php echo esc_html($btn['title'] ?: 'Read more'); ?></a>
           <?php endif; ?>

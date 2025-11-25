@@ -1,17 +1,9 @@
 <?php
-$title = get_the_title();
-$hero_text = get_field('hero_text', get_queried_object_id() );
+get_header();
 
- if(!empty($hero_text) ){
-    if(!empty($hero_text['sub_title']) ){
-    $subtitle = '<span class="text-light-gold"> ' . $hero_text['sub_title'] . '</span> ' ;
-    }else{
-        $subtitle = '';
-    }
-    $title = $hero_text['title'] .  $subtitle ;
- }
 ?>
-     <section class=" relative global-hero  lg:pt-20  max-sm:pt-10  ">
+<main>
+    <section class="padding-admin relative global-hero ">
         <div class="absolute inset-0">
             <img src="/wp-content/uploads/2025/11/hero-logo-scaled.jpg" alt="" class="w-full h-full object-cover">
         </div>
@@ -24,8 +16,7 @@ $hero_text = get_field('hero_text', get_queried_object_id() );
                     <div class="vertical-border !mb-[80px] align-middle content-center">
 
                         <h1 class="hero-title text-white text-left font-archivo justify-center    font-semibold  leading-[120%]">
- <?php echo $title; ?>
-                          
+                            Our <span class="text-light-gold"> Team</span>
                         </h1>
                         <div class="google-reviews flex items-center gap-2">
                             <img src="/wp-content/uploads/2025/11/Google_2015_logo.svg-2.svg" alt="Google Reviews" class="w-32">
@@ -58,3 +49,37 @@ $hero_text = get_field('hero_text', get_queried_object_id() );
 
         </div>
     </section>
+    <section>
+        <div class="container">
+            <h3 class="vertical-border text-[30px] font-archivo font-medium">Our Attorneys</h3>
+            <!-- Team content goes here -->
+            <div class="attorneys-grid grid grid-cols-1 gap-8 mt-8">
+                <!-- Attorney items will be added here -->
+                <?php
+                for ($i = 0; $i < 3; $i++) {
+                ?>
+                    <div class="attorney-item grid sm:grid-cols-[2fr_3fr] grid-cols-1 gap-5 shadow-[0_0_20px_0_rgba(0,0,0,0.25)]">
+                        <div class="attorney-image  relative  bg-black max-sm:min-h-[250px] h-full">
+                            <img class="w-full h-full object-contain absolute inset-0" src="/wp-content/uploads/2025/11/Bg-1.png" alt="Attorney Name">
+                        </div>
+                        <div class="attorney-info  py-[20px] ">
+                            <div class="vertical-border py-10">
+                                <h4 class=" mb-5 attorney-name text-[30px] font-normal capitalize text-black ">Leif A. Becker, Esq.</h4>
+                                <p class="attorney-title mb-5">Becker Legal was founded to provide affordable legal services to clients in New Hampshire and Maine. Attorney Becker takes a holistic approach to the law; working with clients to determine the best legal route for them when taking into account all their objectives. </p>
+                                <p class="mb-5">This requires the attorney/client team to consider not only what their legal options are, but also which of those options will leave the client most satisfied in the long run.
+                                    Attorney Becker also strives to provide legal services to those who cannot afford legal representation through Pro Bono service to New Hampshire Bar Association Pro Bono Programs.</p>
+                                <div class="flex gap-4 mb-5">
+                                    <a href="tel:603-945-4912" class="gradient-border-button">603-945-4912</a>
+                                    <a href="mailto:info@beckergnl.com" class="gradient-border-button">view profile</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+    </section>
+</main>
+<?php
+get_footer();
+?>

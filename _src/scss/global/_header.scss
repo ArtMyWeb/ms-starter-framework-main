@@ -86,17 +86,17 @@ header {
                 }
 
                 &.hover-active {
-                    color: var(--gold);
+                    color: var(--light-gold);
                 }
             }
 
             .current-menu-item,
             .current-menu-parent {
-                color: var(--gold);
+                color: var(--light-gold);
 
                 &::before {
                     content: '';
-                    background: var(--gold);
+                    background: var(--light-gold);
                     width: 100%;
                     height: 3px;
                     position: absolute;
@@ -116,7 +116,7 @@ header {
                     li {
                         a {
                             &:hover {
-                                color: var(--gold);
+                                color: var(--light-gold);
                             }
                         }
                     }
@@ -299,6 +299,15 @@ header {
             @apply font-sans text-white font-bold leading-[2] text-[1rem];
         }
     }
+
+    .menu-item {
+        &:hover {
+            a {
+                color: var(--light-gold);
+            }
+        }
+    }
+
 }
 
 .padding-admin {

@@ -20,15 +20,17 @@ $img_photo= get_sub_field('home_sa_photo_image');
         </div>
       </div>
       <div class="image-block -order-1 relative flex flex-col gap-5">
-        <div class="img-bg flex items-center gap-5 max-h-[450px]">
-          <?php if (!empty($img_bg['url'])): ?><img src="<?php echo esc_url($img_bg['url']); ?>" alt=""><?php endif; ?>
-          <div class="three-lines vertical-lines flex stretch h-full justify-center gap-4">
+        <div class="img-bg flex items-center gap-5 ">
+            <div class="img-wrap w-full">
+          <?php if (!empty($img_bg['url'])): ?><img src="<?php echo esc_url($img_bg['url']); ?>" alt="" class="w-full"><?php endif; ?>
+            </div>
+          <div class="three-lines vertical-lines flex lg:stretch h-full justify-center gap-4 max-sm:hidden">
             <div class="line bg-rotate-gold vertical w-[10px] h-full"></div>
             <div class="line bg-rotate-gold w-[10px] h-full"></div>
             <div class="line bg-rotate-gold w-[10px] h-full"></div>
           </div>
         </div>
-        <div class="photo-img absolute bottom-0 right-0 max-w-[430px]">
+        <div class="photo-img absolute bottom-0 right-0 lg:max-w-[430px] max-w-[250px]">
           <?php if (!empty($img_photo['url'])): ?><img src="<?php echo esc_url($img_photo['url']); ?>" alt=""><?php endif; ?>
         </div>
         <div class="three-lines horizontal-lines flex flex-col justify-center gap-4">

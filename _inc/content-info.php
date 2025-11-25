@@ -1,6 +1,6 @@
 <div class="c-footer__map u-block--accent-1 u-block-padding--lg">
         
-    <div class="o-container">
+    <div class="container">
         
         <div class="o-row">
             

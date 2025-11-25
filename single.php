@@ -1,45 +1,38 @@
-<?php get_header(); ?>
-
-<div class="c-content u-block-padding--lg">
-
-    <div class="o-container">
-
-        <div class="o-row">
-
-            <div class="o-col--xxs-12 o-col--md-8">
-
-               <div class="o-content">
-                   
-                    <?php if ( have_posts() ) :?>
-
-                        <?php while ( have_posts() ) : the_post(); ?>
-
-                            <article>
-
-                                <?php get_template_part('_inc/content', 'image'); ?>
-
-                                <?php the_content(); ?>
-
-                            </article>
-
-                        <?php endwhile; ?>
-
-                        <?php single_pager_nav(); ?>
-
+<?php
+get_header();
+?>
+<?php 
+       get_template_part('_inc/page', 'hero'); 
+?>
+    <section class="bio-section">
+        <div class="container lg:grid lg:grid-cols-[2fr_1fr] gap-16 lg:pt-24">
+            <div class="content max-lg:mb-10">
+                <?php if (have_posts()) :
+                    while (have_posts()) : the_post(); ?>
+                    <!-- featured image -->
+                    <?php if (has_post_thumbnail()) : ?>
+                        <div class="featured-image mb-6">
+                            <?php the_post_thumbnail('large'); ?>
+                        </div>
                     <?php endif; ?>
-                
-               </div>
-
+                            <?php the_content(); ?>
+                <?php endwhile;
+                endif; ?>
             </div>
+            <div class="sidebar-container">
+                <!-- Sidebar/content will go here -->
 
-           <?php get_sidebar('blog'); ?>
-
+                <div class="sidebar">
+                    <?php if (is_active_sidebar('sidebar')) : ?>
+                                <?php dynamic_sidebar('sidebar'); ?>
+                    <?php endif; ?>
+                </div>
+            </div>
         </div>
 
-    </div>
+        </div>
+    </section>
 
-</div>
-
-<?php get_footer(); ?>
-
-
+<?php
+get_footer();
+?>

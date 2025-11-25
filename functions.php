@@ -61,7 +61,8 @@ function theme_styles() {
 function themejs() {
 	wp_enqueue_script( 'font-awesome', 'https://kit.fontawesome.com/43f01e18f7.js', array(), false );
 	wp_enqueue_script( 'lightbox', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js', array('jquery'), '', true );
-	wp_enqueue_script( 'script', get_template_directory_uri() . '/_dist/js/scripts.js', array('jquery'), '', true );
+	wp_enqueue_script( 'script', get_template_directory_uri() . '/_dist/js/scripts.min.js', array(), '', true );
+	wp_enqueue_script( 'vcf-generator', get_template_directory_uri() . '/assets/js/vcf-generator.js', array(), '1.0.0', true );
 }
 
 
@@ -114,7 +115,7 @@ add_theme_support( 'align-wide' );
 ========================================== */
 
 register_nav_menus( array(
-	'main_nav' => 'Main Navigation',
+    'header-menu' => 'Header Menu',
 	'sidebar_nav' => 'Sidebar Navigation',
 	'footer_nav' => 'Footer Navigation',
 	'resources_nav' => 'Resources Navigation',
@@ -374,4 +375,10 @@ function page_title() {
 		echo get_the_title();
 	}
 }
+ 
 
+add_filter('use_block_editor_for_post_type', '__return_false');
+// Disables the block editor from managing widgets in the Gutenberg plugin.
+add_filter('gutenberg_use_widgets_block_editor', '__return_false');
+// Disables the block editor from managing widgets.
+add_filter('use_widgets_block_editor', '__return_false');

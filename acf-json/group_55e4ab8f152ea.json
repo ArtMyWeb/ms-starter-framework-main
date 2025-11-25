@@ -18,11 +18,68 @@
             "placement": "top",
             "endpoint": 0
         },
+                {
+            "key": "field_67919ce182aca",
+            "label": "Footer Contact Form Title",
+            "name": "info_footer_contact_form_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "br"
+        },
+        {
+            "key": "field_67919ce182ac9",
+            "label": "Footer Contact Form Subtitle",
+            "name": "info_footer_contact_form_subtitle",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "br"
+        },
         {
             "key": "field_67919ce182acb",
-            "label": "Address",
-            "name": "info_address",
-            "type": "textarea",
+            "label": "Footer Contact Form",
+            "name": "info_footer_contact_form",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "br"
+        },
+        {
+            "key": "field_67a2edf506172",
+            "label": "Map Title",
+            "name": "info_map_title",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -354,7 +411,7 @@
             "key": "field_6851fad958c6d",
             "label": "Copyright",
             "name": "footer_copyright",
-            "type": "textarea",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -424,25 +481,6 @@
             "maxlength": ""
         },
         {
-            "key": "field_670f1276cdf43",
-            "label": "Additional Content",
-            "name": "contact_additional_content",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "basic",
-            "media_upload": 0,
-            "delay": 0
-        },
-        {
             "key": "field_640111c5e7e44",
             "label": "Form",
             "name": "contact_form",
@@ -461,30 +499,7 @@
             "media_upload": 0,
             "delay": 0
         },
-        {
-            "key": "field_6711d299fd62d",
-            "label": "Image",
-            "name": "contact_image",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "url",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
+ 
         {
             "key": "field_6454376beeb2b",
             "label": "Reviews",
@@ -1035,10 +1050,10 @@
             "mime_types": ""
         },
         {
-            "key": "field_6760e641b389d",
-            "label": "Phones",
-            "name": "header_phones",
-            "type": "repeater",
+            "key": "field_6760e658b389e",
+            "label": "Phone",
+            "name": "header_phone",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -1047,76 +1062,17 @@
                 "class": "",
                 "id": ""
             },
-            "collapsed": "field_6760e658b389e",
-            "min": 0,
-            "max": 0,
-            "layout": "block",
-            "button_label": "Add Phone",
-            "sub_fields": [
-                {
-                    "key": "field_6760e658b389e",
-                    "label": "Phone",
-                    "name": "header_phone",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_6760e8c408d07",
-                    "label": "Text",
-                    "name": "header_text",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_6760e8d008d08",
-                    "label": "Icon",
-                    "name": "header_icon",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                }
-            ]
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_67df42ba7ee54",
-            "label": "Platform",
-            "name": "header_platform",
-            "type": "image",
+            "label": "Call text",
+            "name": "header_text",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,

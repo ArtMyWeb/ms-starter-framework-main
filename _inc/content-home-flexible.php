@@ -16,6 +16,7 @@ if ( function_exists('have_rows') && have_rows('home') ) :
             'home_faq'             => 'home-faq',
             'home_two_col'         => 'home-two-col',
             'home_blog_grid'       => 'home-blog-grid',
+            'home_trustindex'      => 'home-trustindex',
         ];
         if ( isset( $partials[ $layout ] ) ) {
             $file = get_template_directory() . '/_inc/flex/' . $partials[ $layout ] . '.php';

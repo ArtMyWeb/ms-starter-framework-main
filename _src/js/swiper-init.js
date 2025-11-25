@@ -1,4 +1,7 @@
 // Initialize Swiper (Note: Swiper bundle must be loaded via CDN in header.php)
+
+
+
 (function () {
     'use strict';
 
@@ -13,16 +16,24 @@
         const swiperElement = document.querySelector('.why-hire-swiper');
         const sidebarSwiperElement = document.querySelector('.sidebar-reviews-swiper');
         if (sidebarSwiperElement && typeof Swiper !== 'undefined') {
-            const swiper = new Swiper('.sidebar-reviews-swiper', {
+
+            const swiperReview = new Swiper('.sidebar-reviews-swiper', {
                 loop: true,
                 spaceBetween: 20,
                 slidesPerView: 1,
+
             });
-            console.log('Sidebar swiper initialized:', swiper);
+
         }
+        console.log(typeof Swiper);
+        console.log(Swiper);
+
 
         if (swiperElement && typeof Swiper !== 'undefined') {
+
             const swiper = new Swiper('.why-hire-swiper', {
+
+
                 // Optional parameters
                 loop: true,
                 spaceBetween: 30,

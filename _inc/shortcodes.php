@@ -149,3 +149,30 @@ function columns_shortcode($atts, $content = null) {
 }
 
 add_shortcode('columns', 'columns_shortcode');
+
+
+function my_sidebar_contact_us_shortcode()
+{
+    $title       = get_field('contact_title', 'option');
+    $sub_heading = get_field('contact_subtitle', 'option');
+ 
+    $form        = get_field('contact_form', 'option');
+
+    if (!$title || empty($title) || empty($form) || empty($sub_heading)) {
+        return '';
+    }
+    ob_start();
+?>
+                    <div class="contact-us-widget bg-dark text-white px-8 py-10">
+                        <div class="contact-form-wrapper">
+                            <p class="text-2xl font-archivo text-center text-light-gold">Schedule a Consultation</p>
+                            <h3 class="text-white text-[54px] leading-[120%] my-4 text-center font-semibold">Contact Us</h3>
+                            <div class="form-shortcode"><?php echo do_shortcode($form); ?></div>
+
+                        </div>
+                    </div>
+<?php
+    return ob_get_clean();
+}
+
+add_shortcode('sidebar_contact_us', 'my_sidebar_contact_us_shortcode');

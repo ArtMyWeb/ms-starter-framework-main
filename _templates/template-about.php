@@ -9,9 +9,10 @@
 
 <?php get_template_part('_inc/page', 'hero'); ?>
 
+
 <div class="c-content u-block-padding--lg">
 
-	<div class="o-container">
+	<div class="container">
 
 	    <div class="o-row">
 
