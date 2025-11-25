@@ -96,16 +96,7 @@ get_header();
                     </div>
                 </div>
                 <div class="content mt-10">
-                    <div class="vertical-border ">
-                        <h3>Biography</h3>
-                        <?php if ($biography): ?>
-                            <?php echo wp_kses_post($biography); ?>
-                        <?php else: ?>
-                            <p>Becker Legal was founded to provide affordable legal services to clients in New Hampshire and Maine. Attorney Becker takes a holistic approach to the law; working with clients to determine the best legal route for them when taking into account all their objectives. This requires the attorney/client team to consider not only what their legal options are, but also which of those options will leave the client most satisfied in the long run.
-                                Attorney Becker also strives to provide legal services to those who cannot afford legal representation through Pro Bono service to New Hampshire Bar Association Pro Bono Programs.</p>
-                        <?php endif; ?>
-                    </div>
-
+ 
                     <?php if ($information): ?>
                         <?php foreach ($information as $info): ?>
                                 <h3><?php echo esc_html($info['title']); ?></h3>

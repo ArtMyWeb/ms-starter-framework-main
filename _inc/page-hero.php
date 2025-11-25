@@ -1,6 +1,7 @@
 <?php
-$title = get_the_title(  );
-$hero_text = get_field('hero_text');
+$title = get_the_title();
+$hero_text = get_field('hero_text', get_queried_object_id() );
+
  if(!empty($hero_text) ){
     if(!empty($hero_text['sub_title']) ){
     $subtitle = '<span class="text-light-gold"> ' . $hero_text['sub_title'] . '</span> ' ;
