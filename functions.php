@@ -382,3 +382,15 @@ add_filter('use_block_editor_for_post_type', '__return_false');
 add_filter('gutenberg_use_widgets_block_editor', '__return_false');
 // Disables the block editor from managing widgets.
 add_filter('use_widgets_block_editor', '__return_false');
+
+// excerpt length
+function custom_excerpt_length( $length ) {
+	return 20;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+// remove excerpt ellipsis
+function custom_excerpt_more( $more ) {
+	return ' ...';
+}
+add_filter( 'excerpt_more', 'custom_excerpt_more' );
