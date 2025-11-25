@@ -644,6 +644,10 @@ strong {
 
         place-content: start;
 
+        li {
+            @apply text-center
+        }
+
         div:nth-child(2) {
             ul {
                 @apply border-l-[1px] border-[#ffffff];
