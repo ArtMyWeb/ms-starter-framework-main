@@ -1504,6 +1504,9 @@ button{
 .mt-8{
   margin-top: 2rem;
 }
+.mb-8{
+  margin-bottom: 2rem;
+}
 .block{
   display: block;
 }
@@ -2039,6 +2042,10 @@ button{
 .text-xs{
   font-size: 0.75rem;
   line-height: 1rem;
+}
+.text-xl{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 .font-black{
   font-weight: 900;

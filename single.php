@@ -6,7 +6,7 @@ get_header();
 ?>
     <section class="bio-section">
         <div class="container lg:grid lg:grid-cols-[2fr_1fr] gap-16 lg:pt-24">
-            <div class="bio-content max-lg:mb-10">
+            <div class="content max-lg:mb-10">
                 <?php if (have_posts()) :
                     while (have_posts()) : the_post(); ?>
                     <!-- featured image -->
