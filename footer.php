@@ -52,19 +52,19 @@ $info_footer_bg_image = get_field('info_footer_bg_image', 'option');
                     </div>
                     <div class="contacts grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] lg:grid-cols-[3fr_3fr_5fr] gap-1 px-5 py-[30px] bg-dark">
                         <div class="footer-widget-column">
-                            <h4>Portsmouth Office</h4>
-                            <p><?php echo $info_portsmouth_address; ?></p>
-                            <a href="tel:<?php echo esc_html($info_portsmouth_phone); ?>"><?php echo $info_portsmouth_phone; ?></a>
+                            <h4 class="font-worksans font-semibold">Portsmouth Office</h4>
+                            <p class="font-pontano"><?php echo $info_portsmouth_address; ?></p>
+                            <a class="font-pontano" href="tel:<?php echo esc_html($info_portsmouth_phone); ?>"><?php echo $info_portsmouth_phone; ?></a>
                         </div>
                         <div class="footer-widget-column">
-                            <h4>Concord office</h4>
-                            <p><?php echo $info_concord_address; ?></p>
-                            <a href="tel:<?php echo esc_html($info_concord_phone); ?>"><?php echo $info_concord_phone; ?></a>
+                            <h4 class="font-worksans font-semibold">Concord office</h4>
+                            <p class="font-pontano"><?php echo $info_concord_address; ?></p>
+                            <a  class="font-pontano" href="tel:<?php echo esc_html($info_concord_phone); ?>"><?php echo $info_concord_phone; ?></a>
                         </div>
                         <div class="footer-widget-column call-us flex flex-col gap-4">
                             <h3><?php echo esc_html($info_hours); ?></h3>
                             <div class="divider h-[1px] bg-[#FAF1A7] w-full"></div>
-                            <a href="tel:<?php echo esc_html($phone); ?>"><?php echo $phone; ?></a>
+                            <a class="font-utopia text-[2.5rem] text-cta" href="tel:<?php echo esc_html($phone); ?>"><?php echo $phone; ?></a>
                         </div>
 
                     </div>

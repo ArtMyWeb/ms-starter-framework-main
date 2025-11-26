@@ -548,6 +548,14 @@ strong {
     }
 
     .footer-widget-column {
+        p {
+            @apply font-pontano
+        }
+
+        a {
+            @apply font-pontano font-semibold;
+        }
+
         color: #fff;
         padding-right: 2rem;
 
@@ -645,6 +653,11 @@ strong {
         place-content: start;
 
         li {
+            a {
+                @apply font-pontano font-normal text-[1rem];
+
+            }
+
             @apply text-center
         }
 
