@@ -1953,8 +1953,14 @@ button{
 .font-archivo{
   font-family: Archivo, sans-serif;
 }
+.font-pontano{
+  font-family: Pontano Sans, sans-serif;
+}
 .font-sans{
   font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.font-worksans{
+  font-family: Work Sans, sans-serif;
 }
 .\!text-\[1\.25rem\]\/\[1\.2\]{
   font-size: 1.25rem !important;
@@ -2547,6 +2553,78 @@ strong{
 }
 .widget__widget_nav_menu .menu{
   text-align: center;
+}
+
+.ti-widget-container .ti-reviews-container {
+  display: flex !important;
+  flex-direction: column;
+}
+.ti-widget-container .ti-controls {
+  position: initial !important;
+  display: flex !important;
+  height: auto !important;
+  order: 3;
+  margin-top: 30px !important;
+  justify-content: flex-end;
+  align-items: center !important;
+  gap: 30px !important;
+}
+.ti-widget-container .ti-controls:before {
+  content: "" !important;
+  background: linear-gradient(180deg, #FAF1A7 0%, #9F692E 101.96%);
+  display: block;
+  width: 100%;
+  height: 10px;
+  order: -2;
+  margin-right: 30px;
+}
+.ti-widget-container .ti-controls .ti-next {
+  display: block !important;
+  position: relative !important;
+}
+.ti-widget-container .ti-controls .ti-next:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='16' viewBox='0 0 17 16' fill='none'%3E%3Cpath d='M9.40671e-07 8.94267L12.9167 8.94267L8.66321 13.3333L10.4896 15.2187L16.0347 9.49467C16.519 8.9946 16.7911 8.31644 16.7911 7.60934C16.7911 6.90223 16.519 6.22408 16.0347 5.724L10.4896 8.72838e-07L8.66321 1.88534L12.9167 6.276L7.07543e-07 6.276L9.40671e-07 8.94267Z' fill='white'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none !important;
+  transform: translate(-50%, -50%) rotate(0deg) !important;
+  width: 17px !important;
+  height: 16px !important;
+}
+.ti-widget-container .ti-controls .ti-prev {
+  display: block !important;
+  position: relative !important;
+  order: -1;
+  margin-right: 26px;
+}
+.ti-widget-container .ti-controls .ti-prev::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg) !important;
+  width: 17px !important;
+  height: 16px !important;
+  border: none !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='16' viewBox='0 0 17 16' fill='none'%3E%3Cpath d='M16.7911 6.276H3.87445L8.12791 1.88533L6.30149 0L0.756365 5.724C0.272065 6.22407 0 6.90223 0 7.60933C0 8.31644 0.272065 8.99459 0.756365 9.49467L6.30149 15.2187L8.12791 13.3333L3.87445 8.94267H16.7911V6.276Z' fill='white'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.ti-widget-container .ti-controls .ti-prev,
+.ti-widget-container .ti-controls .ti-next {
+  width: 43px !important;
+  height: 43px !important;
+  background: linear-gradient(90deg, #FAF1A7 0%, #9F692E 100%);
+  border: 0px !important;
+  border-radius: 0% !important;
+  outline-color: transparent !important;
 }
 .hover\:scale-105:hover{
   --tw-scale-x: 1.05;

@@ -47,13 +47,13 @@ $info_hours = get_field('info_hours', 'option');
                     </div>
                     <div class="contacts grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] lg:grid-cols-[3fr_3fr_5fr] gap-1 px-5 py-[30px] bg-dark">
                         <div class="footer-widget-column">
-                            <h4>Portsmouth Office</h4>
-                            <p>1 New Hampshire Avenue1st FloorPortsmouth NH 03801</p>
+                            <h4 class="font-worksans font-semibold">Portsmouth Office</h4>
+                            <p class="font-pontano">1 New Hampshire Avenue1st FloorPortsmouth NH 03801</p>
                             <a href="tel:6032596726">603-259-6726</a>
                         </div>
                         <div class="footer-widget-column">
-                            <h4>Concord office</h4>
-                            <p>5 Warren StreetSuite 2AConcord, NH 03301</p>
+                            <h4 class="font-worksans font-semibold">Concord office</h4>
+                            <p class="font-pontano">5 Warren StreetSuite 2AConcord, NH 03301</p>
                             <a href="tel:6032596726">603-259-6726</a>
                         </div>
                         <div class="footer-widget-column call-us flex flex-col gap-4">
@@ -91,7 +91,7 @@ $info_hours = get_field('info_hours', 'option');
                     </ul>
                 </div>
             </div>
-            <div class="footer-grid-links grid lg:grid-cols-3 md:grid-cols-2 grid-cols-2 w-full gap-0 text-white">
+            <div class="footer-grid-links grid lg:grid-cols-3 md:grid-cols-2 grid-cols-2 w-full gap-0 text-white lg:pt-20">
                 <div>
                <?php 
                // render widget area 'footer-1'
