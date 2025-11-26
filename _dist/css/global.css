@@ -1521,9 +1521,6 @@ button{
 .mt-8{
   margin-top: 2rem;
 }
-.mb-\[50px\]{
-  margin-bottom: 50px;
-}
 .block{
   display: block;
 }
@@ -1965,6 +1962,9 @@ button{
 .font-archivo{
   font-family: Archivo, sans-serif;
 }
+.font-figtree{
+  font-family: Figtree, sans-serif;
+}
 .font-pontano{
   font-family: Pontano Sans, sans-serif;
 }
@@ -1973,9 +1973,6 @@ button{
 }
 .font-worksans{
   font-family: Work Sans, sans-serif;
-}
-.font-figtree{
-  font-family: Figtree, sans-serif;
 }
 .\!text-\[1\.25rem\]\/\[1\.2\]{
   font-size: 1.25rem !important;
@@ -2028,6 +2025,9 @@ button{
   font-size: 1rem;
   line-height: 1.2;
 }
+.text-\[2\.5rem\]{
+  font-size: 2.5rem;
+}
 .text-\[20px\]{
   font-size: 20px;
 }
@@ -2069,12 +2069,6 @@ button{
 .text-xs{
   font-size: 0.75rem;
   line-height: 1rem;
-}
-.text-\[2rem\]{
-  font-size: 2rem;
-}
-.text-\[2\.5rem\]{
-  font-size: 2.5rem;
 }
 .font-black{
   font-weight: 900;
