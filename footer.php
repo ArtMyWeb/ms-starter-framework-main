@@ -103,7 +103,7 @@ $info_footer_bg_image = get_field('info_footer_bg_image', 'option');
             <div class="footer-grid-links grid lg:grid-cols-3 md:grid-cols-2 grid-cols-2 w-full gap-0 text-white">
                 <div>
                          <?php 
-               // render widget area 'footer-1'
+               // render widget area 'footer-2'
                if ( is_active_sidebar( 'sidebar-footer-2' ) ) {
                    dynamic_sidebar( 'sidebar-footer-2' );
                }
@@ -111,7 +111,7 @@ $info_footer_bg_image = get_field('info_footer_bg_image', 'option');
                 </div>
                 <div>
                  <?php 
-               // render widget area 'footer-1'
+               // render widget area 'footer-3'
                if ( is_active_sidebar( 'sidebar-footer-3' ) ) {
                    dynamic_sidebar( 'sidebar-footer-3' );
                }
@@ -119,7 +119,7 @@ $info_footer_bg_image = get_field('info_footer_bg_image', 'option');
                 </div>
                 <div>
                     <?php 
-               // render widget area 'footer-1'
+               // render widget area 'footer-4'
                if ( is_active_sidebar( 'sidebar-footer-4' ) ) {
                    dynamic_sidebar( 'sidebar-footer-4' );
                }
