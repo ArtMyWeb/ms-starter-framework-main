@@ -1324,18 +1324,20 @@ button{
 .footer-widget-column .footer-grid-links ul li a {
     color: #fff;
   }
-.footer-widget-column .footer-grid-links div {
+.footer-grid-links {
     place-content: start;
   }
-.footer-widget-column .footer-grid-links div:last-child ul{
+.footer-grid-links li{
+  text-align: center;
+}
+.footer-grid-links div:nth-child(2) ul{
   border-left-width: 1px;
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
 }
-.footer-widget-column .footer-grid-links div:first-child ul{
-  border-right-width: 1px;
-  --tw-border-opacity: 1;
-  border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
+.footer-grid-links div:nth-child(3) ul{
+  border-left-width: 1px;
+  border-color: #fffff;
 }
 .two-col-section h1,
   .two-col-section h2,
@@ -1486,6 +1488,9 @@ button{
 .mb-7{
   margin-bottom: 1.75rem;
 }
+.mb-8{
+  margin-bottom: 2rem;
+}
 .mb-\[4rem\]{
   margin-bottom: 4rem;
 }
@@ -1503,9 +1508,6 @@ button{
 }
 .mt-8{
   margin-top: 2rem;
-}
-.mb-8{
-  margin-bottom: 2rem;
 }
 .block{
   display: block;
@@ -2039,13 +2041,13 @@ button{
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
-.text-xs{
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
 .text-xl{
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+.text-xs{
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 .font-black{
   font-weight: 900;
@@ -2543,63 +2545,53 @@ a:not(.button),
 strong{
   font-weight: 500;
 }
-
+.widget__widget_nav_menu .menu{
+  text-align: center;
+}
 .hover\:scale-105:hover{
   --tw-scale-x: 1.05;
   --tw-scale-y: 1.05;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
-
 .hover\:text-light-gold:hover{
   --tw-text-opacity: 1;
   color: rgb(250 241 167 / var(--tw-text-opacity, 1));
 }
-
 .hover\:text-white:hover{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
-
 .hover\:underline:hover{
   text-decoration-line: underline;
 }
-
 .group\/nav-button:hover .group-hover\/nav-button\:text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
-
 .group\/nav-button.active .group-\[\.active\]\/nav-button\:mb-2{
   margin-bottom: 0.5rem;
 }
-
 .group\/nav-button.active .group-\[\.active\]\/nav-button\:mt-3{
   margin-top: 0.75rem;
 }
-
 .group\/body.modal-open .group-\[\.modal-open\]\/body\:-translate-y-\[--modal-wrapper-mobile-nav-modal-scroll-position\]{
   --tw-translate-y: calc(var(--modal-wrapper-mobile-nav-modal-scroll-position) * -1);
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
-
 .group\/nav-button.active .group-\[\.active\]\/nav-button\:-rotate-45{
   --tw-rotate: -45deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
-
 .group\/nav-button.active .group-\[\.active\]\/nav-button\:rotate-45{
   --tw-rotate: 45deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
-
 .group\/nav-button.active .group-\[\.active\]\/nav-button\:opacity-0{
   opacity: 0;
 }
-
 .group\/body.modal-open .group-\[\.modal-open\]\/body\:duration-0{
   transition-duration: 0s;
 }
-
 @media not all and (min-width: 1025px){
   .max-lg\:mb-10{
     margin-bottom: 2.5rem;
@@ -2608,7 +2600,6 @@ strong{
     gap: 0.75rem;
   }
 }
-
 @media not all and (min-width: 769px){
   .max-md\:pointer-events-none{
     pointer-events: none;
@@ -2653,7 +2644,6 @@ strong{
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 }
-
 @media not all and (min-width: 641px){
   .max-sm\:hidden{
     display: none;
@@ -2693,7 +2683,6 @@ strong{
     font-size: 1.15rem !important;
   }
 }
-
 @media (min-width: 641px){
   .sm\:h-20{
     height: 5rem;
@@ -2728,7 +2717,6 @@ strong{
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 }
-
 @media (min-width: 769px){
   .md\:mt-1\.5{
     margin-top: 0.375rem;
@@ -2765,7 +2753,6 @@ strong{
     line-height: 1.2;
   }
 }
-
 @media (min-width: 1025px){
   .lg\:flex{
     display: flex;
@@ -2775,12 +2762,6 @@ strong{
   }
   .lg\:h-24{
     height: 6rem;
-  }
-  .lg\:w-1\/3{
-    width: 33.333333%;
-  }
-  .lg\:w-2\/3{
-    width: 66.666667%;
   }
   .lg\:max-w-\[300px\]{
     max-width: 300px;
@@ -2858,34 +2839,28 @@ strong{
     line-height: 1;
   }
 }
-
 .\[\&\.scroll-down\]\:-translate-y-\[100\%\].scroll-down{
   --tw-translate-y: -100%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
-
 .\[\&\.scroll-up\]\:translate-y-0.scroll-up{
   --tw-translate-y: 0px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
-
 @media (min-width: 641px){
   .sm\:\[\&\.scroll-up\]\:-translate-y-\[calc\(100\%-\(100\%-5rem\)\)\].scroll-up{
     --tw-translate-y: calc(calc(100% - (100% - 5rem)) * -1);
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 }
-
 .\[\&\>iframe\]\:h-full>iframe{
   height: 100%;
 }
-
 .\[\&\>span\]\:transition-all>span{
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
-
 .\[\&\>span\]\:duration-300>span{
   transition-duration: 300ms;
 }

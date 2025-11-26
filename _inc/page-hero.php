@@ -10,10 +10,17 @@ $hero_text = get_field('hero_text', get_queried_object_id() );
     }
     $title = $hero_text['title'] .  $subtitle ;
  }
+
+$hero_image_bg = get_field('hero_image_bg', 'option');
+$hero_image_one = get_field('hero_image_one', 'option');
+$hero_image_two = get_field('hero_image_two', 'option');
+$hero_source = get_field('hero_source', 'option');
 ?>
      <section class=" relative global-hero  lg:pt-20  max-sm:pt-10  ">
         <div class="absolute inset-0">
-            <img src="/wp-content/uploads/2025/11/hero-logo-scaled.jpg" alt="" class="w-full h-full object-cover">
+            <?php if($hero_image_bg): ?>
+                <img src="<?php echo esc_url($hero_image_bg['url']); ?>" alt="<?php echo esc_attr($hero_image_bg['alt']); ?>" class="w-full h-full object-cover">
+            <?php endif; ?>
         </div>
         <div class="hero-overlay absolute inset-0 overflow-hidden"></div>
         <div class="person-content-overlay absolute pointer-events-none max-h-[230px] h-full w-full bottom-0"></div>
@@ -27,6 +34,10 @@ $hero_text = get_field('hero_text', get_queried_object_id() );
  <?php echo $title; ?>
                           
                         </h1>
+                        <?php if($hero_source == 'google'): 
+                        $hero_google_text = get_field('hero_google_text', 'option');
+                        $hero_google_rating = get_field('hero_google_rating', 'option');
+                        ?>
                         <div class="google-reviews flex items-center gap-2">
                             <img src="/wp-content/uploads/2025/11/Google_2015_logo.svg-2.svg" alt="Google Reviews" class="w-32">
                             <div class="right-side flex flex-col gap-2">
@@ -41,14 +52,24 @@ $hero_text = get_field('hero_text', get_queried_object_id() );
                                     <?php } ?>
                                 </div>
                                 <div class="reiew-text">
-                                    <p class="text-white text-[13px] ">4.9 rating from 1000+ reviews</p>
+                                    <p class="text-white text-[13px] "><?php echo esc_html($hero_google_text); ?></p>
                                 </div>
                             </div>
                         </div>
+                        <?php elseif($hero_source == 'trustindex'): 
+                        $hero_trustindex_js = get_field('hero_trustindex_js', 'option');
+                        if($hero_trustindex_js):
+                        ?>
+                        <script><?php echo $hero_trustindex_js; ?></script>
+                        <?php endif; endif; ?>
                     </div>
                 </div>
                 <div class="hero-image-person relative z-10 lg:justify-end flex justify-center ">
-                    <img class="object-contain h-full max-h-[320px] self-end" src="/wp-content/uploads/2025/11/headshot-1.png" alt="">
+                    <?php if($hero_image_one): ?>
+                        <img class="object-contain h-full max-h-[320px] self-end" src="<?php echo esc_url($hero_image_one['url']); ?>" alt="<?php echo esc_attr($hero_image_one['alt']); ?>">
+                        <?php endif; ?>    <?php if($hero_image_two): ?>
+                            <img class="object-contain h-full max-h-[320px] self-end" src="<?php echo esc_url($hero_image_two['url']); ?>" alt="<?php echo esc_attr($hero_image_two['alt']); ?>">
+                        <?php endif; ?>
                 </div>
 
 
