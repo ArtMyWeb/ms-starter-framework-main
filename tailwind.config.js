@@ -87,6 +87,10 @@ module.exports = {
       fontFamily: {
         'archivo': ['Archivo', 'sans-serif'],
         'pontano': ['Pontano Sans', 'sans-serif'],
+        'figtree': ['Figtree', 'sans-serif'],
+        'worksans': ['Work Sans', 'sans-serif'],
+
+
       },
       spacing: {
         // Додайте свої розміри тут

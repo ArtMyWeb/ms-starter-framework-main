@@ -6,7 +6,7 @@ $t2     = get_sub_field('home_hero_title_line2');
 $desc   = get_sub_field('home_hero_description');
 $btn    = get_sub_field('home_hero_button'); // link array
 ?>
-<section class="padding-admin relative">
+<section class="lg:pt-20 relative">
     <div class="absolute inset-0">
         <?php if (!empty($bg['url'])): ?>
             <img src="<?php echo esc_url($bg['url']); ?>" alt="" class="w-full h-full object-cover">
