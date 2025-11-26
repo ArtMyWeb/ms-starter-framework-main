@@ -280,11 +280,11 @@ function sidebar_reviews_slider_shortcode()
                                                         </svg>
                                                     <?php endfor; ?>
                                                 </div>
-                                                <p class="text-[24px] text-center font-semibold text-[#2A2A2B]">“<?php echo esc_html($review['reviews_quote']); ?>”</p>
+                                                <p class="text-[24px] text-center font-semibold text-[#2A2A2B] font-figtree">“<?php echo esc_html($review['reviews_quote']); ?>”</p>
                                                 <div class="author flex justify-center items-center flex-col gap-5 w-full">
                                                     <p class="text-[18px] font-medium text-light-brown m-0 font-archivo">~ <?php echo esc_html($review['reviews_author']); ?></p>
                                                     <div class="line bg-gradient-to-b from-light-gold to-light-brown h-[2px]  w-full"></div>
-                                                    <p class="text-[16px] text-light-brown uppercase font-medium font-archivo">Personal Injury</p>
+                                                    <p class="text-[16px] text-light-brown uppercase font-medium font-figtree">Personal Injury</p>
 
                                                 </div>
 
