@@ -1,71 +1,31 @@
-            <?php elseif( get_row_layout() == 'block_7_video' ):
-
-                $block_7_title = get_sub_field('block_7_video_title');
-                $block_7_content = get_sub_field('block_7_video_content');
-                $block_7_image = get_sub_field('block_7_video_image');
-                $block_7_link = get_sub_field('block_7_video_link');
+            <?php  if( get_row_layout() == 'block_7_video' ):
 
             ?>
 
-            <!-- Section -->
-
-            <div class="c-video u-block-padding--md">
-
-                <div class="o-container">
-
-                    <div class="o-row">
-
-                        <div class="o-col--xxs-12">
-
-                            <?php if ( $block_7_title ): ?>
-
-                                <h2><?php echo $block_7_title; ?></h2>
-
-                            <?php endif; ?>
-
-                            <?php if ( $block_7_content ): ?>
-
-                                <?php echo $block_7_content; ?>
-
-                            <?php endif; ?>
-
-                            <?php if ( $block_7_image ): ?>
-
-                                <div class="c-video__block">
-
-                                    <div class="c-video--line"></div>
-
-                                    <?php if ( $block_7_link ): ?>
-
-                                        <a href="<?php echo $block_7_link['url']; ?>" data-fancybox title="<?php echo $block_7_link['title']; ?>" class="c-video__link">
-
-                                    <?php endif; ?>
-
-                                        <img class="c-video__image u-reset--margin b-lazy"
-                                             src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                             data-original="<?php echo $block_7_image['url']; ?>"
-                                             alt="<?php echo $block_7_image['alt']; ?>"
-                                             width="<?php echo $block_7_image['width']; ?>"
-                                             height="<?php echo $block_7_image['height']; ?>">
-
-                                        <span class="c-video__icon"><i class="fa fa-play" aria-hidden="true"></i></span>
-
-                                    <?php if ( $block_7_link ): ?>
-
-                                        </a>
-
-                                    <?php endif; ?>
-
-                                </div>
-
-                            <?php endif; ?>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
+     <div class="grid-video grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <?php
+      $query = new WP_Query(array(
+          'post_type' => 'media-post',
+          'posts_per_page' => -1,
+      ));
+      if ($query->have_posts()): while ($query->have_posts()): $query->the_post();
+        $img_url = get_the_post_thumbnail_url(get_the_ID(), 'large');
+        $ttl = get_the_title();
+        $exc = get_field('short_text');
+        $lnk = get_permalink();
+      ?>
+      <article class="video-item">
+        <a href="<?php echo esc_url($lnk); ?>" class="flex flex-col">
+          <div class="video-img">
+            <?php if ($img_url): ?><img src="<?php echo esc_url($img_url); ?>" alt="<?php echo esc_attr($ttl); ?>"><?php endif; ?>
+          </div>
+          <div class="blog-content flex flex-col text-white z-10 vertical-border bg-light-dark/90 p-5 bottom-0 left-0 w-full">
+            <?php if ($ttl): ?><h3 class="text-[1.375rem]/[1.2] font-archivo font-semibold pb-2"><?php echo esc_html($ttl); ?></h3><?php endif; ?>
+            <div class="blog-excerpt"><div class=""><div class="overflow-hidden"><?php if ($exc): ?><p><?php echo esc_html($exc); ?></p><?php endif; ?></div></div></div>
+          </div>
+        </a>
+      </article>
+      <?php endwhile; wp_reset_postdata(); endif; ?>
+    </div>
 
             <?php endif; ?>
