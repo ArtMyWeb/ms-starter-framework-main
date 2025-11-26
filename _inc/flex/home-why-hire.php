@@ -2,7 +2,7 @@
 // Try both get_sub_field (for layout level) and direct field names
 $img_bg_raw = get_sub_field('home_wh_image_bg');
 $img_photo_raw = get_sub_field('home_wh_image_photo');
-
+$image_bg = get_sub_field('field_home_wh_image_bg_background');
 // If fields are empty, they might be named differently - try common variations
 if (empty($img_bg_raw)) {
     $img_bg_raw = get_sub_field('image_bg') ?: get_sub_field('background_image') ?: get_sub_field('bg_image');
@@ -11,13 +11,7 @@ if (empty($img_photo_raw)) {
     $img_photo_raw = get_sub_field('image_photo') ?: get_sub_field('photo') ?: get_sub_field('image');
 }
 
-// Debug: log what we're getting
-if (WP_DEBUG) {
-    error_log('=== WHY HIRE DEBUG ===');
-    error_log('Layout: ' . get_row_layout());
-    error_log('img_bg type: ' . gettype($img_bg_raw) . ' | value: ' . print_r($img_bg_raw, true));
-    error_log('img_photo type: ' . gettype($img_photo_raw) . ' | value: ' . print_r($img_photo_raw, true));
-}
+ 
 
 // Slides
 $slides = have_rows('home_wh_slides');
@@ -44,8 +38,8 @@ if (is_array($img_photo_raw) && !empty($img_photo_raw['url'])) {
 ?>
 <section class="msster why-hire-section relative shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]">
   <div class="image-overlay absolute inset-0">
-    <?php if (!empty($img_bg_url)): ?>
-      <img class="w-full h-full object-bottom-left" src="<?php echo esc_url($img_bg_url); ?>" alt="">
+    <?php if (!empty($image_bg['url'])): ?>
+      <img class="w-full h-full object-bottom-left" src="<?php echo esc_url($image_bg['url']); ?>" alt="">
     <?php endif; ?>
     <div class="absolute inset-0 bg-dark opacity-70"></div>
   </div>
