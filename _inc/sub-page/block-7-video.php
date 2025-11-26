@@ -1,8 +1,10 @@
             <?php  if( get_row_layout() == 'block_7_video' ):
-
+                $block_7_title = get_sub_field('block_7_video_title');
             ?>
-
-     <div class="grid-video grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+  <div class="container">
+                <h3 class="vertical-border text-[30px] font-archivo font-medium"><?php echo esc_html($block_7_title ?: 'Our Attorneys'); ?></h3>
+            <!-- Team content goes here -->
+     <div class="grid-video grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-7" >
       <?php
       $query = new WP_Query(array(
           'post_type' => 'media-post',
@@ -26,6 +28,7 @@
         </a>
       </article>
       <?php endwhile; wp_reset_postdata(); endif; ?>
+    </div>
     </div>
 
             <?php endif; ?>
