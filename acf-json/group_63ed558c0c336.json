@@ -200,6 +200,13 @@
                                 }
                             ]
                         },
+                        {"key": "field_home_wh_image_bg_background",
+                            "label": "Background Image",
+                            "name": "home_wh_image_background",
+                            "type": "image",
+                            "return_format": "array",
+                            "preview_size": "large"
+                        },
                         {
                             "key": "field_home_wh_image_bg",
                             "label": "Left Image",
@@ -396,6 +403,7 @@
                             "type": "link",
                             "return_format": "array"
                         },
+                        
                         {
                             "key": "field_home_sa_left_image",
                             "label": "Left Image",

@@ -18,6 +18,30 @@
             "placement": "top",
             "endpoint": 0
         },
+        {
+            "key" : "field_67919cbf82ac8",
+            "label" : "Footer bg Image",
+            "name" : "info_footer_bg_image",
+            "type" : "image",
+            "instructions" : "",
+            "required" : 0,
+            "conditional_logic" : 0,
+            "wrapper" : {
+                "width" : "",
+                "class" : "",
+                "id" : ""
+            },
+            "return_format" : "array",
+            "preview_size" : "medium",
+            "library" : "all",
+            "min_width" : "",
+            "min_height" : "",
+            "min_size" : "",
+            "max_width" : "",
+            "max_height" : "",
+            "max_size" : "",
+            "mime_types" : ""
+        },
                 {
             "key": "field_67919ce182aca",
             "label": "Footer Contact Form Title",
@@ -134,9 +158,9 @@
         },
         {
             "key": "field_67919cff82acc",
-            "label": "Email",
-            "name": "info_email",
-            "type": "email",
+            "label": "Phone",
+            "name": "info_phone",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -150,10 +174,30 @@
             "prepend": "",
             "append": ""
         },
+ 
         {
-            "key": "field_6738fd8bb28ef",
-            "label": "Content",
-            "name": "info_content",
+            "key": "field_info_portsmouth_address",
+            "label": "Portsmouth Office Address",
+            "name": "info_portsmouth_address",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 3,
+            "new_lines": "wpautop"
+        },
+        {
+            "key": "field_info_portsmouth_phone",
+            "label": "Portsmouth Office Phone",
+            "name": "info_portsmouth_phone",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -170,9 +214,28 @@
             "maxlength": ""
         },
         {
-            "key": "field_682e7050b8ec0",
-            "label": "Location",
-            "name": "info_location",
+            "key": "field_info_concord_address",
+            "label": "Concord Office Address",
+            "name": "info_concord_address",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 3,
+            "new_lines": "wpautop"
+        },
+        {
+            "key": "field_info_concord_phone",
+            "label": "Concord Office Phone",
+            "name": "info_concord_phone",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -187,58 +250,6 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
-        },
-        {
-            "key": "field_667f533711ce0",
-            "label": "Link Primary",
-            "name": "link_primary",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array"
-        },
-        {
-            "key": "field_667f533d11ce1",
-            "label": "Link Secondary",
-            "name": "link_secondary",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array"
-        },
-        {
-            "key": "field_67a2ee0806175",
-            "label": "Show Map",
-            "name": "show_map",
-            "type": "button_group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "yes": "Yes",
-                "no": "No"
-            },
-            "allow_null": 0,
-            "default_value": "yes",
-            "layout": "horizontal",
-            "return_format": "value"
         },
         {
             "key": "field_588a50d23cc0a",
@@ -347,66 +358,7 @@
             "placement": "top",
             "endpoint": 0
         },
-        {
-            "key": "field_61cbbce221bee",
-            "label": "Links",
-            "name": "links",
-            "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "collapsed": "field_61cbbcf921bf0",
-            "min": 0,
-            "max": 0,
-            "layout": "block",
-            "button_label": "Add Link",
-            "sub_fields": [
-                {
-                    "key": "field_61cbbcf921bf0",
-                    "label": "Link",
-                    "name": "link",
-                    "type": "link",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array"
-                }
-            ]
-        },
-        {
-            "key": "field_6760e66f0ca31",
-            "label": "Logo",
-            "name": "footer_logo",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
+  
         {
             "key": "field_6851fad958c6d",
             "label": "Copyright",
@@ -426,79 +378,7 @@
             "rows": "",
             "new_lines": ""
         },
-        {
-            "key": "field_6401113e55075",
-            "label": "Contact",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_6401114f55076",
-            "label": "Title",
-            "name": "contact_title",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_640111bde7e43",
-            "label": "Subtitle",
-            "name": "contact_subtitle",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_640111c5e7e44",
-            "label": "Form",
-            "name": "contact_form",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 0,
-            "delay": 0
-        },
+ 
  
         {
             "key": "field_6454376beeb2b",
@@ -825,40 +705,6 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
-        },
-        {
-            "key": "field_67df42cb7ee55",
-            "label": "Rating",
-            "name": "header_rating",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_682e6d2a7e4c0",
-            "label": "Link",
-            "name": "header_link",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array"
         },
         {
             "key": "field_hero_tab",
