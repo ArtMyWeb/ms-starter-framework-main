@@ -397,6 +397,12 @@ strong {
             background: unset;
         }
     }
+    .hero-section {
+       .ti-widget  {
+    max-width: max-content;
+    width: 100%;
+}
+    }   
 
     .hero-overlay {
         background: rgba(17, 17, 16, 0.73);
