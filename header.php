@@ -13,7 +13,7 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Figtree:wght@600&family=Pontano+Sans:wght@300..700&family=Work+Sans:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://use.typekit.net/imd5ipl.css">
+<link rel="stylesheet" href="https://use.typekit.net/bsz4csh.css">
 
  
 		<meta name="msapplication-TileColor" content="#ffffff">

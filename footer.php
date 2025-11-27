@@ -64,7 +64,7 @@ $info_footer_bg_image = get_field('info_footer_bg_image', 'option');
                         <div class="footer-widget-column call-us flex flex-col gap-4">
                             <h3><?php echo esc_html($info_hours); ?></h3>
                             <div class="divider h-[1px] bg-[#FAF1A7] w-full"></div>
-                            <a class="font-utopia text-[2.5rem] text-cta" href="tel:<?php echo esc_html($phone); ?>"><?php echo $phone; ?></a>
+                            <a class=" text-[2.5rem] text-cta !font-utopia !font-normal" href="tel:<?php echo esc_html($phone); ?>"><?php echo $phone; ?></a>
                         </div>
 
                     </div>
