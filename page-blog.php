@@ -56,7 +56,7 @@ get_header();
                 ?>
                     <article class="blog-item group    h-full  overflow-hidden ">
                         <div class="relative ">
-                            <div class="blog-img h-full max-h-[500px]">
+                            <div class="blog-img h-full max-h-[475px]">
                                 <img class="w-full h-auto object-cover " src="/wp-content/uploads/2025/11/Bg.png" alt="">
                             </div>
                             <div

@@ -7,8 +7,8 @@ $btn    = get_sub_field('home_pb_button');
 <section class="blog-section bg-[url()] bg-no-repeat">
   <div class="container">
     <div class="practice-areas pb-[70px]">
-      <div class="vertical-border flex gap-5 justify-between max-sm:flex-col max-sm:gap-3">
-        <div class="text-side lg:max-w-[50%] flex flex-col gap-5">
+      <div class="flex gap-5 justify-between max-sm:flex-col max-sm:gap-3">
+        <div class="text-side lg:max-w-[50%] flex flex-col gap-5 vertical-border " >
           <h2>
             <?php if ($t_main): echo esc_html($t_main); endif; ?>
             <?php if ($t_high): ?><span class="text-light-brown"> <?php echo esc_html($t_high); ?></span><?php endif; ?>
@@ -31,7 +31,7 @@ $btn    = get_sub_field('home_pb_button');
       ?>
       <article class="blog-item group h-full overflow-hidden">
         <div class="relative">
-          <div class="blog-img h-full max-h-[500px]">
+          <div class="blog-img h-full max-h-[475px]">
             <?php if (!empty($img['url'])): ?><img class="w-full h-auto object-cover" src="<?php echo esc_url($img['url']); ?>" alt=""><?php endif; ?>
           </div>
           <div class="blog-content flex flex-col text-white z-10 vertical-border bg-light-dark/90 p-5 !absolute bottom-0 left-0 w-full">

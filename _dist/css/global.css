@@ -3,8 +3,16 @@
 header{
   height: var(--header-height);
   transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+  transition: opacity 0.3s ease;
 }
-header.scrolled .header-inner {
+header.is-faded {
+  opacity: 0.85;
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.2px);
+  -webkit-backdrop-filter: blur(8.2px);
+}
+header.scrolled #header {
   background: rgba(18, 60, 114, 0.7254901961);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -93,7 +101,7 @@ header .menu-header-menu-container .menu .current-menu-parent::before {
   width: 100%;
   height: 3px;
   position: absolute;
-  top: -100%;
+  top: -81%;
   left: 0;
 }
 @media (max-width: 769px) {
@@ -1343,13 +1351,21 @@ button{
   text-align: center;
 }
 .footer-grid-links div:nth-child(2) ul{
-  border-left-width: 1px;
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
 }
+@media (min-width: 1025px){
+  .footer-grid-links div:nth-child(2) ul{
+    border-left-width: 1px;
+  }
+}
 .footer-grid-links div:nth-child(3) ul{
-  border-left-width: 1px;
   border-color: #fffff;
+}
+@media (min-width: 1025px){
+  .footer-grid-links div:nth-child(3) ul{
+    border-left-width: 1px;
+  }
 }
 .two-col-section h1,
   .two-col-section h2,
@@ -1418,8 +1434,8 @@ button{
 .top-1\/2{
   top: 50%;
 }
-.top-\[var\(--header-height\)\]{
-  top: var(--header-height);
+.top-\[calc\(var\(--header-height\)-10px\)\]{
+  top: calc(var(--header-height) - 10px);
 }
 .z-10{
   z-index: 10;
@@ -1590,8 +1606,8 @@ button{
 .max-h-\[320px\]{
   max-height: 320px;
 }
-.max-h-\[500px\]{
-  max-height: 500px;
+.max-h-\[475px\]{
+  max-height: 475px;
 }
 .max-h-\[520px\]{
   max-height: 520px;
@@ -1919,10 +1935,6 @@ button{
   padding-top: 70px;
   padding-bottom: 70px;
 }
-.py-\[80px\]{
-  padding-top: 80px;
-  padding-bottom: 80px;
-}
 .\!pl-0{
   padding-left: 0px !important;
 }
@@ -1944,8 +1956,8 @@ button{
 .pl-\[32px\]{
   padding-left: 32px;
 }
-.pt-3\.5{
-  padding-top: 0.875rem;
+.pt-2\.5{
+  padding-top: 0.625rem;
 }
 .pt-\[400px\]{
   padding-top: 400px;
@@ -2073,6 +2085,9 @@ button{
   font-size: 0.75rem;
   line-height: 1rem;
 }
+.\!font-normal{
+  font-weight: 400 !important;
+}
 .font-black{
   font-weight: 900;
 }
@@ -2090,9 +2105,6 @@ button{
 }
 .font-semibold{
   font-weight: 600;
-}
-.\!font-normal{
-  font-weight: 400 !important;
 }
 .uppercase{
   text-transform: uppercase;
@@ -2647,6 +2659,14 @@ strong{
   border-radius: 0% !important;
   outline-color: transparent !important;
 }
+.home .drilldown-menu-box{
+  border-color: #ffffff33;
+}
+@media (min-width: 1025px){
+  .home .drilldown-menu-box{
+    border-top-width: 1px;
+  }
+}
 .hover\:scale-105:hover{
   --tw-scale-x: 1.05;
   --tw-scale-y: 1.05;
@@ -2759,15 +2779,24 @@ strong{
   .max-sm\:flex-col{
     flex-direction: column;
   }
+  .max-sm\:justify-center{
+    justify-content: center;
+  }
   .max-sm\:gap-3{
     gap: 0.75rem;
   }
   .max-sm\:gap-6{
     gap: 1.5rem;
   }
+  .max-sm\:gap-10{
+    gap: 2.5rem;
+  }
   .max-sm\:py-3{
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
+  }
+  .max-sm\:pl-0{
+    padding-left: 0px;
   }
   .max-sm\:pl-5{
     padding-left: 1.25rem;
@@ -2804,10 +2833,6 @@ strong{
   .sm\:justify-between{
     justify-content: space-between;
   }
-  .sm\:py-2\.5{
-    padding-top: 0.625rem;
-    padding-bottom: 0.625rem;
-  }
   .group\/nav-button.active .sm\:group-\[\.active\]\/nav-button\:mb-3{
     margin-bottom: 0.75rem;
   }
@@ -2817,9 +2842,6 @@ strong{
   }
 }
 @media (min-width: 769px){
-  .md\:mt-1\.5{
-    margin-top: 0.375rem;
-  }
   .md\:hidden{
     display: none;
   }
@@ -2829,8 +2851,8 @@ strong{
   .md\:grid-cols-\[2fr_3fr\]{
     grid-template-columns: 2fr 3fr;
   }
-  .md\:justify-end{
-    justify-content: flex-end;
+  .md\:justify-between{
+    justify-content: space-between;
   }
   .md\:gap-2\.5{
     gap: 0.625rem;
@@ -2906,6 +2928,10 @@ strong{
   }
   .lg\:gap-7{
     gap: 1.75rem;
+  }
+  .lg\:\!py-\[65px\]{
+    padding-top: 65px !important;
+    padding-bottom: 65px !important;
   }
   .lg\:pt-20{
     padding-top: 5rem;

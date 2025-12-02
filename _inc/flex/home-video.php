@@ -15,7 +15,7 @@ $content  = get_sub_field('home_video_content');
           <?php if ($subtitle): ?><h4 class="subtitle pb-2"><?php echo esc_html($subtitle); ?></h4><?php endif; ?>
           <?php if ($title): ?><h2><?php echo esc_html($title); ?></h2><?php endif; ?>
         </div>
-        <div class="content pl-[32px]">
+        <div class="content pl-[32px] max-sm:pl-0">
           <?php if ($content): ?><p><?php echo esc_html($content); ?></p><?php endif; ?>
         </div>
       </div>
