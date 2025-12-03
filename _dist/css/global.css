@@ -25,9 +25,6 @@ header .menu-item-has-children > .sub-menu {
 header .menu-item-has-children > .sub-menu .sub-menu {
   opacity: 1;
 }
-header .sub-menu li a:hover {
-  color: var(--gold);
-}
 header .menu-header-menu-container {
   color: white;
 }
@@ -51,7 +48,7 @@ header .menu-header-menu-container .menu {
   display: flex;
   align-items: center;
   gap: 1.5625rem;
-  justify-content: center;
+  justify-content: flex-start;
 }
 @media (max-width: 1024px) {
   header .menu-header-menu-container .menu {
@@ -137,7 +134,7 @@ header .menu-header-menu-container .menu .menu-item-has-children > a::after {
   background-repeat: no-repeat;
   top: 50%;
   right: -0.75rem;
-  transform: translateY(-50%);
+  transform: translateY(-70%);
   width: 0.625rem;
   height: 0.4375rem;
   transition-property: transform;
@@ -271,7 +268,7 @@ header button .sr-only {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
-header .menu-item:hover a {
+header .menu-item:hover > a {
   color: var(--light-gold);
 }
 

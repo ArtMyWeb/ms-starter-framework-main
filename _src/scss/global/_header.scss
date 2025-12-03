@@ -36,9 +36,7 @@ header {
 
     .sub-menu {
         li {
-            a:hover {
-                color: var(--gold);
-            }
+            a:hover {}
         }
     }
 
@@ -66,7 +64,7 @@ header {
             display: flex;
             align-items: center;
             gap: 1.5625rem;
-            justify-content: center;
+            justify-content: flex-start;
 
             @media (max-width: 1024px) {
                 gap: 16px;
@@ -156,7 +154,7 @@ header {
                         background-repeat: no-repeat;
                         top: 50%;
                         right: -0.75rem;
-                        transform: translateY(-50%);
+                        transform: translateY(-70%);
                         width: 0.625rem;
                         height: 0.4375rem;
                         transition-property: transform;
@@ -315,7 +313,7 @@ header {
 
     .menu-item {
         &:hover {
-            a {
+            >a {
                 color: var(--light-gold);
             }
         }
