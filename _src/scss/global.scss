@@ -669,13 +669,13 @@ strong {
 
         div:nth-child(2) {
             ul {
-                @apply border-l-[1px] border-[#ffffff];
+                @apply lg:border-l-[1px] border-[#ffffff];
             }
         }
 
         div:nth-child(3) {
             ul {
-                @apply border-l-[1px] border-[#fffff];
+                @apply lg:border-l-[1px] border-[#fffff];
             }
         }
 
@@ -792,4 +792,9 @@ strong {
 
         }
     }
+
+    .drilldown-menu-box {
+        @apply lg:border-t-[1px] border-[#ffffff33];
+    }
+
 }

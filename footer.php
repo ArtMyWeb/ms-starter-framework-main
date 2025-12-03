@@ -82,7 +82,7 @@ $info_footer_bg_image = get_field('info_footer_bg_image', 'option');
                }
                ?>
                 <div class="social">
-                    <ul class="flex gap-4">
+                    <ul class="flex gap-4 max-sm:justify-center">
                         <?php if (have_rows('social', 'option')): ?>
                             <?php while (have_rows('social', 'option')): the_row();
                                 $social_icon = get_sub_field('social_icon');
@@ -100,7 +100,7 @@ $info_footer_bg_image = get_field('info_footer_bg_image', 'option');
                     </ul>
                 </div>
             </div>
-            <div class="footer-grid-links grid lg:grid-cols-3 md:grid-cols-2 grid-cols-2 w-full gap-0 text-white lg:pt-20">
+            <div class="footer-grid-links grid lg:grid-cols-3 md:grid-cols-2 grid-cols-2 w-full gap-0 text-white lg:pt-20 max-sm:gap-10">
                 <div>
                          <?php 
                // render widget area 'footer-2'
