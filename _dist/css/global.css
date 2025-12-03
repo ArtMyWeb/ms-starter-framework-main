@@ -2785,14 +2785,14 @@ strong{
   .max-sm\:justify-center{
     justify-content: center;
   }
+  .max-sm\:gap-10{
+    gap: 2.5rem;
+  }
   .max-sm\:gap-3{
     gap: 0.75rem;
   }
   .max-sm\:gap-6{
     gap: 1.5rem;
-  }
-  .max-sm\:gap-10{
-    gap: 2.5rem;
   }
   .max-sm\:py-3{
     padding-top: 0.75rem;
