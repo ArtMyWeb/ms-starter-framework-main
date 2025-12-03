@@ -113,7 +113,7 @@ header .menu-header-menu-container .menu .current-menu-parent .sub-menu li::befo
 }
 header .menu-header-menu-container .menu .current-menu-item .sub-menu li a:hover,
 header .menu-header-menu-container .menu .current-menu-parent .sub-menu li a:hover {
-  color: var(--light-gold);
+  color: var(---light-brown);
 }
 header .menu-header-menu-container .menu .menu-item-has-children {
   position: relative;
@@ -270,6 +270,9 @@ header button .sr-only {
 }
 header .menu-item:hover > a {
   color: var(--light-gold);
+}
+header .menu-item .sub-menu li a:hover {
+  color: var(--light-brown);
 }
 
 .padding-admin {
