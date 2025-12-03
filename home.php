@@ -27,7 +27,7 @@ get_template_part( '_inc/page','hero'  );
                         ?>
                         <article class="blog-item group h-full overflow-hidden">
                             <div class="relative">
-                                <div class="blog-img h-full max-h-[500px]">
+                                <div class="blog-img h-full max-h-[475px]">
                                     <?php if ($post_thumbnail): ?>
                                         <img class="w-full h-auto object-cover" src="<?php echo esc_url($post_thumbnail); ?>" alt="<?php echo esc_attr($post_title); ?>">
                                     <?php else: ?>

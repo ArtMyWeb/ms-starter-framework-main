@@ -14,7 +14,7 @@ $img_photo= get_sub_field('home_sa_photo_image');
           <?php if ($subtitle): ?><h4 class="subtitle text-balance"><?php echo esc_html($subtitle); ?></h4><?php endif; ?>
           <?php if ($title): ?><h2 class="text-balance text-dark"><?php echo esc_html($title); ?></h2><?php endif; ?>
         </div>
-        <div class="content-part pl-[32px]">
+        <div class="content-part pl-[32px] max-sm:pl-0">
           <?php if ($content): ?><p><?php echo esc_html($content); ?></p><?php endif; ?>
           <?php if (!empty($btn['url'])): ?><a href="<?php echo esc_url($btn['url']); ?>" class="button" target="<?php echo isset($btn['target']) ? esc_attr($btn['target']) : '_self'; ?>"><?php echo esc_html($btn['title'] ?: 'Learn more'); ?></a><?php endif; ?>
         </div>

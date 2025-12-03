@@ -13,6 +13,7 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Figtree:wght@600&family=Pontano+Sans:wght@300..700&family=Work+Sans:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.typekit.net/bsz4csh.css">
 
  
 		<meta name="msapplication-TileColor" content="#ffffff">
@@ -39,8 +40,8 @@ $header_phone = get_field('header_phone', 'option');
    <!-- BEGIN of header -->
     <header id="header"
         class="group/header fixed z-[1100]  w-full transform-gpu group-[.modal-open]/body:-translate-y-[--modal-wrapper-mobile-nav-modal-scroll-position] group-[.modal-open]/body:duration-0 [&.scroll-down]:-translate-y-[100%] [&.scroll-up]:translate-y-0 sm:[&.scroll-up]:-translate-y-[calc(100%-(100%-5rem))] bg-dark">
-        <div class="header-inner relative z-30 transform-gpu sm:group-[.scroll-up]/header:translate-y-[calc(5rem/2)] bg-dark py-4">
-            <div class="container relative py-1 sm:py-2.5 max-sm:bg-orange">
+        <div class="header-inner relative z-30 transform-gpu sm:group-[.scroll-up]/header:translate-y-[calc(5rem/2)] py-4">
+            <div class="container  py-0   ">
                                 <div class="w-full">
                     <div class="flex items-center justify-between mb-2 max-lg:gap-3">
                                                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo max-w-[440px] flex-shrink-0 max-md:hidden">
@@ -50,7 +51,7 @@ $header_phone = get_field('header_phone', 'option');
                                                   </div>
                             </a>
                                                 <div class="max-md:w-full">
-                            <div class="flex sm:items-center md:gap-2.5 lg:gap-7 max-md:w-full justify-center sm:justify-between md:justify-end">
+                            <div class="flex sm:items-center md:gap-2.5 lg:gap-7 max-md:w-full justify-center sm:justify-between md:justify-between">
                                                                     <div
                                         class="max-sm:py-3 max-sm:pl-5 max-sm:pr-2 flex sm:items-center max-sm:bg-dark-blue text-white max-sm:hidden">
                                         <p class="font-sans uppercase text-[1rem] lg:text-[16px] leading-[3] font-black tracking-[0.3em]">
@@ -63,7 +64,7 @@ $header_phone = get_field('header_phone', 'option');
                                         </div>
                                                                                                 </div>
                             <!-- .container -->
-                            <div class="drilldown-menu-box group max-md:absolute left-0 top-[var(--header-height)] z-50 w-full max-md:pointer-events-none max-md:h-[calc(100dvh-var(--wp-admin--admin-bar--height,0px)-var(--header-height))] transition-transform duration-[600ms]  md:mt-1.5 pt-3.5">
+                            <div class="drilldown-menu-box group max-md:absolute left-0 top-[calc(var(--header-height)-10px)] z-50 w-full max-md:pointer-events-none max-md:h-[calc(100dvh-var(--wp-admin--admin-bar--height,0px)-var(--header-height))] transition-transform duration-[600ms]   pt-2.5 ">
                                 <div id="mobile-menu"
                                     class=" group/deskop-menu w-full max-md:group-[.active]:translate-x-0 max-md:absolute max-md:h-full max-md:right-0 max-md:top-0 max-md:pointer-events-auto max-md:translate-x-full transition-transform duration-[600ms] max-md:bg-dark">
                                     <div class="max-sm:h-full">

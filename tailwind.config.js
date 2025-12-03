@@ -89,6 +89,7 @@ module.exports = {
         'pontano': ['Pontano Sans', 'sans-serif'],
         'figtree': ['Figtree', 'sans-serif'],
         'worksans': ['Work Sans', 'sans-serif'],
+        'utopia': ['utopia-std', 'serif'],
 
 
       },

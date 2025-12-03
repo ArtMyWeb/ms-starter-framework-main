@@ -10,7 +10,7 @@ $hero_text = get_field('hero_text', get_queried_object_id() );
     }
     $title = $hero_text['title'] .  $subtitle ;
  }
-
+ 
 $hero_image_bg = get_field('hero_image_bg', 'option');
 $hero_image_one = get_field('hero_image_one', 'option');
 $hero_image_two = get_field('hero_image_two', 'option');
@@ -60,7 +60,7 @@ $hero_source = get_field('hero_source', 'option');
                         $hero_trustindex_js = get_field('hero_trustindex_js', 'option');
                         if($hero_trustindex_js):
                         ?>
-                        <script><?php echo $hero_trustindex_js; ?></script>
+                    <?php echo $hero_trustindex_js; ?>
                         <?php endif; endif; ?>
                     </div>
                 </div>
