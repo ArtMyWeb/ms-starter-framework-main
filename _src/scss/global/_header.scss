@@ -197,6 +197,8 @@ header {
                         opacity: 1;
                         transform: translate(0px, 0px);
                         pointer-events: visible;
+                        background-color: transparent !important;
+                        border: 1px solid #fff;
                         //li {
                         //  text-align: left;
                         //}
@@ -255,7 +257,7 @@ header {
                     .sub-menu {
                         position: unset;
                         background-color: transparent;
-                        color: var(--dark-blue);
+                        color: var(--light-gold);
                         background: white;
                         width: 21rem;
                         padding: 0;
@@ -319,8 +321,8 @@ header {
         }
 
         .sub-menu {
-            li {
-                a:hover {
+            li:hover {
+                a {
                     color: var(--light-brown);
                 }
             }
