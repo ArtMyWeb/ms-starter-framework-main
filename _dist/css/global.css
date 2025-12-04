@@ -1283,6 +1283,12 @@ button{
     padding-right: 0;
     padding-left: 2rem;
   }
+@media not all and (min-width: 641px){
+  .footer-widget-column:last-child{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
 .footer-widget-column h4 {
     color: #FAF1A7;
     font-size: 12.637px;
@@ -2790,6 +2796,10 @@ strong{
   }
   .max-sm\:gap-6{
     gap: 1.5rem;
+  }
+  .max-sm\:px-5{
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
   .max-sm\:py-3{
     padding-top: 0.75rem;
