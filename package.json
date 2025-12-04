@@ -6,7 +6,8 @@
   "scripts": {
     "build": "gulp",
     "watch": "gulp",
-    "dev": "gulp"
+    "dev": "gulp",
+    "package": "npm run build && cd .. && zip -r ms-starter-framework.zip ms-starter-framework-main -x '*/node_modules/*' -x '*/.git/*' -x '*/.github/*' -x '*/package-lock.json'"
   },
   "engines": {
     "node": ">= 18.0.0"
