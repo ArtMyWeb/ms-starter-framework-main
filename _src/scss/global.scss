@@ -577,6 +577,8 @@ strong {
         &:last-child {
             padding-right: 0;
             padding-left: 2rem;
+            @apply max-sm:px-0;
+
         }
 
         h4 {

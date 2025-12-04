@@ -111,7 +111,7 @@ header {
                     width: 100%;
                     height: 3px;
                     position: absolute;
-                    top: -81%;
+                    top: -65%;
                     left: 0;
 
                     @media (max-width: 769px) {
@@ -127,7 +127,7 @@ header {
                     li {
                         a {
                             &:hover {
-                                color: var(--light-gold);
+                                color: var(---light-brown);
                             }
                         }
                     }
@@ -317,6 +317,16 @@ header {
                 color: var(--light-gold);
             }
         }
+
+        .sub-menu {
+            li {
+                a:hover {
+                    color: var(--light-brown);
+                }
+            }
+        }
+
+
     }
 
 }
