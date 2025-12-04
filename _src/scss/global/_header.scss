@@ -36,9 +36,7 @@ header {
 
     .sub-menu {
         li {
-            a:hover {
-                color: var(--gold);
-            }
+            a:hover {}
         }
     }
 
@@ -66,7 +64,7 @@ header {
             display: flex;
             align-items: center;
             gap: 1.5625rem;
-            justify-content: center;
+            justify-content: flex-start;
 
             @media (max-width: 1024px) {
                 gap: 16px;
@@ -113,7 +111,7 @@ header {
                     width: 100%;
                     height: 3px;
                     position: absolute;
-                    top: -81%;
+                    top: -65%;
                     left: 0;
 
                     @media (max-width: 769px) {
@@ -129,7 +127,7 @@ header {
                     li {
                         a {
                             &:hover {
-                                color: var(--light-gold);
+                                color: var(---light-brown);
                             }
                         }
                     }
@@ -156,7 +154,7 @@ header {
                         background-repeat: no-repeat;
                         top: 50%;
                         right: -0.75rem;
-                        transform: translateY(-50%);
+                        transform: translateY(-70%);
                         width: 0.625rem;
                         height: 0.4375rem;
                         transition-property: transform;
@@ -315,10 +313,20 @@ header {
 
     .menu-item {
         &:hover {
-            a {
+            >a {
                 color: var(--light-gold);
             }
         }
+
+        .sub-menu {
+            li {
+                a:hover {
+                    color: var(--light-brown);
+                }
+            }
+        }
+
+
     }
 
 }

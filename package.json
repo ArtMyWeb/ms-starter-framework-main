@@ -4,9 +4,10 @@
   "description": "WordPress theme with Tailwind CSS",
   "main": "gulpfile.js",
   "scripts": {
-    "build": "gulp",
+    "build": "gulp build",
     "watch": "gulp",
-    "dev": "gulp"
+    "dev": "gulp",
+    "package": "npm run build && cd .. && zip -r ms-starter-framework.zip ms-starter-framework-main -x '*/node_modules/*' -x '*/.git/*' -x '*/.github/*' -x '*/package-lock.json'"
   },
   "engines": {
     "node": ">= 18.0.0"
@@ -42,6 +43,7 @@
   "keywords": [],
   "type": "commonjs",
   "dependencies": {
+    "gsap": "^3.13.0",
     "swiper": "^12.0.3"
   }
 }

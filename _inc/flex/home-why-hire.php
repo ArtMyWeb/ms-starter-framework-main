@@ -44,7 +44,7 @@ if (is_array($img_photo_raw) && !empty($img_photo_raw['url'])) {
     <div class="absolute inset-0 bg-dark opacity-70"></div>
   </div>
   <div class="container relative z-10">
-    <div class="py-0 grid grid-cols-1 lg:grid-cols-2 lg:gap-20  vertical-border overflow-hidden max-sm:pl-5">
+    <div class="py-0 grid grid-cols-1 lg:grid-cols-2 lg:gap-20  vertical-border overflow-hidden max-sm:px-5">
       <div class="swiper lg:max-w-[390px] max-w-full why-hire-swiper pb-20">
         <div class="swiper-wrapper">
           <?php if ($slides): while (have_rows('home_wh_slides')): the_row();
