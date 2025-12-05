@@ -25,7 +25,7 @@ $btn    = get_sub_field('home_hero_button'); // link array
                 <div class="line bg-gradient-gold h-[10px] w-full"></div>
                 <div class="line bg-gradient-gold h-[10px] w-full"></div>
             </div>
-            <div class="person-content flex flex-col items-center text-center gap-10 relative pt-[400px] max-w-[770px] z-2 mx-auto p-10 -mt-[120px]">
+            <div class="person-content flex flex-col items-center text-center gap-10 relative pt-[400px] max-w-[770px] z-2 mx-auto p-10 -mt-[120px] max-sm:px-0">
                 <?php if (!empty($person['url'])): ?>
                     <img class="person-img max-w-[100%] lg:max-w-[500px] absolute bottom-0 left-1/2 -translate-x-1/2 object-contain" src="<?php echo esc_url($person['url']); ?>" alt="">
                 <?php endif; ?>
