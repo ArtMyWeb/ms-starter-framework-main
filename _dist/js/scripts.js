@@ -4810,8 +4810,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    const menuItems = document.querySelectorAll('.menu > .menu-item');
-    const primaryMenu = document.querySelector('.menu');
+    const menuItems = document.querySelectorAll(' header .menu > .menu-item');
+    const primaryMenu = document.querySelector(' header .menu');
     let timeoutId;
 
     function isMobile() {

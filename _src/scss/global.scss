@@ -352,9 +352,8 @@ strong {
     }
 
     .button {
-        @apply overflow-hidden text-white text-center uppercase font-archivo font-bold transition-colors duration-200 text-[18px] lg:text-[20px] leading-normal lg:px-[40px] lg:py-[20px] px-6 py-4 max-sm:w-full;
+        @apply overflow-hidden text-white text-center uppercase font-archivo font-bold transition-colors duration-200 text-[18px] lg:text-[20px] leading-normal lg:px-[40px] lg:py-[20px] px-6 py-4 max-sm:w-full max-sm:px-5;
         display: inline-flex;
-        padding: 20px 40px;
         justify-content: center;
         align-items: center;
         gap: 10px;
@@ -372,7 +371,7 @@ strong {
     .sidebar .wpforms-submit-container button.wpforms-submit {
         @apply overflow-hidden text-white text-center uppercase font-archivo !font-bold transition-colors duration-200 text-[16px] leading-normal;
         display: inline-flex;
-        padding: 20px 40px;
+        padding: 20px 20px;
         justify-content: center;
         align-items: center;
         gap: 10px;
@@ -547,135 +546,7 @@ strong {
         }
     }
 
-    .footer-widget-column {
-        p {
-            @apply font-pontano
-        }
 
-        a {
-            @apply font-pontano font-semibold;
-        }
-
-        color: #fff;
-        padding-right: 2rem;
-
-        &:not(:last-child) {
-            border-right: 1px solid #FAF1A7;
-
-        }
-
-        &:nth-of-type(2) {
-            padding-left: 2rem;
-        }
-
-        &:last-child {
-            padding-right: 0;
-            padding-left: 2rem;
-            @apply max-sm:px-0;
-
-        }
-
-        h4 {
-            color: #FAF1A7;
-            font-size: 12.637px;
-            font-weight: 700;
-            line-height: 14.217px;
-            letter-spacing: 1.643px;
-            text-transform: uppercase;
-            margin-bottom: 1rem;
-        }
-
-        h3 {
-            color: var(--White, #FFF);
-            font-size: 13.087px;
-            font-weight: 900;
-            line-height: 16px;
-            letter-spacing: 1.636px;
-            text-transform: uppercase;
-        }
-
-        p {
-            color: #FFF;
-            font-size: 14.217px;
-            font-weight: 500;
-            line-height: 18.166px;
-        }
-
-        @media (max-width: 768px) {
-            padding-right: 0;
-            padding-left: 0;
-            text-align: center;
-
-            &:not(:last-child) {
-                border-right: none;
-            }
-
-            &:nth-of-type(2) {
-                padding-left: 0;
-
-            }
-        }
-
-        .call-us {
-            a {
-                color: var(--CTA, #16898A);
-                font-size: 37.626px;
-                font-weight: 400;
-                line-height: 39.835px;
-                text-transform: capitalize;
-            }
-        }
-
-        .footer-grid-links {
-
-
-
-
-            ul {
-                @apply my-10 px-5;
-
-                li {
-                    @apply mb-2 text-center;
-
-                    a {
-                        color: #fff;
-                    }
-                }
-            }
-        }
-
-
-
-
-
-    }
-
-    .footer-grid-links {
-
-        place-content: start;
-
-        li {
-            a {
-                @apply font-pontano font-normal text-[1rem];
-
-            }
-
-            @apply text-center
-        }
-
-        div:nth-child(2) {
-            ul {
-                @apply lg:border-l-[1px] border-[#ffffff];
-            }
-        }
-
-        div:nth-child(3) {
-            ul {
-                @apply lg:border-l-[1px] border-[#fffff];
-            }
-        }
-
-    }
 
     .two-col-section {
 
@@ -789,8 +660,10 @@ strong {
         }
     }
 
-    .drilldown-menu-box {
-        @apply lg:border-t-[1px] border-[#ffffff33];
-    }
 
+
+}
+
+.drilldown-menu-box {
+    @apply lg:border-t-[1px] border-[#ffffff33];
 }
