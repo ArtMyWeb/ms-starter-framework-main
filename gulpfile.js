@@ -124,6 +124,14 @@
 
 	exports.scss = scss;
 	exports.fonts = fonts;
+	exports.build = series(
+		scss,
+		styles,
+		fonts,
+		js,
+		scripts,
+		images
+	);
 	exports.default = series(
 		scss,
 		styles,

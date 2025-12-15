@@ -115,6 +115,9 @@ header .menu-header-menu-container .menu .current-menu-item .sub-menu li a:hover
 header .menu-header-menu-container .menu .current-menu-parent .sub-menu li a:hover {
   color: var(---light-brown);
 }
+header .menu-header-menu-container .menu .current-menu-item {
+  color: var(--light-brown);
+}
 header .menu-header-menu-container .menu .menu-item-has-children {
   position: relative;
 }
@@ -271,9 +274,9 @@ header button .sr-only {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 header .menu-item:hover > a {
-  color: var(--light-gold);
+  color: var(--light-brown);
 }
-header .menu-item .sub-menu li:hover a {
+header .menu-item .sub-menu li:hover {
   color: var(--light-brown);
 }
 
@@ -1544,6 +1547,9 @@ button{
 }
 .mt-4{
   margin-top: 1rem;
+}
+.mt-7{
+  margin-top: 1.75rem;
 }
 .mt-8{
   margin-top: 2rem;
