@@ -563,3 +563,25 @@ add_action('init', function () {
     );
 
 });
+
+
+add_action('template_redirect', function () {
+
+    if (is_category('firm-news')) {
+
+        // якщо URL містить /blog/category/
+        if (strpos($_SERVER['REQUEST_URI'], '/blog/category/') !== false) {
+
+            $paged = get_query_var('paged');
+            $target = home_url('/firm-news/');
+
+            if ($paged && $paged > 1) {
+                $target .= 'page/' . $paged . '/';
+            }
+
+            wp_redirect($target, 301);
+            exit;
+        }
+    }
+
+});

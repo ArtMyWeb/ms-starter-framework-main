@@ -6,7 +6,7 @@ $cat_id = get_queried_object_id();
 
 $args = array(
     'post_type'      => 'post',
-    'posts_per_page' => 3,
+    'posts_per_page' => 12,
     'paged'          => $paged,
     'post_status'    => 'publish',
     'cat'            => $cat_id,
