@@ -4,12 +4,21 @@
 	let currentPage = 1;
 	let isLoading = false;
 	let hasMorePosts = true;
+	let currentCategory = '';
+	let perPage = 3;
 
 	// Intersection Observer для виявлення коли користувач скролить вниз
 	function initIntersectionObserver() {
 		const loadMoreTrigger = document.getElementById('load-more-trigger');
 		
 		if (!loadMoreTrigger) return;
+
+		const initialPage = parseInt(loadMoreTrigger.dataset.page || '1', 10);
+		const triggerCategory = loadMoreTrigger.dataset.cat || '';
+		const triggerPerPage = parseInt(loadMoreTrigger.dataset.perPage || (lazyLoadPosts.postsPerPage || '3'), 10);
+		currentPage = isNaN(initialPage) ? 1 : initialPage;
+		currentCategory = triggerCategory;
+		perPage = isNaN(triggerPerPage) ? 3 : triggerPerPage;
 
 		const observer = new IntersectionObserver(function(entries) {
 			entries.forEach(function(entry) {
@@ -39,7 +48,9 @@
 			data: {
 				action: 'load_more_posts',
 				page: currentPage,
-				nonce: lazyLoadPosts.nonce
+				nonce: lazyLoadPosts.nonce,
+				per_page: perPage,
+				cat: currentCategory
 			},
 			success: function(response) {
 				if (response === 'no_more_posts') {

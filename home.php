@@ -66,7 +66,7 @@ get_template_part( '_inc/page','hero'  );
                 <?php endif; ?>
             </div>
             <!-- Trigger element for Intersection Observer -->
-            <div id="load-more-trigger" class="w-full h-10 mt-10"></div>
+			<div id="load-more-trigger" class="w-full h-10 mt-10" data-per-page="12"></div>
         </div>
     </section>
 

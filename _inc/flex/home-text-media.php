@@ -20,7 +20,7 @@ $btn      = get_sub_field('home_tm_button');
             <?php if ($h_main): ?><span><?php echo esc_html($h_main); ?></span><?php endif; ?>
             <?php if ($h_high): ?><span class="text-light-gold"><?php echo esc_html($h_high); ?></span><?php endif; ?>
           </h2>
-          <?php if ($subtitle): ?><h4 class="subtitle"><?php echo esc_html($subtitle); ?></h4><?php endif; ?>
+          <?php if ($subtitle): ?><h1 class="subtitle"><?php echo esc_html($subtitle); ?></h1><?php endif; ?>
         </div>
         <div class="text-about mb-11">
           <?php if ($content): echo wp_kses_post($content); endif; ?>

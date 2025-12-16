@@ -470,15 +470,21 @@ add_action( 'wp_enqueue_scripts', 'enqueue_lazy_load_script' );
 // AJAX handler to load more posts
 function load_more_posts() {
 	check_ajax_referer( 'lazy_load_nonce', 'nonce' );
-	
-	$paged = isset( $_POST['page'] ) ? intval( $_POST['page'] ) : 1;
-	
+
+	$paged     = isset( $_POST['page'] ) ? max( 1, intval( $_POST['page'] ) ) : 1;
+	$per_page  = isset( $_POST['per_page'] ) ? max( 1, intval( $_POST['per_page'] ) ) : 3;
+	$cat_id    = isset( $_POST['cat'] ) ? intval( $_POST['cat'] ) : 0;
+
 	$args = array(
-		'post_type' => 'post',
-		'posts_per_page' => 12,
-		'paged' => $paged,
-		'post_status' => 'publish'
+		'post_type'      => 'post',
+		'posts_per_page' => $per_page,
+		'paged'          => $paged,
+		'post_status'    => 'publish',
 	);
+
+	if ( $cat_id ) {
+		$args['cat'] = $cat_id;
+	}
 	
 	$query = new WP_Query( $args );
 	
@@ -534,4 +540,26 @@ add_action( 'wp_ajax_nopriv_load_more_posts', 'load_more_posts' );
 
 
 
+add_action('wp_head', function () {
+    if (is_category('firm-news')) {
+        echo '<link rel="canonical" href="' . home_url('/firm-news/') . '" />';
+    }
+});
 
+add_action('init', function () {
+
+    // Основна сторінка
+    add_rewrite_rule(
+        '^firm-news/?$',
+        'index.php?category_name=firm-news',
+        'top'
+    );
+
+    // Пагінація
+    add_rewrite_rule(
+        '^firm-news/page/([0-9]+)/?$',
+        'index.php?category_name=firm-news&paged=$matches[1]',
+        'top'
+    );
+
+});

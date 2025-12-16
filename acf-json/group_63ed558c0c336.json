@@ -314,6 +314,16 @@
                             "preview_size": "large"
                         },
                         {
+                            "key": "field_home_video_main_iframe",
+                            "label": "Main Video Embed (iframe)",
+                            "name": "home_video_main_iframe",
+                            "type": "textarea",
+                            "instructions": "Paste full iframe embed code (YouTube or Facebook). If provided, it will be used instead of the image.",
+                            "rows": 3,
+                            "new_lines": "",
+                            "maxlength": ""
+                        },
+                        {
                             "key": "field_home_video_subtitle",
                             "label": "Subtitle",
                             "name": "home_video_subtitle",
@@ -346,6 +356,16 @@
                                     "type": "image",
                                     "return_format": "array",
                                     "preview_size": "medium"
+                                },
+                                {
+                                    "key": "field_home_video_item_iframe",
+                                    "label": "Video Embed (iframe)",
+                                    "name": "home_video_item_iframe",
+                                    "type": "textarea",
+                                    "instructions": "Optional: paste iframe embed code (YouTube or Facebook). If provided, it will be used instead of the image.",
+                                    "rows": 3,
+                                    "new_lines": "",
+                                    "maxlength": ""
                                 },
                                 {
                                     "key": "field_home_video_item_title",
