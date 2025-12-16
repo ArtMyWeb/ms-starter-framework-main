@@ -96,7 +96,12 @@ get_header();
                     </div>
                 </div>
                 <div class="content mt-10">
- 
+                         <!-- Fallback content if no ACF data -->
+                        <div class="vertical-border">
+                            <h3>Biography</h3>
+         
+            		        <?php echo $biography; ?>
+                             </div>
                     <?php if ($information): ?>
                         <?php foreach ($information as $info): ?>
                                 <h3><?php echo esc_html($info['title']); ?></h3>
@@ -105,31 +110,7 @@ get_header();
                                 <?php endif; ?>
                         <?php endforeach; ?>
                     <?php else: ?>
-                        <!-- Fallback content if no ACF data -->
-                        <div class="vertical-border">
-                            <h3>Biography</h3>
-                            <p>Becker Legal was founded to provide affordable legal services to clients in New Hampshire and Maine. Attorney Becker takes a holistic approach to the law; working with clients to determine the best legal route for them when taking into account all their objectives. This requires the attorney/client team to consider not only what their legal options are, but also which of those options will leave the client most satisfied in the long run.
-                                Attorney Becker also strives to provide legal services to those who cannot afford legal representation through Pro Bono service to New Hampshire Bar Association Pro Bono Programs.</p>
-                        </div>
-                        <h3>Education</h3>
-                        <ul>
-                            <li>University of New Hampshire School of Law, Concord, New Hampshire</li>
-                            <li>J.D. – 2018</li>
-                            <li>Plymouth State University</li>
-                            <li>B.A. – 2014</li>
-                            <li>Honors: magna cum laude</li>
-                            <li>Major: Political Science</li>
-                            <li>White Mountains Community College</li>
-                            <li>A.A. – 2014</li>
-                            <li>Major: Teacher Education</li>
-                        </ul>
-                        <h3>Practice Areas</h3>
-                        <ul>
-                            <li>Family Law</li>
-                            <li>Personal Injury</li>
-                            <li>Small Claims</li>
-                            <li>Pro Bono Services</li>
-                        </ul>
+
                     <?php endif; ?>
                 </div>
             </div>
