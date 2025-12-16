@@ -438,10 +438,13 @@ function ms_trim_excerpt_chars( $excerpt, $post ) {
 		return $text;
 	}
 
-	// Soft trim at word boundary within limit
+	// Trim at the last complete word within the limit
 	$soft = $substr( $text, 0, $limit );
-	if ( preg_match( '/^(.+?)\b.*$/u', $soft, $m ) ) {
-		$soft = $m[1];
+	
+	// Find the last space to avoid cutting mid-word
+	$last_space = strrpos( $soft, ' ' );
+	if ( $last_space !== false && $last_space > 0 ) {
+		$soft = $substr( $soft, 0, $last_space );
 	}
 
 	return rtrim( $soft ) . ' ...';
