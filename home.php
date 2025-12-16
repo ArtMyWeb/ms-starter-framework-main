@@ -11,7 +11,7 @@ get_template_part( '_inc/page','hero'  );
                 <?php
                 $args = array(
                     'post_type' => 'post',
-                    'posts_per_page' => 12,
+                    'posts_per_page' => 3,
                     'post_status' => 'publish'
                 );
 

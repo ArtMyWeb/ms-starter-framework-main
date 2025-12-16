@@ -421,7 +421,7 @@ function enqueue_lazy_load_script() {
 	wp_localize_script( 'lazy-load-posts', 'lazyLoadPosts', array(
 		'ajaxUrl' => admin_url( 'admin-ajax.php' ),
 		'nonce' => wp_create_nonce( 'lazy_load_nonce' ),
-		'postsPerPage' => 12
+		'postsPerPage' => 3
 	));
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_lazy_load_script' );
@@ -434,7 +434,7 @@ function load_more_posts() {
 	
 	$args = array(
 		'post_type' => 'post',
-		'posts_per_page' => 12,
+		'posts_per_page' => 3,
 		'paged' => $paged,
 		'post_status' => 'publish'
 	);
