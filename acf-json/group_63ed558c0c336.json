@@ -643,45 +643,7 @@
                     "name": "home_blog_grid",
                     "label": "Blog Grid",
                     "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_home_bg_items",
-                            "label": "Items",
-                            "name": "home_bg_items",
-                            "type": "repeater",
-                            "layout": "block",
-                            "button_label": "Add Item",
-                            "sub_fields": [
-                                {
-                                    "key": "field_home_bg_item_image",
-                                    "label": "Image",
-                                    "name": "home_bg_item_image",
-                                    "type": "image",
-                                    "return_format": "array",
-                                    "preview_size": "medium"
-                                },
-                                {
-                                    "key": "field_home_bg_item_title",
-                                    "label": "Title",
-                                    "name": "home_bg_item_title",
-                                    "type": "text"
-                                },
-                                {
-                                    "key": "field_home_bg_item_excerpt",
-                                    "label": "Excerpt",
-                                    "name": "home_bg_item_excerpt",
-                                    "type": "text"
-                                },
-                                {
-                                    "key": "field_home_bg_item_link",
-                                    "label": "Link",
-                                    "name": "home_bg_item_link",
-                                    "type": "link",
-                                    "return_format": "array"
-                                }
-                            ]
-                        }
-                    ],
+  
                     "min": "",
                     "max": ""
                 },
