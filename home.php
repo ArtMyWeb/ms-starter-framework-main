@@ -11,7 +11,7 @@ get_template_part( '_inc/page','hero'  );
                 <?php
                 $args = array(
                     'post_type' => 'post',
-                    'posts_per_page' => 50,
+                    'posts_per_page' => 12,
                     'post_status' => 'publish'
                 );
 
@@ -65,6 +65,8 @@ get_template_part( '_inc/page','hero'  );
                     </div>
                 <?php endif; ?>
             </div>
+            <!-- Trigger element for Intersection Observer -->
+            <div id="load-more-trigger" class="w-full h-10 mt-10"></div>
         </div>
     </section>
 

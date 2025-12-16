@@ -1578,6 +1578,9 @@ button{
 .aspect-\[25\/34\]{
   aspect-ratio: 25/34;
 }
+.aspect-\[3\/4\]{
+  aspect-ratio: 3/4;
+}
 .h-1{
   height: 0.25rem;
 }
@@ -1613,6 +1616,9 @@ button{
 }
 .h-full{
   height: 100%;
+}
+.h-10{
+  height: 2.5rem;
 }
 .max-h-\[230px\]{
   max-height: 230px;
