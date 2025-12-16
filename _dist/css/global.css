@@ -1958,6 +1958,10 @@ button{
   padding-top: 70px;
   padding-bottom: 70px;
 }
+.py-16{
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
 .\!pl-0{
   padding-left: 0px !important;
 }

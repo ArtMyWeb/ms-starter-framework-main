@@ -456,7 +456,7 @@ function ms_trim_excerpt_chars( $excerpt, $post ) {
 
 // Enqueue lazy load script
 function enqueue_lazy_load_script() {
-	wp_enqueue_script( 'lazy-load-posts', get_template_directory_uri() . '/assets/js/lazy-load-posts.js', array('jquery'), '1.0.0', true );
+	wp_enqueue_script( 'lazy-load-posts', get_template_directory_uri() . '/assets/js/lazy-load-posts.js', array('jquery'), '1.1.0', true );
 	
 	// Localize script with AJAX URL and nonce
 	wp_localize_script( 'lazy-load-posts', 'lazyLoadPosts', array(
