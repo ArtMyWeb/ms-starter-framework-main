@@ -79,7 +79,7 @@ get_header();
                                                data-vcf-phone="<?php echo esc_attr($phone); ?>"
                                                data-vcf-email="<?php echo esc_attr($email); ?>"
                                                data-vcf-organization="<?php echo esc_attr(get_bloginfo('name')); ?>"
-                                               class="cursor-pointer hover:underline">
+                                               class="cursor-pointer hover:underline hidden">
                                                 Download Contact Card
                                             </a>
                                         <?php endif; ?>
