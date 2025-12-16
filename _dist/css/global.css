@@ -1584,6 +1584,9 @@ button{
 .h-1{
   height: 0.25rem;
 }
+.h-10{
+  height: 2.5rem;
+}
 .h-12{
   height: 3rem;
 }
@@ -1616,9 +1619,6 @@ button{
 }
 .h-full{
   height: 100%;
-}
-.h-10{
-  height: 2.5rem;
 }
 .max-h-\[230px\]{
   max-height: 230px;
