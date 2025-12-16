@@ -66,7 +66,7 @@
 		if (blogGrid) {
 			const endMessage = document.createElement('div');
 			endMessage.className = 'col-span-full text-center py-10';
-			endMessage.innerHTML = '<p class="text-gray-600">No more posts to load.</p>';
+			// endMessage.innerHTML = '<p class="text-gray-600">No more posts to load.</p>';
 			blogGrid.appendChild(endMessage);
 		}
 	}
