@@ -410,6 +410,44 @@ function custom_excerpt_more( $more ) {
 add_filter( 'excerpt_more', 'custom_excerpt_more' );
 
 /* ==========================================
+   Excerpt Character Limit (global)
+   Trims get_the_excerpt() to a fixed number of characters.
+   Adjust via filter: apply_filters('ms_excerpt_char_limit', 160)
+========================================== */
+
+add_filter( 'get_the_excerpt', 'ms_trim_excerpt_chars', 10, 2 );
+
+function ms_trim_excerpt_chars( $excerpt, $post ) {
+	// Allow theme/plugins to override the limit
+	$limit = apply_filters( 'ms_excerpt_char_limit', 160 );
+
+	// Normalize text: strip tags/shortcodes and whitespace
+	$text = strip_shortcodes( $excerpt );
+	$text = wp_strip_all_tags( $text );
+	$text = html_entity_decode( $text, ENT_QUOTES | ENT_HTML5, get_bloginfo( 'charset' ) );
+	$text = preg_replace( '/\s+/', ' ', $text );
+	$text = trim( $text );
+
+	// Remove common trailing ellipsis markers to avoid duplicates
+	$text = preg_replace( '/(\s*\.\.\.|…|\s*\[.*\])$/u', '', $text );
+
+	$strlen = function_exists( 'mb_strlen' ) ? 'mb_strlen' : 'strlen';
+	$substr = function_exists( 'mb_substr' ) ? 'mb_substr' : 'substr';
+
+	if ( $strlen( $text ) <= $limit ) {
+		return $text;
+	}
+
+	// Soft trim at word boundary within limit
+	$soft = $substr( $text, 0, $limit );
+	if ( preg_match( '/^(.+?)\b.*$/u', $soft, $m ) ) {
+		$soft = $m[1];
+	}
+
+	return rtrim( $soft ) . ' ...';
+}
+
+/* ==========================================
    Lazy Load Posts (Infinite Scroll)
 ========================================== */
 
@@ -434,7 +472,7 @@ function load_more_posts() {
 	
 	$args = array(
 		'post_type' => 'post',
-		'posts_per_page' => 3,
+		'posts_per_page' => 12,
 		'paged' => $paged,
 		'post_status' => 'publish'
 	);
@@ -454,9 +492,9 @@ function load_more_posts() {
 				<div class="relative">
 					<div class="blog-img h-full max-h-[475px]">
 						<?php if ( $post_thumbnail ): ?>
-							<img class="w-full h-auto object-cover" src="<?php echo esc_url( $post_thumbnail ); ?>" alt="<?php echo esc_attr( $post_title ); ?>">
+							<img class="aspect-[3/4] w-full h-auto object-cover" src="<?php echo esc_url( $post_thumbnail ); ?>" alt="<?php echo esc_attr( $post_title ); ?>">
 						<?php else: ?>
-							<img class="w-full h-auto object-cover" src="/wp-content/uploads/2025/11/Bg.png" alt="<?php echo esc_attr( $post_title ); ?>">
+							<img class="aspect-[3/4] w-full h-auto object-cover" src="/wp-content/uploads/2025/11/Bg.png" alt="<?php echo esc_attr( $post_title ); ?>">
 						<?php endif; ?>
 					</div>
 					<div class="blog-content flex flex-col text-white z-10 vertical-border bg-light-dark/90 p-5 !absolute bottom-0 left-0 w-full">
