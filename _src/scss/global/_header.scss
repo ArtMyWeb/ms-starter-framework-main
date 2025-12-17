@@ -101,6 +101,8 @@ header {
                 }
             }
 
+
+
             .current-menu-item,
             .current-menu-parent {
                 color: var(--light-gold);
@@ -132,6 +134,10 @@ header {
                         }
                     }
                 }
+            }
+
+            .current-menu-item {
+                color: var(--light-brown);
             }
 
             .menu-item-has-children {
@@ -316,15 +322,15 @@ header {
     .menu-item {
         &:hover {
             >a {
-                color: var(--light-gold);
+                color: var(--light-brown);
             }
         }
 
         .sub-menu {
             li:hover {
-                a {
-                    color: var(--light-brown);
-                }
+
+                color: var(--light-brown);
+
             }
         }
 

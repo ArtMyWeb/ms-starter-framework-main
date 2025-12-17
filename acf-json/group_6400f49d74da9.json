@@ -377,6 +377,50 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_block_practice_areas": {
+                    "key": "layout_block_practice_areas",
+                    "name": "block_practice_areas",
+                    "label": "Practice Areas",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_block_pa_title_main",
+                            "label": "Title Main",
+                            "name": "block_pa_title_main",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "default_value": "Practice Areas"
+                        },
+                        {
+                            "key": "field_block_pa_title_highlight",
+                            "label": "Title Highlight",
+                            "name": "block_pa_title_highlight",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "default_value": ""
+                        },
+                        {
+                            "key": "field_block_pa_pages",
+                            "label": "Select Pages",
+                            "name": "block_pa_pages",
+                            "type": "relationship",
+                            "instructions": "Select pages to display as practice areas",
+                            "required": 0,
+                            "post_type": [
+                                "page"
+                            ],
+                            "taxonomy": [],
+                            "allow_null": 0,
+                            "multiple": 1,
+                            "return_format": "id",
+                            "ui": 1
+                        } 
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Block",

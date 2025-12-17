@@ -11,7 +11,7 @@ get_template_part( '_inc/page','hero'  );
                 <?php
                 $args = array(
                     'post_type' => 'post',
-                    'posts_per_page' => 50,
+                    'posts_per_page' => 12,
                     'post_status' => 'publish'
                 );
 
@@ -29,9 +29,9 @@ get_template_part( '_inc/page','hero'  );
                             <div class="relative">
                                 <div class="blog-img h-full max-h-[475px]">
                                     <?php if ($post_thumbnail): ?>
-                                        <img class="w-full h-auto object-cover" src="<?php echo esc_url($post_thumbnail); ?>" alt="<?php echo esc_attr($post_title); ?>">
+                                        <img class="aspect-[3/4] w-full h-auto object-cover" src="<?php echo esc_url($post_thumbnail); ?>" alt="<?php echo esc_attr($post_title); ?>">
                                     <?php else: ?>
-                                        <img class="w-full h-auto object-cover" src="/wp-content/uploads/2025/11/Bg.png" alt="<?php echo esc_attr($post_title); ?>">
+                                        <img class="aspect-[3/4] w-full h-auto object-cover" src="/wp-content/uploads/2025/11/Bg.png" alt="<?php echo esc_attr($post_title); ?>">
                                     <?php endif; ?>
                                 </div>
                                 <div class="blog-content flex flex-col text-white z-10 vertical-border bg-light-dark/90 p-5 !absolute bottom-0 left-0 w-full">
@@ -65,6 +65,8 @@ get_template_part( '_inc/page','hero'  );
                     </div>
                 <?php endif; ?>
             </div>
+            <!-- Trigger element for Intersection Observer -->
+			<div id="load-more-trigger" class="w-full h-10 mt-10" data-per-page="12"></div>
         </div>
     </section>
 

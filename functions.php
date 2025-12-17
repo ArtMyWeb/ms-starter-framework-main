@@ -407,8 +407,181 @@ add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 function custom_excerpt_more( $more ) {
 	return ' ...';
 }
-add_filter( 'excerpt_more', 'custom_excerpt_more' ); 
+add_filter( 'excerpt_more', 'custom_excerpt_more' );
+
+/* ==========================================
+   Excerpt Character Limit (global)
+   Trims get_the_excerpt() to a fixed number of characters.
+   Adjust via filter: apply_filters('ms_excerpt_char_limit', 160)
+========================================== */
+
+add_filter( 'get_the_excerpt', 'ms_trim_excerpt_chars', 10, 2 );
+
+function ms_trim_excerpt_chars( $excerpt, $post ) {
+	// Allow theme/plugins to override the limit
+	$limit = apply_filters( 'ms_excerpt_char_limit', 160 );
+
+	// Normalize text: strip tags/shortcodes and whitespace
+	$text = strip_shortcodes( $excerpt );
+	$text = wp_strip_all_tags( $text );
+	$text = html_entity_decode( $text, ENT_QUOTES | ENT_HTML5, get_bloginfo( 'charset' ) );
+	$text = preg_replace( '/\s+/', ' ', $text );
+	$text = trim( $text );
+
+	// Remove common trailing ellipsis markers to avoid duplicates
+	$text = preg_replace( '/(\s*\.\.\.|…|\s*\[.*\])$/u', '', $text );
+
+	$strlen = function_exists( 'mb_strlen' ) ? 'mb_strlen' : 'strlen';
+	$substr = function_exists( 'mb_substr' ) ? 'mb_substr' : 'substr';
+
+	if ( $strlen( $text ) <= $limit ) {
+		return $text;
+	}
+
+	// Trim at the last complete word within the limit
+	$soft = $substr( $text, 0, $limit );
+	
+	// Find the last space to avoid cutting mid-word
+	$last_space = strrpos( $soft, ' ' );
+	if ( $last_space !== false && $last_space > 0 ) {
+		$soft = $substr( $soft, 0, $last_space );
+	}
+
+	return rtrim( $soft ) . ' ...';
+}
+
+/* ==========================================
+   Lazy Load Posts (Infinite Scroll)
+========================================== */
+
+// Enqueue lazy load script
+function enqueue_lazy_load_script() {
+	wp_enqueue_script( 'lazy-load-posts', get_template_directory_uri() . '/assets/js/lazy-load-posts.js', array('jquery'), '1.1.0', true );
+	
+	// Localize script with AJAX URL and nonce
+	wp_localize_script( 'lazy-load-posts', 'lazyLoadPosts', array(
+		'ajaxUrl' => admin_url( 'admin-ajax.php' ),
+		'nonce' => wp_create_nonce( 'lazy_load_nonce' ),
+		'postsPerPage' => 3
+	));
+}
+add_action( 'wp_enqueue_scripts', 'enqueue_lazy_load_script' );
+
+// AJAX handler to load more posts
+function load_more_posts() {
+	check_ajax_referer( 'lazy_load_nonce', 'nonce' );
+
+	$paged     = isset( $_POST['page'] ) ? max( 1, intval( $_POST['page'] ) ) : 1;
+	$per_page  = isset( $_POST['per_page'] ) ? max( 1, intval( $_POST['per_page'] ) ) : 3;
+	$cat_id    = isset( $_POST['cat'] ) ? intval( $_POST['cat'] ) : 0;
+
+	$args = array(
+		'post_type'      => 'post',
+		'posts_per_page' => $per_page,
+		'paged'          => $paged,
+		'post_status'    => 'publish',
+	);
+
+	if ( $cat_id ) {
+		$args['cat'] = $cat_id;
+	}
+	
+	$query = new WP_Query( $args );
+	
+	if ( $query->have_posts() ) {
+		while ( $query->have_posts() ) {
+			$query->the_post();
+			$post_id = get_the_ID();
+			$post_title = get_the_title();
+			$post_excerpt = get_the_excerpt();
+			$post_permalink = get_the_permalink();
+			$post_thumbnail = get_the_post_thumbnail_url( $post_id, 'large' );
+			?>
+			<article class="blog-item group h-full overflow-hidden">
+				<div class="relative">
+					<div class="blog-img h-full max-h-[475px]">
+						<?php if ( $post_thumbnail ): ?>
+							<img class="aspect-[3/4] w-full h-auto object-cover" src="<?php echo esc_url( $post_thumbnail ); ?>" alt="<?php echo esc_attr( $post_title ); ?>">
+						<?php else: ?>
+							<img class="aspect-[3/4] w-full h-auto object-cover" src="/wp-content/uploads/2025/11/Bg.png" alt="<?php echo esc_attr( $post_title ); ?>">
+						<?php endif; ?>
+					</div>
+					<div class="blog-content flex flex-col text-white z-10 vertical-border bg-light-dark/90 p-5 !absolute bottom-0 left-0 w-full">
+						<h3 class="text-[1.375rem]/[1.2] font-archivo font-semibold pb-2">
+							<a href="<?php echo esc_url( $post_permalink ); ?>" class="hover:text-light-gold transition-colors">
+								<?php echo esc_html( $post_title ); ?>
+							</a>
+						</h3>
+						<div class="blog-excerpt">
+							<div class="">
+								<div class="">
+									<p><?php echo esc_html( $post_excerpt ); ?></p>
+								</div>
+							</div>
+						</div>
+						<a href="<?php echo esc_url( $post_permalink ); ?>"
+							class="text-light-gold text-[1rem]/[1.2] font-archivo font-medium underline underline-offset-5 hover:text-white transition-colors">
+							Read More
+						</a>
+					</div>
+				</div>
+			</article>
+			<?php
+		}
+		wp_reset_postdata();
+		wp_die();
+	} else {
+		wp_die( 'no_more_posts' );
+	}
+}
+
+add_action( 'wp_ajax_load_more_posts', 'load_more_posts' );
+add_action( 'wp_ajax_nopriv_load_more_posts', 'load_more_posts' );
 
 
 
+add_action('wp_head', function () {
+    if (is_category('firm-news')) {
+        echo '<link rel="canonical" href="' . home_url('/firm-news/') . '" />';
+    }
+});
 
+add_action('init', function () {
+
+    // Основна сторінка
+    add_rewrite_rule(
+        '^firm-news/?$',
+        'index.php?category_name=firm-news',
+        'top'
+    );
+
+    // Пагінація
+    add_rewrite_rule(
+        '^firm-news/page/([0-9]+)/?$',
+        'index.php?category_name=firm-news&paged=$matches[1]',
+        'top'
+    );
+
+});
+
+
+add_action('template_redirect', function () {
+
+    if (is_category('firm-news')) {
+
+        // якщо URL містить /blog/category/
+        if (strpos($_SERVER['REQUEST_URI'], '/blog/category/') !== false) {
+
+            $paged = get_query_var('paged');
+            $target = home_url('/firm-news/');
+
+            if ($paged && $paged > 1) {
+                $target .= 'page/' . $paged . '/';
+            }
+
+            wp_redirect($target, 301);
+            exit;
+        }
+    }
+
+});

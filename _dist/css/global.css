@@ -115,6 +115,9 @@ header .menu-header-menu-container .menu .current-menu-item .sub-menu li a:hover
 header .menu-header-menu-container .menu .current-menu-parent .sub-menu li a:hover {
   color: var(---light-brown);
 }
+header .menu-header-menu-container .menu .current-menu-item {
+  color: var(--light-brown);
+}
 header .menu-header-menu-container .menu .menu-item-has-children {
   position: relative;
 }
@@ -271,9 +274,9 @@ header button .sr-only {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 header .menu-item:hover > a {
-  color: var(--light-gold);
+  color: var(--light-brown);
 }
-header .menu-item .sub-menu li:hover a {
+header .menu-item .sub-menu li:hover {
   color: var(--light-brown);
 }
 
@@ -1575,6 +1578,9 @@ button{
 .aspect-\[25\/34\]{
   aspect-ratio: 25/34;
 }
+.aspect-\[3\/4\]{
+  aspect-ratio: 3/4;
+}
 .h-1{
   height: 0.25rem;
 }
@@ -1610,6 +1616,9 @@ button{
 }
 .h-full{
   height: 100%;
+}
+.h-10{
+  height: 2.5rem;
 }
 .max-h-\[230px\]{
   max-height: 230px;
@@ -1948,6 +1957,10 @@ button{
 .py-\[70px\]{
   padding-top: 70px;
   padding-bottom: 70px;
+}
+.py-16{
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 .\!pl-0{
   padding-left: 0px !important;

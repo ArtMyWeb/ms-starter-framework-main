@@ -1,7 +1,6 @@
 <?php
-$title = get_the_title();
 $hero_text = get_field('hero_text', get_queried_object_id() );
-
+$title ='';
  if(!empty($hero_text) ){
     if(!empty($hero_text['sub_title']) ){
     $subtitle = '<span class="text-light-gold"> ' . $hero_text['sub_title'] . '</span> ' ;
@@ -9,6 +8,10 @@ $hero_text = get_field('hero_text', get_queried_object_id() );
         $subtitle = '';
     }
     $title = $hero_text['title'] .  $subtitle ;
+ }  
+ if(empty($title)){
+	 
+	$title = get_the_title();
  }
  
 $hero_image_bg = get_field('hero_image_bg', 'option');
@@ -38,7 +41,7 @@ $hero_source = get_field('hero_source', 'option');
                         $hero_google_text = get_field('hero_google_text', 'option');
                         $hero_google_rating = get_field('hero_google_rating', 'option');
                         ?>
-                        <div class="google-reviews flex items-center gap-2">
+                        <div class="google-reviews hidden items-center gap-2">
                             <img src="/wp-content/uploads/2025/11/Google_2015_logo.svg-2.svg" alt="Google Reviews" class="w-32">
                             <div class="right-side flex flex-col gap-2">
                                 <div class="star-block flex gap-[3px]">
